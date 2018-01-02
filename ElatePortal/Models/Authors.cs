@@ -13,6 +13,7 @@ namespace ElatePortal.Models
 
         [Key]
         public int Id { get; set; }
+        [Display(Name ="Fist Name")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }

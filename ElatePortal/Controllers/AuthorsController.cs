@@ -7,9 +7,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ElatePortal.DAL;
 using ElatePortal.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ElatePortal.Controllers
 {
+    [Authorize]
+    [Route("Admin/[controller]/[action]")]
     public class AuthorsController : Controller
     {
         private readonly AuthorsContext _context;
@@ -20,6 +23,7 @@ namespace ElatePortal.Controllers
         }
 
         // GET: Authors
+      
         public async Task<IActionResult> Index()
         {
             return View(await _context.Authors.ToListAsync());

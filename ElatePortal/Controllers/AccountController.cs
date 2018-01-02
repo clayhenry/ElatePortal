@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Mvc;
 
-namespace AuthenticationTest.Controllers
+namespace ElatePortal.Controllers
 {
     [Route("[controller]/[action]")]
     public class AccountController : Controller
