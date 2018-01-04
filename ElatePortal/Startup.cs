@@ -29,6 +29,7 @@ namespace ElatePortal
             var connectionString = Configuration["App::ConnectionStrings:DefaultConnection"];
 
             services.AddDbContext<AuthorsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<ProfileContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication(sharedOptions =>
             {
@@ -55,7 +56,7 @@ namespace ElatePortal
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
+         
             app.UseStaticFiles();
             app.UseAuthentication();
 
