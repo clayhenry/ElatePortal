@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using ElatePortal.DAL;
 using System.Collections;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Http;
 
 namespace ElatePortal.Controllers
 {
@@ -43,7 +44,11 @@ namespace ElatePortal.Controllers
             {
                 if (currentProfile == null)
                 {
-                    return RedirectToAction("Register");
+
+                    HttpContext.Session.SetString("Email", Profile[9].Value);
+           
+
+                    return RedirectToAction("Index", "Register");
                 }
             }
 
@@ -51,14 +56,7 @@ namespace ElatePortal.Controllers
             return View(currentProfile);
         }
 
-        [HttpGet]
-        public IActionResult Register(string Id)
-        {
-            ViewData["email"] = Profile[9].Value;
-            ViewData["name"] = Profile[4].Value;
-         //   return new ContentResult() { Content = Id };
-            return View();
-        }
+   
 
         [HttpPost]
         public async Task<IActionResult> Register( Profile profile ) {
