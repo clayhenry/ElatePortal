@@ -36,30 +36,46 @@ namespace ElatePortal.Controllers
         public IActionResult Index()
 
         {
+            //this needs to be middleware
+            var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
 
             if (User.Identity.IsAuthenticated)
             {
-
-                var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
-                // Get users's email.
-                
                 if (currentProfile == null)
                 {
-                   return  RedirectToAction("Register");
+                    return RedirectToAction("Register");
                 }
-      
-
             }
-            return View();
+
+         //   return new ContentResult() { Content = "hello"};
+            return View(currentProfile);
         }
 
-
-        public IActionResult Register()
+        [HttpGet]
+        public IActionResult Register(string Id)
         {
             ViewData["email"] = Profile[9].Value;
             ViewData["name"] = Profile[4].Value;
+         //   return new ContentResult() { Content = Id };
+            return View();
+        }
 
-          
+        [HttpPost]
+        public async Task<IActionResult> Register( Profile profile ) {
+
+            if (ModelState.IsValid) {
+
+                profile.Email = this.Profile[9].Value;
+                profile.Name = this.Profile[4].Value;
+                profile.Registered = true;
+                profile.CreatedAt = DateTime.Now;
+
+                _proileContext.Update(profile);
+                await _proileContext.SaveChangesAsync();
+
+                return RedirectToAction("Index");
+            }
+
             return View();
         }
 
