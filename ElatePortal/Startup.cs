@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ElatePortal.DAL;
+using ElatePortal.Modules;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -39,7 +40,7 @@ namespace ElatePortal
             .AddAzureAd(options => Configuration.Bind("AzureAd", options))
             .AddCookie();
 
-
+            services.AddScoped<IModule, Test>();
 
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddSession();
