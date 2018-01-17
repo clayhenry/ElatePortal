@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ElatePortal.DAL;
+using ElatePortal.Middleware;
 using ElatePortal.Modules;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -58,9 +59,13 @@ namespace ElatePortal
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+             
             app.UseSession();
             app.UseStaticFiles();
             app.UseAuthentication();
+
+          //  app.UseRegisterMiddleware();
 
             app.UseMvc(routes =>
             {
@@ -69,6 +74,8 @@ namespace ElatePortal
                     template: "{controller=Home}/{action=Index}/{id?}");
 
             });
+
+      
         }
     }
 }

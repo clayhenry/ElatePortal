@@ -29,14 +29,8 @@ namespace ElatePortal.Controllers
         {
 
             {
-                var c = this._ModuleInstance.DoWork();
-
-                ViewData["email"] = this.Profile[9].Value;
-                ViewData["name"] = this.Profile[4].Value;
-                var UserEmail = HttpContext.Session.GetString("Email");
-                 var profile = _proileContext.Profile.First(p => p.Email == this.Profile[9].Value);
-                // return new ContentResult() { Content = UserEmail };
-                return View(profile);
+  
+                return View();
             }
             
         }
