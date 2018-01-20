@@ -38,22 +38,22 @@ namespace ElatePortal.Controllers
 
         {
             //this needs to be middleware
-            var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
+            //var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
 
-            if (User.Identity.IsAuthenticated)
-            {
-                if (currentProfile == null)
-                {
+            //if (User.Identity.IsAuthenticated)
+            //{
+            //    if (currentProfile == null)
+            //    {
 
-                    HttpContext.Session.SetString("Email", Profile[9].Value);
+            //        HttpContext.Session.SetString("Email", Profile[9].Value);
            
 
-                    return RedirectToAction("Index", "Register");
-                }
-            }
+            //        return RedirectToAction("Index", "Register");
+            //    }
+            //}
 
          //   return new ContentResult() { Content = "hello"};
-            return View(currentProfile);
+            return View();
         }
 
    
@@ -112,6 +112,11 @@ namespace ElatePortal.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Register()
+        {
+            return View(new RegisterModel { MyProperty = 5555 } );
         }
     }
 }

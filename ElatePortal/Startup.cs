@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ElatePortal.DAL;
 using ElatePortal.Middleware;
+using ElatePortal.Models;
 using ElatePortal.Modules;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -13,6 +14,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+
 
 namespace ElatePortal
 {
@@ -42,6 +44,7 @@ namespace ElatePortal
             .AddCookie();
 
             services.AddScoped<IModule, Test>();
+            services.AddScoped<RegisterModel>();
 
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddSession();
