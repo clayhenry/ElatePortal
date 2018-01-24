@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace ElatePortal.Middleware
 {
     // You may need to install the Microsoft.AspNetCore.Http.Abstractions package into your project

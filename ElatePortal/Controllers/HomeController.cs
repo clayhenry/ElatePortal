@@ -38,7 +38,7 @@ namespace ElatePortal.Controllers
 
         {
             //this needs to be middleware
-            //var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
+            var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
 
             //if (User.Identity.IsAuthenticated)
             //{
@@ -46,25 +46,40 @@ namespace ElatePortal.Controllers
             //    {
 
             //        HttpContext.Session.SetString("Email", Profile[9].Value);
-           
+
 
             //        return RedirectToAction("Index", "Register");
             //    }
             //}
 
-         //   return new ContentResult() { Content = "hello"};
+            //   return new ContentResult() { Content = "hello"};
+
+           
+
             return View();
         }
 
-   
+
+        [HttpGet]
+        [Route("Register")]
+        public IActionResult Register()
+        {
+
+            ViewData["email"] = this.Profile[9].Value;
+            ViewData["name"] = this.Profile[4].Value;
+
+            return View();
+        }
 
         [HttpPost]
+        [Route("Register")]
         public async Task<IActionResult> Register( Profile profile ) {
 
             if (ModelState.IsValid) {
 
                 profile.Email = this.Profile[9].Value;
                 profile.Name = this.Profile[4].Value;
+                profile.ExternalId = Guid.Parse(this.Profile[7].Value);
                 profile.Registered = true;
                 profile.CreatedAt = DateTime.Now;
 
@@ -108,15 +123,12 @@ namespace ElatePortal.Controllers
             return View();
         }
 
+
         [AllowAnonymous]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult Register()
-        {
-            return View(new RegisterModel { MyProperty = 5555 } );
-        }
     }
 }
