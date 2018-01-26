@@ -1,12 +1,20 @@
-﻿
+﻿@model HomeViewModel;
 
 @{
 
     ViewData["Title"] = "Home Page";
 }
 
+<ul>
 
 
+
+    @foreach (var post in Model.Posts)
+    {
+        <li>@post.Content</li>
+    }
+
+</ul>
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
     <ol class="carousel-indicators">

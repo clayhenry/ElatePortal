@@ -24,39 +24,26 @@ namespace ElatePortal.Controllers
         //this feeld will be the injected object
         private IConfiguration _configuration;
         private readonly ProfileContext _proileContext;
+        private readonly BlogContext _blogContext;
 
         private List<Claim> Profile { get { return User.Claims.ToList();  } }
 
-        public HomeController( IConfiguration Configuration, ProfileContext ProfileConext)
+        public HomeController( IConfiguration Configuration, ProfileContext ProfileConext, BlogContext BlogContext)
         {
             //let set the object via constructor
             _configuration = Configuration;
             _proileContext = ProfileConext;
+            _blogContext = BlogContext;
         }
 
         public IActionResult Index()
 
         {
-            //this needs to be middleware
-            var currentProfile = _proileContext.Profile.FirstOrDefault(x => x.Email == Profile[9].Value);
+        
+            var v = new HomeViewModel();
+            v.Posts = _blogContext.Blog;
 
-            //if (User.Identity.IsAuthenticated)
-            //{
-            //    if (currentProfile == null)
-            //    {
-
-            //        HttpContext.Session.SetString("Email", Profile[9].Value);
-
-
-            //        return RedirectToAction("Index", "Register");
-            //    }
-            //}
-
-            //   return new ContentResult() { Content = "hello"};
-
-           
-
-            return View();
+            return View(v);
         }
 
 
@@ -68,7 +55,9 @@ namespace ElatePortal.Controllers
             ViewData["email"] = this.Profile[9].Value;
             ViewData["name"] = this.Profile[4].Value;
 
-            return View();
+            var profile = _proileContext.Profile.Single(x => x.Email.Equals(this.Profile[9].Value));
+
+            return View(profile);
         }
 
         [HttpPost]
