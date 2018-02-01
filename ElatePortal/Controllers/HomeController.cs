@@ -13,6 +13,7 @@ using Microsoft.AspNetCore.Hosting;
 using ElatePortal.DAL;
 using System.Collections;
 using System.Security.Claims;
+using ElatePortal.Extensions;
 using Microsoft.AspNetCore.Http;
 
 namespace ElatePortal.Controllers
@@ -25,25 +26,32 @@ namespace ElatePortal.Controllers
         private IConfiguration _configuration;
         private readonly ProfileContext _proileContext;
         private readonly BlogContext _blogContext;
+   
 
         private List<Claim> Profile { get { return User.Claims.ToList();  } }
 
-        public HomeController( IConfiguration Configuration, ProfileContext ProfileConext, BlogContext BlogContext)
+        public HomeController( 
+            IConfiguration Configuration, 
+            ProfileContext ProfileConext, 
+            BlogContext BlogContext
+       
+            )
         {
             //let set the object via constructor
             _configuration = Configuration;
             _proileContext = ProfileConext;
             _blogContext = BlogContext;
+     
         }
-
+  
         public IActionResult Index()
 
         {
         
-            var v = new HomeViewModel();
-            v.Posts = _blogContext.Blog;
+            var Email = HttpContext.GetEmail();
+            IQueryable<HomeViewModel> g = (from f in _blogContext.Blog join t in _proileContext.Profile on f.ProfileId equals t.Id select new HomeViewModel() {   Content= f.Content, Name = t.Name });
 
-            return View(v);
+            return Ok(g);
         }
 
 

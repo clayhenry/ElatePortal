@@ -13,6 +13,8 @@ namespace ElatePortal.DAL
         {
 
         }
+
         public DbSet<BlogModel> Blog { get; set; }
+
     }
 }

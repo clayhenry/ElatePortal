@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
+using ElatePortal.Extensions;
 
 namespace ElatePortal.Models
 {
@@ -18,7 +19,6 @@ namespace ElatePortal.Models
         {
             this._profileContext = profileContext;
         }
-
 
         public void CheckIfRegistered(HttpContext httpContext, PathString Path)
         {   
@@ -32,10 +32,7 @@ namespace ElatePortal.Models
                 {
                     httpContext.Response.Redirect("/Register");
                 }
-                else
-                {
-                    httpContext.Session.SetString("Email", Profile[9].Value);
-                }
+         
                 
             }
 
