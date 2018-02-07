@@ -7,12 +7,17 @@
 
 <ul>
 
-
-
     @foreach (var post in Model)
     {
         <li>@post.Content</li>
-        <li>@post.Name</li>
+        <li>
+            @post.Name <br />
+
+                       <form asp-controller="Blog" asp-action="CreateComment" method="post">
+                           <textarea name="content">  </textarea> <input type="submit" name="submit" value="submit comment" />
+                       </form>
+            </li>
+        
     }
 
 </ul>

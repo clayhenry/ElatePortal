@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ElatePortal.DAL;
 using ElatePortal.Models;
+using ElatePortal.Repository;
 
 namespace ElatePortal.Modules.Blog
 {
@@ -14,18 +15,20 @@ namespace ElatePortal.Modules.Blog
     [Route("api/Blogs")]
     public class BlogsController : Controller
     {
-        private readonly BlogContext _context;
+        private readonly BlogContext _blogcontext;
+        private readonly PortalRepository _protalreposirory;
 
-        public BlogsController(BlogContext context)
+        public BlogsController(BlogContext BlogContext, PortalRepository PortalRepository)
         {
-            _context = context;
+            this._blogcontext = BlogContext;
+            this._protalreposirory = PortalRepository;
         }
 
         // GET: api/Blogs
         [HttpGet]
         public IEnumerable<BlogModel> GetBlog()
         {
-            return _context.Blog;
+            return _blogcontext.Blog;
         }
 
         // GET: api/Blogs/5
@@ -37,7 +40,7 @@ namespace ElatePortal.Modules.Blog
                 return BadRequest(ModelState);
             }
 
-            var blog = await _context.Blog.SingleOrDefaultAsync(m => m.Id == id);
+            var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id);
 
             if (blog == null)
             {
@@ -61,11 +64,11 @@ namespace ElatePortal.Modules.Blog
                 return BadRequest();
             }
 
-            _context.Entry(blog).State = EntityState.Modified;
+            _blogcontext.Entry(blog).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _blogcontext.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -91,8 +94,8 @@ namespace ElatePortal.Modules.Blog
                 return BadRequest(ModelState);
             }
 
-            _context.Blog.Add(blog);
-            await _context.SaveChangesAsync();
+            _blogcontext.Blog.Add(blog);
+            await _blogcontext.SaveChangesAsync();
 
             return CreatedAtAction("GetBlog", new { id = blog.Id }, blog);
         }
@@ -106,21 +109,32 @@ namespace ElatePortal.Modules.Blog
                 return BadRequest(ModelState);
             }
 
-            var blog = await _context.Blog.SingleOrDefaultAsync(m => m.Id == id);
+            var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id);
             if (blog == null)
             {
                 return NotFound();
             }
 
-            _context.Blog.Remove(blog);
-            await _context.SaveChangesAsync();
+            _blogcontext.Blog.Remove(blog);
+            await _blogcontext.SaveChangesAsync();
 
             return Ok(blog);
         }
 
         private bool BlogExists(int id)
         {
-            return _context.Blog.Any(e => e.Id == id);
+            return _blogcontext.Blog.Any(e => e.Id == id);
         }
+
+
+        [HttpGet("create/comment")]
+        public IActionResult ViewBlog()
+        {
+
+            return Content("dasds");
+        }
+
+
+   
     }
 }

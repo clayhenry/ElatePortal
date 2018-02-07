@@ -18,6 +18,8 @@ namespace ElatePortal.Models
         public bool Registered { get; set; }
         public DateTime CreatedAt { get; set; }
         public virtual BlogModel BlogModel { get; set; }
+        public string Level { get; set; }
     }
 }
+
 

@@ -15,6 +15,7 @@ using System.Collections;
 using System.Security.Claims;
 using ElatePortal.Extensions;
 using Microsoft.AspNetCore.Http;
+using ElatePortal.Repository;
 
 namespace ElatePortal.Controllers
 {
@@ -26,32 +27,37 @@ namespace ElatePortal.Controllers
         private IConfiguration _configuration;
         private readonly ProfileContext _proileContext;
         private readonly BlogContext _blogContext;
+        private readonly PortalRepository _reposirory;
    
 
         private List<Claim> Profile { get { return User.Claims.ToList();  } }
 
-        public HomeController( 
-            IConfiguration Configuration, 
-            ProfileContext ProfileConext, 
-            BlogContext BlogContext
-       
+        public HomeController(
+            IConfiguration Configuration,
+            ProfileContext ProfileConext,
+            BlogContext BlogContext,
+            PortalRepository PortalRepository
+            
             )
         {
             //let set the object via constructor
             _configuration = Configuration;
             _proileContext = ProfileConext;
             _blogContext = BlogContext;
+            _reposirory = PortalRepository;
      
         }
   
         public IActionResult Index()
 
         {
-        
+                
             var Email = HttpContext.GetEmail();
             IQueryable<HomeViewModel> g = (from f in _blogContext.Blog join t in _proileContext.Profile on f.ProfileId equals t.Id select new HomeViewModel() {   Content= f.Content, Name = t.Name });
 
-            return Ok(g);
+            var id = _reposirory.GetProfileId(Email);
+
+            return View(g);
         }
 
 
@@ -60,10 +66,10 @@ namespace ElatePortal.Controllers
         public IActionResult Register()
         {
 
-            ViewData["email"] = this.Profile[9].Value;
+            ViewData["email"] = HttpContext.GetEmail();
             ViewData["name"] = this.Profile[4].Value;
 
-            var profile = _proileContext.Profile.Single(x => x.Email.Equals(this.Profile[9].Value));
+            var profile = _proileContext.Profile.Single(x => x.Email.Equals(HttpContext.GetEmail()));
 
             return View(profile);
         }

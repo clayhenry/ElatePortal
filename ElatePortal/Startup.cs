@@ -6,6 +6,7 @@ using ElatePortal.DAL;
 using ElatePortal.Middleware;
 using ElatePortal.Models;
 using ElatePortal.Modules;
+using ElatePortal.Repository;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
@@ -35,7 +36,8 @@ namespace ElatePortal
             services.AddDbContext<AuthorsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<BlogContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<ProfileContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-           
+            services.AddDbContext<CommentContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
 
             services.AddAuthentication(sharedOptions =>
             {
@@ -47,6 +49,7 @@ namespace ElatePortal
 
             services.AddScoped<IModule, Test>();
             services.AddScoped<RegisterModel>();
+            services.AddScoped<PortalRepository>();
 
             services.AddMvc().AddSessionStateTempDataProvider();
             services.AddSession();

@@ -29,6 +29,7 @@ namespace ElatePortal.Models
         public int CategoryId { get; set; }
         public string Status { get; set; }
 
+        public List<CommentModel> Comments { get; set; }
 
 
     }
