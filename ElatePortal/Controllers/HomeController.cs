@@ -24,6 +24,7 @@ namespace ElatePortal.Controllers
     {
 
         //this feeld will be the injected object
+
         private IConfiguration _configuration;
         private readonly ProfileContext _proileContext;
         private readonly BlogContext _blogContext;
@@ -53,9 +54,15 @@ namespace ElatePortal.Controllers
         {
                 
             var Email = HttpContext.GetEmail();
-            IQueryable<HomeViewModel> g = (from f in _blogContext.Blog join t in _proileContext.Profile on f.ProfileId equals t.Id select new HomeViewModel() {   Content= f.Content, Name = t.Name });
+            IQueryable<HomeViewModel> g = (from f in _blogContext.Blog
+                                           join t in _proileContext.Profile on f.ProfileId equals t.Id
+                                           select new HomeViewModel() {
+                Content = f.Content,
+                Name = t.Name,
+                BlogId = f.Id
+            });
 
-            var id = _reposirory.GetProfileId(Email);
+            //var id = _reposirory.GetProfileId(Email);
 
             return View(g);
         }
@@ -69,7 +76,7 @@ namespace ElatePortal.Controllers
             ViewData["email"] = HttpContext.GetEmail();
             ViewData["name"] = this.Profile[4].Value;
 
-            var profile = _proileContext.Profile.Single(x => x.Email.Equals(HttpContext.GetEmail()));
+            var profile = _proileContext.Profile.SingleOrDefault(x => x.Email.Equals(HttpContext.GetEmail()));
 
             return View(profile);
         }
@@ -85,6 +92,7 @@ namespace ElatePortal.Controllers
                 profile.ExternalId = Guid.Parse(this.Profile[7].Value);
                 profile.Registered = true;
                 profile.CreatedAt = DateTime.Now;
+                profile.Level = "Admin";
 
                 _proileContext.Update(profile);
                 await _proileContext.SaveChangesAsync();

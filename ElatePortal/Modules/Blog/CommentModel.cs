@@ -15,9 +15,9 @@ namespace ElatePortal.Models
         public int BlogId { get; set; }
         public int ProfileId { get; set; }
 
-        [DataType(DataType.Date)]
+        [DataType(DataType.DateTime)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}")]
-        public DateTime CreatedOn { get; set; }
+        public DateTime CreatedAt { get; set; }
 
 
     }

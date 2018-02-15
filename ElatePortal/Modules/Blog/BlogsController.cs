@@ -8,20 +8,25 @@ using Microsoft.EntityFrameworkCore;
 using ElatePortal.DAL;
 using ElatePortal.Models;
 using ElatePortal.Repository;
+using ElatePortal.Extensions;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ElatePortal.Modules.Blog
 {
+    [Authorize]
     [Produces("application/json")]
     [Route("api/Blogs")]
     public class BlogsController : Controller
     {
         private readonly BlogContext _blogcontext;
         private readonly PortalRepository _protalreposirory;
+        private readonly CommentContext _commentcontext;
 
-        public BlogsController(BlogContext BlogContext, PortalRepository PortalRepository)
+        public BlogsController(BlogContext BlogContext, PortalRepository PortalRepository, CommentContext CommentContext)
         {
             this._blogcontext = BlogContext;
             this._protalreposirory = PortalRepository;
+            this._commentcontext = CommentContext;
         }
 
         // GET: api/Blogs
@@ -127,11 +132,19 @@ namespace ElatePortal.Modules.Blog
         }
 
 
-        [HttpGet("create/comment")]
-        public IActionResult ViewBlog()
+        [HttpPost("create/comment/{blogid}")]
+        public async Task<IActionResult> CreateComment(int blogid, string Comment, CommentModel commentModel)
         {
 
-            return Content("dasds");
+            commentModel.BlogId = blogid;
+            commentModel.ProfileId = _protalreposirory.GetProfileId(HttpContext.GetEmail());
+            commentModel.Comment = Comment;
+            commentModel.CreatedAt = DateTime.Now;
+
+            _commentcontext.Update(commentModel);
+            await _commentcontext.SaveChangesAsync();
+
+            return Content(blogid.ToString());
         }
 
 

@@ -13,10 +13,10 @@
         <li>
             @post.Name <br />
 
-                       <form asp-controller="Blog" asp-action="CreateComment" method="post">
-                           <textarea name="content">  </textarea> <input type="submit" name="submit" value="submit comment" />
+                       <form action="/api/Blogs/create/comment/@post.BlogId" method="post">
+                           <textarea name="Comment"> @post.Comment </textarea> <input type="submit" name="submit" value="submit comment" />
                        </form>
-            </li>
+        </li>
         
     }
 

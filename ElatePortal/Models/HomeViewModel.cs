@@ -11,6 +11,8 @@ namespace ElatePortal.Models
 
         public string Content { get; set; }
         public string Name { get; set; }
+        public int BlogId { get; set; }
+        public string Comment { get; set; }
 
     }
 }
