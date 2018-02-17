@@ -9,13 +9,17 @@
 
     @foreach (var post in Model)
     {
-        <li>@post.Content</li>
+        <li>@post.Title</li>
+        <li>@post.Preview ...</li>
+        <li>Comments: @post.Comments.Count </li>        
+                          
         <li>
-            @post.Name <br />
+            
+            @post.Name <br/>
 
-                       <form action="/api/Blogs/create/comment/@post.BlogId" method="post">
-                           <textarea name="Comment"> @post.Comment </textarea> <input type="submit" name="submit" value="submit comment" />
-                       </form>
+            <form action="/api/Blogs/create/comment/@post.BlogId" method="post">
+                <textarea name="Comment"> @post.Comment </textarea> <input type="submit" name="submit" value="submit comment"/>
+            </form>
         </li>
         
     }

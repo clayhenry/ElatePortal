@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ElatePortal.Models;
 
 namespace ElatePortal.Repository
 {
@@ -24,6 +25,13 @@ namespace ElatePortal.Repository
         public int GetProfileId(string Email) {
             var Id = _profileContext.Profile.SingleOrDefault(x => x.Email == Email).Id;
             return Id;
+        }
+
+        public List<CommentModel> GetBlogComments(int blogId)
+        {
+            var comments =  _commentContext.Comment.Where(c => c.BlogId.Equals(blogId)).ToList();
+            return comments;
+
         }
 
 

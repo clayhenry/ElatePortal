@@ -52,14 +52,19 @@ namespace ElatePortal.Controllers
         public IActionResult Index()
 
         {
-                
+
             var Email = HttpContext.GetEmail();
+            //move to repository
             IQueryable<HomeViewModel> g = (from f in _blogContext.Blog
                                            join t in _proileContext.Profile on f.ProfileId equals t.Id
-                                           select new HomeViewModel() {
+                                           select new HomeViewModel {
                 Content = f.Content,
                 Name = t.Name,
-                BlogId = f.Id
+                BlogId = f.Id,
+                Title =  f.Title,
+                Preview =  new HomeViewModel().TruncateString(f.Content, 5),
+                Comments =  _reposirory.GetBlogComments(f.Id)
+                    
             });
 
             //var id = _reposirory.GetProfileId(Email);
