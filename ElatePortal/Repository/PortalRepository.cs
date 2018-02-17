@@ -22,16 +22,26 @@ namespace ElatePortal.Repository
            }
 
 
-        public int GetProfileId(string Email) {
-            var Id = _profileContext.Profile.SingleOrDefault(x => x.Email == Email).Id;
-            return Id;
+        public int GetProfileId(string email)
+        {
+           
+            try
+            {
+                var id = _profileContext.Profile.SingleOrDefault(x => x.Email == email).Id;
+                return id;
+            }
+            catch (ArgumentNullException e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+          
         }
 
         public List<CommentModel> GetBlogComments(int blogId)
         {
             var comments =  _commentContext.Comment.Where(c => c.BlogId.Equals(blogId)).ToList();
             return comments;
-
         }
 
         public IQueryable<HomeViewModel> GetBlogList()
