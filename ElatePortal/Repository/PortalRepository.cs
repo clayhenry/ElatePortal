@@ -34,6 +34,23 @@ namespace ElatePortal.Repository
 
         }
 
+        public IQueryable<HomeViewModel> GetBlogList()
+        {  
+            var g = (from f in _blogContext.Blog
+                join t in _profileContext.Profile on f.ProfileId equals t.Id
+                select new HomeViewModel {
+                    Content = f.Content,
+                    Name = t.Name,
+                    BlogId = f.Id,
+                    Title =  f.Title,
+                    Preview =  new HomeViewModel().TruncateString(f.Content, 5),
+                    Comments =  this.GetBlogComments(f.Id)
+                    
+                });
+
+            return g;
+        }
+
 
     }
 }

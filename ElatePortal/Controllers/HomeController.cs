@@ -28,7 +28,7 @@ namespace ElatePortal.Controllers
         private IConfiguration _configuration;
         private readonly ProfileContext _proileContext;
         private readonly BlogContext _blogContext;
-        private readonly PortalRepository _reposirory;
+        private readonly PortalRepository _repositrory;
    
 
         private List<Claim> Profile { get { return User.Claims.ToList();  } }
@@ -45,31 +45,15 @@ namespace ElatePortal.Controllers
             _configuration = Configuration;
             _proileContext = ProfileConext;
             _blogContext = BlogContext;
-            _reposirory = PortalRepository;
+            _repositrory = PortalRepository;
      
         }
   
         public IActionResult Index()
 
         {
-
-            var Email = HttpContext.GetEmail();
-            //move to repository
-            IQueryable<HomeViewModel> g = (from f in _blogContext.Blog
-                                           join t in _proileContext.Profile on f.ProfileId equals t.Id
-                                           select new HomeViewModel {
-                Content = f.Content,
-                Name = t.Name,
-                BlogId = f.Id,
-                Title =  f.Title,
-                Preview =  new HomeViewModel().TruncateString(f.Content, 5),
-                Comments =  _reposirory.GetBlogComments(f.Id)
-                    
-            });
-
-            //var id = _reposirory.GetProfileId(Email);
-
-            return View(g);
+            var blogList = _repositrory.GetBlogList();
+            return View(blogList);
         }
 
 
