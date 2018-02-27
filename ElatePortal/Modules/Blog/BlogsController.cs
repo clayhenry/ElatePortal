@@ -147,6 +147,14 @@ namespace ElatePortal.Modules.Blog
             return Content(blogid.ToString());
         }
 
+        [HttpGet("post/{id}")]
+        public IActionResult Post(int id)
+        {
+            var post = this._protalreposirory.GetBlogPost(id);
+            return View("~/Modules/Blog/Views/Post.cshtml", post);
+
+        }
+
 
    
     }

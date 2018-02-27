@@ -32,7 +32,7 @@ namespace ElatePortal.Repository
             }
             catch (ArgumentNullException e)
             {
-                Console.WriteLine(e);
+                Console.WriteLine(e.Message);
                 throw;
             }
           
@@ -59,6 +59,24 @@ namespace ElatePortal.Repository
                 });
 
             return g;
+        }
+        
+        public IQueryable<HomeViewModel> GetBlogPost(int id)
+        {  
+            var post = (from f in _blogContext.Blog
+                join t in _profileContext.Profile on f.ProfileId equals t.Id
+                where  f.Id.Equals(id)
+                select new HomeViewModel {
+                    Content = f.Content,
+                    Name = t.Name,
+                    BlogId = f.Id,
+                    Title =  f.Title,
+                    Preview =  new HomeViewModel().TruncateString(f.Content, 5),
+                    Comments =  this.GetBlogComments(f.Id)
+                    
+                });
+
+            return post;
         }
 
 

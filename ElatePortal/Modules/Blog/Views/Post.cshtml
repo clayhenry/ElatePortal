@@ -1,0 +1,25 @@
+@using ElatePortal.Models
+@model IQueryable<ElatePortal.Models.HomeViewModel>
+
+<body>
+
+@foreach (var post in Model)
+{
+
+   <h1>@post.Title</h1>
+   @post.Content
+   
+    <ul>
+   @foreach (var comment in post.Comments)
+    {
+       
+        <li>  @comment.Comment</li>
+        
+    }
+
+    </ul>
+
+}
+
+
+</body>
