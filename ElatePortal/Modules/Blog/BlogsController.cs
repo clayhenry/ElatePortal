@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ElatePortal.Modules.Blog
 {
-    [Authorize]
+    //[Authorize]
     [Produces("application/json")]
     [Route("api/Blogs")]
     public class BlogsController : Controller

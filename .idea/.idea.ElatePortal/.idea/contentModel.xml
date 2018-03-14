@@ -25,15 +25,24 @@
           <e p="README.md" t="Include" />
           <e p="src" t="Include">
             <e p="app" t="Include">
+              <e p="app-routing.module.ts" t="Include" />
               <e p="app.component.css" t="Include" />
               <e p="app.component.html" t="Include" />
               <e p="app.component.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
+              <e p="Blog" t="Include">
+                <e p="blog.component.css" t="Include" />
+                <e p="blog.component.html" t="Include" />
+                <e p="blog.component.spec.ts" t="Include" />
+                <e p="blog.component.ts" t="Include" />
+              </e>
               <e p="counter" t="Include">
                 <e p="counter.component.html" t="Include" />
                 <e p="counter.component.spec.ts" t="Include" />
                 <e p="counter.component.ts" t="Include" />
               </e>
+              <e p="data.service.spec.ts" t="Include" />
+              <e p="data.service.ts" t="Include" />
               <e p="fetch-data" t="Include">
                 <e p="fetch-data.component.html" t="Include" />
                 <e p="fetch-data.component.ts" t="Include" />
@@ -56,6 +65,9 @@
               <e p="environment.ts" t="Include" />
             </e>
             <e p="index.html" t="Include" />
+            <e p="interfaces" t="Include">
+              <e p="posts.ts" t="Include" />
+            </e>
             <e p="main.ts" t="Include" />
             <e p="polyfills.ts" t="Include" />
             <e p="styles.css" t="Include" />
@@ -141,6 +153,7 @@
             </e>
           </e>
         </e>
+        <e p="package-lock.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
