@@ -2,33 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69be5bd4-d2ad-4b6f-9af5-996d085136e6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/DAL/GalleryContext.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Middleware/LoginMiddleware.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryImage.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryIndexModel.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Gallery/ImageTag.cs" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Gallery/Views/Gallery.cshtml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/dataSources.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.vs/ElatePortal/v15/.suo" afterPath="$PROJECT_DIR$/.vs/ElatePortal/v15/.suo" />
       <change beforePath="$PROJECT_DIR$/.vs/ElatePortal/v15/Server/sqlite3/storage.ide" afterPath="$PROJECT_DIR$/.vs/ElatePortal/v15/Server/sqlite3/storage.ide" />
-      <change beforePath="$PROJECT_DIR$/.vs/config/applicationhost.config" afterPath="$PROJECT_DIR$/.vs/config/applicationhost.config" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal.sln" afterPath="$PROJECT_DIR$/ElatePortal.sln" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/ClientApp/src/app/app.component.ts" afterPath="$PROJECT_DIR$/ElatePortal/ClientApp/src/app/app.component.ts" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/ClientApp/src/app/blog/blog.component.html" afterPath="$PROJECT_DIR$/ElatePortal/ClientApp/src/app/blog/blog.component.html" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Controllers/AccountController.cs" afterPath="$PROJECT_DIR$/ElatePortal/Controllers/AccountController.cs" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Controllers/HomeController.cs" afterPath="$PROJECT_DIR$/ElatePortal/Controllers/HomeController.cs" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterModel.cs" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterModel.cs" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Properties/launchSettings.json" afterPath="$PROJECT_DIR$/ElatePortal/Properties/launchSettings.json" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Startup.cs" afterPath="$PROJECT_DIR$/ElatePortal/Startup.cs" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csprojResolveAssemblyReference.cache" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" />
+      <change beforePath="$PROJECT_DIR$/.vs/ElatePortal/v15/Server/sqlite3/storage.ide-shm" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.vs/ElatePortal/v15/Server/sqlite3/storage.ide-wal" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.cache" afterPath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.cache" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.props" afterPath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.props" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/project.assets.json" afterPath="$PROJECT_DIR$/ElatePortal/obj/project.assets.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,22 +62,36 @@
             <state relative-caret-position="136">
               <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
               <folding>
-                <marker date="1521510631004" expanded="true" signature="28:163" ph="{...}" />
                 <marker date="1521510631004" expanded="true" signature="56:161" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UploadController.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UploadController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="33" />
+            <state relative-caret-position="-850">
+              <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
-                <marker date="1521688858679" expanded="true" signature="6:105" ph="..." />
-                <marker date="1521688858679" expanded="true" signature="189:1749" ph="{...}" />
-                <marker date="1521688858679" expanded="true" signature="247:1743" ph="{...}" />
+                <marker date="1521769452265" expanded="false" signature="6:307" ph="..." />
+                <marker date="1521769452265" expanded="true" signature="342:3255" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="391:3253" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="512:576" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="628:2124" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="708:888" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="757:857" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="950:1120" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="1009:1106" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="1200:1831" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="1270:1511" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="1564:1799" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="1941:2026" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="2215:3245" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="2328:3175" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="2383:3161" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="2752:2856" ph="{...}" />
+                <marker date="1521769452265" expanded="true" signature="2929:3141" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -105,14 +100,9 @@
       <file leaf-file-name="Gallery.cshtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/Views/Gallery.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-              <folding>
-                <marker date="1521514855590" expanded="true" signature="96:416" ph="&lt;ul.../&gt;" />
-                <marker date="1521514855590" expanded="true" signature="191:397" ph="&lt;li.../&gt;" />
-                <marker date="1521514855590" expanded="true" signature="226:370" ph="@..." />
-                <marker date="1521514855590" expanded="true" signature="258:370" ph="{...}" />
-              </folding>
+            <state relative-caret-position="510">
+              <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -217,7 +207,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GalleryIndexModel.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GalleryIndexModel.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryIndexModel.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
@@ -358,6 +348,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -376,26 +367,12 @@
               <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Modules" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
-            <path>
-              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
-              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Modules" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Gallery" type="977d5f41:SolutionExplorerNodeRider" />
-            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1298,6 +1275,7 @@
       <workItem from="1520999453226" duration="25315000" />
       <workItem from="1521251328557" duration="9991000" />
       <workItem from="1521688898953" duration="1483000" />
+      <workItem from="1521769956443" duration="39000" />
     </task>
     <task id="LOCAL-00001" summary="Home Page Blog">
       <created>1518838665371</created>
@@ -1359,7 +1337,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71056000" />
+    <option name="totallyTimeSpent" value="71095000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1382,9 +1360,8 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42065218" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57173914" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17750533" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17910448" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.4968017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15671642" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -1396,6 +1373,7 @@
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.4968017" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1783,26 +1761,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/Views/Gallery.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="12" lean-forward="false" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <marker date="1521514855590" expanded="true" signature="96:416" ph="&lt;ul.../&gt;" />
-            <marker date="1521514855590" expanded="true" signature="191:397" ph="&lt;li.../&gt;" />
-            <marker date="1521514855590" expanded="true" signature="226:370" ph="@..." />
-            <marker date="1521514855590" expanded="true" signature="258:370" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <marker date="1521688858679" expanded="true" signature="6:105" ph="..." />
-            <marker date="1521688858679" expanded="true" signature="189:1749" ph="{...}" />
-            <marker date="1521688858679" expanded="true" signature="247:1743" ph="{...}" />
-          </folding>
+        <state relative-caret-position="510">
+          <caret line="30" column="12" lean-forward="false" selection-start-line="30" selection-start-column="12" selection-end-line="30" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1831,7 +1792,6 @@
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <marker date="1521510631004" expanded="true" signature="28:163" ph="{...}" />
             <marker date="1521510631004" expanded="true" signature="56:161" ph="{...}" />
           </folding>
         </state>
@@ -1844,6 +1804,33 @@
           <folding>
             <marker date="1521689863162" expanded="true" signature="63:224" ph="{...}" />
             <marker date="1521689863162" expanded="true" signature="100:222" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-850">
+          <caret line="14" column="17" lean-forward="false" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+          <folding>
+            <marker date="1521769452265" expanded="false" signature="6:307" ph="..." />
+            <marker date="1521769452265" expanded="true" signature="342:3255" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="391:3253" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="512:576" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="628:2124" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="708:888" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="757:857" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="950:1120" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="1009:1106" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="1200:1831" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="1270:1511" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="1564:1799" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="1941:2026" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="2215:3245" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="2328:3175" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="2383:3161" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="2752:2856" ph="{...}" />
+            <marker date="1521769452265" expanded="true" signature="2929:3141" ph="{...}" />
           </folding>
         </state>
       </provider>
