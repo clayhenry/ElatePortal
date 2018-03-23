@@ -1,0 +1,282 @@
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071316.200.txt
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071315-1.200.txt
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071315.200.txt
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071300.200.txt
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071257.200.txt
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T071037.200.txt
+
+###
+
+GET http://localhost:5000/Account/auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070845.404.html
+
+###
+
+GET http://localhost:5000/Account/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070837.404.html
+
+###
+
+GET http://localhost:5000/api/Blogs/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070548.200.json
+
+###
+
+GET http://localhost:5000/api/Blogs/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070447-2.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070447-1.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070447.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/Auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070446.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/auth
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070358.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/authentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070329.400.json
+
+###
+
+GET http://localhost:5000/api/Blogs/post/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070318.200.html
+
+###
+
+GET http://localhost:5000/api/Blog/authentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T070301.404.html
+
+###
+
+GET http://localhost:5000/Account/jjjjj
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065734.404.html
+
+###
+
+GET http://localhost:5000/Account/jjjjj
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065601.404.html
+
+###
+
+GET http://localhost:5000/Account/AccessDenied
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065531.500.html
+
+###
+
+GET http://localhost:5000/Account/SignedOut
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065522.500.html
+
+###
+
+GET http://localhost:5000/Account/SignIn
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065510.200.html
+
+###
+
+GET http://localhost:5000/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065440.404.html
+
+###
+
+GET http://localhost:5000/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065429.404.html
+
+###
+
+GET http://localhost:5000/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065335.404.html
+
+###
+
+GET http://localhost:5000/Account/SignIn
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065319.200.html
+
+###
+
+GET http://localhost:5000/Account/Index
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065309.404.html
+
+###
+
+GET http://localhost:5000/Home/Index
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065245.200.html
+
+###
+
+GET http://localhost:5000/HomeController/Index
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065236.404.html
+
+###
+
+GET http://localhost:5000/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065204.404.html
+
+###
+
+GET http://localhost:5000/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065154.404.html
+
+###
+
+GET http://localhost:5000/AccountController/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065144.404.html
+
+###
+
+GET http://localhost:5000/api/Blogs/post/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-03-14T065124.200.html
+
+###
+
+GET http://localhost:8080/api/Blogs/post/1
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/Account/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+###
+
+GET http://localhost:8080/AccountController/CheckAuthentication
+Accept: */*
+Cache-Control: no-cache
+
+###
+

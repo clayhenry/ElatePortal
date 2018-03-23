@@ -84,11 +84,13 @@
           <e p="AuthorsController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
           <e p="SampleDataController.cs" t="Include" />
+          <e p="UploadController.cs" t="Include" />
         </e>
         <e p="DAL" t="Include">
           <e p="AuthorsContext.cs" t="Include" />
           <e p="BlogContext.cs" t="Include" />
           <e p="CommentContext.cs" t="Include" />
+          <e p="GalleryContext.cs" t="Include" />
           <e p="ProfileContext.cs" t="Include" />
         </e>
         <e p="ElatePortal.csproj" t="IncludeRecursive" />
@@ -98,6 +100,7 @@
           <e p="ElateExtensions.cs" t="Include" />
         </e>
         <e p="Middleware" t="Include">
+          <e p="LoginMiddleware.cs" t="Include" />
           <e p="RegisterMiddleware.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
@@ -134,6 +137,14 @@
             <e p="CommentModel.cs" t="Include" />
             <e p="Views" t="Include">
               <e p="Post.cshtml" t="Include" />
+            </e>
+          </e>
+          <e p="Gallery" t="Include">
+            <e p="GalleryImage.cs" t="Include" />
+            <e p="GalleryIndexModel.cs" t="Include" />
+            <e p="ImageTag.cs" t="Include" />
+            <e p="Views" t="Include">
+              <e p="Gallery.cshtml" t="Include" />
             </e>
           </e>
           <e p="IModule.cs" t="Include" />

@@ -4,7 +4,7 @@ namespace ElatePortal.Models
 {
     public class GalleryIndexModel
     {
-        public IEnumerable<GalleryImages> Type { get; set; }
+        public IEnumerable<GalleryImage> Images { get; set; }
         public string SearchQuery { get; set; }
     }
 }    

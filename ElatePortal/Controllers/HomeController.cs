@@ -52,6 +52,7 @@ namespace ElatePortal.Controllers
         public IActionResult Index()
 
         {
+               this.HttpContext.Response.Redirect("/");
             var blogList = _repositrory.GetBlogList();
             return View(blogList);
         }

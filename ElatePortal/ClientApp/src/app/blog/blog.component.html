@@ -5,17 +5,18 @@
 
 count: {{itemCount}}
 
-{{listItem}}
 
-
-
-  <div *ngFor="let post of blogposts; let i=index" (click)="removeItem(i)">
-
-  {{post.title}}
-  {{post.content}}
+<div *ngFor="let item of items; let i=index" (click)="removeItem(i)">
+  {{item}}
   <br>
+</div>
 
 
+<h1>Blog</h1>
+  <div *ngFor="let post of blogposts; let i=index" (click)="removeItem(i)">
+    {{post.title}}
+    {{post.content}}
+  <br>
   </div>
 
 

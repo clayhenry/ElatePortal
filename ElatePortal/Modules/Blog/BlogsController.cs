@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ElatePortal.Modules.Blog
 {
-    //[Authorize]
+    [Authorize]
     [Produces("application/json")]
     [Route("api/Blogs")]
     public class BlogsController : Controller
@@ -89,6 +89,9 @@ namespace ElatePortal.Modules.Blog
 
             return NoContent();
         }
+        
+        
+
 
         // POST: api/Blogs
         [HttpPost]
@@ -154,8 +157,6 @@ namespace ElatePortal.Modules.Blog
             return View("~/Modules/Blog/Views/Post.cshtml", post);
 
         }
-
-
    
     }
 }

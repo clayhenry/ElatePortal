@@ -26,7 +26,7 @@ namespace ElatePortal.Models
 
             if (Path != "/Register")
             {
-                var currentProfile = _profileContext.Profile.SingleOrDefault(x => x.Email == Profile[9].Value);
+                var currentProfile = _profileContext.Profile.SingleOrDefault(x => x.Email == Profile[10].Value);
 
                 if (currentProfile == null)
                 {

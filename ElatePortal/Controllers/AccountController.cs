@@ -5,13 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 
 namespace ElatePortal.Controllers
 {
     [Route("[controller]/[action]")]
     public class AccountController : Controller
     {
+
+        
         [HttpGet]
         public IActionResult SignIn()
         {
@@ -48,5 +52,20 @@ namespace ElatePortal.Controllers
         {
             return View();
         }
+        
+        [HttpGet]
+        public IActionResult Auth()
+        {
+            
+            if (User.Identity.IsAuthenticated)
+            {
+                
+                var cList = User.Claims.ToList();
+                return Ok("true");
+            };
+
+            return Ok("false");;
+        }
+     
     }
 }
