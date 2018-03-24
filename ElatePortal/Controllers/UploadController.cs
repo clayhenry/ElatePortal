@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ElatePortal.Models;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Hosting.Internal;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SixLabors.ImageSharp.Processing;
@@ -16,10 +17,13 @@ namespace ElatePortal.Controllers
     {
 
         private IHostingEnvironment _he;
-
-        public UploadController(IHostingEnvironment hostingEnvironment)
+        private Helper _helper;
+    
+            
+        public UploadController(IHostingEnvironment hostingEnvironment, Helper helper)
         {
             this._he = hostingEnvironment;
+            this._helper = helper;
 
         }
         // GET
@@ -77,34 +81,13 @@ namespace ElatePortal.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Index(List<IFormFile> files)
+        public IActionResult Index(List<IFormFile> files)
         {
-            long size = files.Sum(f => f.Length);
-        
-            foreach (var formFile in files)
-            {
-                if (formFile.Length > 0)
-                {
 
-                   var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(formFile.FileName);
-                   var uploadFilePath = Path.Combine(_he.WebRootPath, "uploads", fileName);
-                   var filePath = Path.GetTempFileName();
-                    using (var stream = new FileStream(filePath, FileMode.Create))
-                    {
-                        await formFile.CopyToAsync(stream);
-                    }
+            
+          var uploadedFile = this._helper.UploadImages(files);
 
-                     using (Image<Rgba32> image = Image.Load(filePath))
-                    {
-                      
-                        image.Mutate(ctx => ctx.Resize(image.Width / 2, image.Height / 2));
-                        image.Save(uploadFilePath); 
-                    } 
-
-                }
-            }
-
-            return Ok(new { count = files.Count, size });
+            return Ok(new { count = uploadedFile });
 
         }
 

@@ -127,6 +127,7 @@
           <e p="Content.cs" t="Include" />
           <e p="EmployeeViewComponent.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="Helper.cs" t="Include" />
           <e p="HomeViewModel.cs" t="Include" />
           <e p="Profile.cs" t="Include" />
         </e>
@@ -280,7 +281,11 @@
             </e>
           </e>
           <e p="uploads" t="Include">
-            <e p="5e5f4a2582cb43da8378bd305b84f7b3.jpg" t="Include" />
+            <e p="26426b452d4d45f3a7c439ec603db3d5.jpg" t="Include" />
+            <e p="4db77ac92f9b4866933f9871a388f88a.jpg" t="Include" />
+            <e p="6885d4a57bb94abbb58a4044579258c2.jpg" t="Include" />
+            <e p="69d35f2ce12a4e749b026c0d6aa6cfdd.jpg" t="Include" />
+            <e p="a12642f1127b48c7ae90221ac2f35a57.jpg" t="Include" />
           </e>
         </e>
       </e>
