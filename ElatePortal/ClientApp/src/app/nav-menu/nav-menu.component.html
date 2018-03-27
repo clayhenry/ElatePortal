@@ -23,8 +23,11 @@
                         <span class='glyphicon glyphicon-home'></span> Home
                     </a>
                 </li>
-                <li [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/counter"]' (click)='collapse()'>
+                <li [routerLinkActive]='["link-active"]' [routerLinkActiveOptions]='{ exact: true }'>
+
+                  <a [routerLink]="['/counter'] "  (click)='collapse()' >
+
+
                         <span class='glyphicon glyphicon-education'></span> Counter
                     </a>
                 </li>

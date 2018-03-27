@@ -5,3 +5,19 @@
 <p>Current count: <strong>{{ currentCount }}</strong></p>
 
 <button (click)="incrementCounter()">Increment</button>
+
+
+<nav>
+  You need to speciffy parent route and oultlet name in the routes.module
+  <a [routerLink]="[{ outlets: { here: ['fetch-data'] } }]">Data</a>
+
+</nav>
+
+
+
+<div style="background-color: aqua">
+jjj
+  <router-outlet name="here"></router-outlet>
+kkk
+</div>
+

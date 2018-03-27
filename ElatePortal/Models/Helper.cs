@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -21,7 +22,7 @@ namespace ElatePortal.Models
         {
             this._he = hostingEnvironment;
         }
-
+ 
         public string[] UploadImages (List<IFormFile> files)
         {
             long size = files.Sum(f => f.Length);

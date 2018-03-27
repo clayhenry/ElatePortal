@@ -30,8 +30,12 @@ import { AppRoutingModule } from './/app-routing.module';
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'counter', component: CounterComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'counter', component: CounterComponent,
+        children: [{
+
+          path: 'fetch-data', component: FetchDataComponent, outlet:'here'
+        }]
+      },
       { path: 'blog/:id', component: BlogComponent },
     ]),
     AppRoutingModule
