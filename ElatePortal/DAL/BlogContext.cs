@@ -14,7 +14,7 @@ namespace ElatePortal.DAL
 
         }
 
-        public DbSet<BlogModel> Blog { get; set; }
+        public DbSet<Blog> Blog { get; set; }
 
     }
 }

@@ -1,8 +1,10 @@
 ﻿using ElatePortal.DAL;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using ElatePortal.Modules.Blog;
 
 namespace ElatePortal.Models
 {
@@ -14,19 +16,27 @@ namespace ElatePortal.Models
         public int BlogId { get; set; }
         public string Comment { get; set; }
         public string Title { get; set; }
-        public List<CommentModel> Comments { get; set; }
+        [NotMapped]
+        public List<Comments> Comments { get; set; }
         public string Preview { get; set; }
        
 
       
         public string TruncateString(string content, int wordCount)
         {
-           var contentArray = content.Split(" ");
+           
+           var contentArray = content.Trim().Split(" ");
             var preview = "";
-            
-            for (int i = 0; i < wordCount; i++)
+            if(wordCount < contentArray.Length){
+                for (int i = 0; i < wordCount; i++)
+                {
+                    preview += contentArray[i] + " ";
+                }
+            }
+            else
             {
-                preview += contentArray[i] + " ";
+
+                preview = content;
             }
           return preview;
         }

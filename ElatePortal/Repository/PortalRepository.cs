@@ -2,8 +2,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ElatePortal.Models;
+using ElatePortal.Modules.Blog;
+using Microsoft.EntityFrameworkCore;
 
 namespace ElatePortal.Repository
 {
@@ -30,7 +33,7 @@ namespace ElatePortal.Repository
                 var id = _profileContext.Profile.SingleOrDefault(x => x.Email == email).Id;
                 return id;
             }
-            catch (ArgumentNullException e)
+            catch (NullReferenceException e)
             {
                 Console.WriteLine(e.Message);
                 throw;
@@ -38,23 +41,59 @@ namespace ElatePortal.Repository
           
         }
 
-        public List<CommentModel> GetBlogComments(int blogId)
+        public List<Comments> GetBlogComments(int blogId)
         {
-            var comments =  _commentContext.Comment.Where(c => c.BlogId.Equals(blogId)).ToList();
+            var comments =  _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) ).ToList();
             return comments;
         }
 
+
+        public List<Profile> GetCommentAuthor(int profileId)
+        {
+
+            var author = _profileContext.Profile.Where(x => x.Id.Equals(profileId)).ToList();
+            return author;
+        }
+        
+        public IQueryable<HomeViewModel> GetCommentsAndBlogTitle()
+        {
+
+            var g = (from p in _blogContext.Blog
+                    
+                select new HomeViewModel
+                    {
+                        Content = p.Content,
+                        BlogId = p.Id,
+                        Title = p.Title,
+                      
+                      //  Preview = new HomeViewModel().TruncateString(p.Content, 3),
+                        Comments = _commentContext.Comments.Where(x=>x.BlogId.Equals(p.Id))
+                            .Select(com => new Comments()
+                            {
+                                Preview = new HomeViewModel().TruncateString(com.Comment, 6),
+                                Comment = com.Comment,
+                                Author = _profileContext.Profile.Where(pr=>pr.Id.Equals(com.ProfileId)).ToList(),                              
+                                Status = com.Status
+                            }).ToList()
+                    }
+
+                );
+           
+            return g;
+        }
+        
         public IQueryable<HomeViewModel> GetBlogList()
         {  
             var g = (from f in _blogContext.Blog
                 join t in _profileContext.Profile on f.ProfileId equals t.Id
+               
                 select new HomeViewModel {
                     Content = f.Content,
                     Name = t.Name,
                     BlogId = f.Id,
                     Title =  f.Title,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
-                    Comments =  this.GetBlogComments(f.Id)
+                    Comments =  GetBlogComments(f.Id)
                     
                 });
 
@@ -72,7 +111,7 @@ namespace ElatePortal.Repository
                     BlogId = f.Id,
                     Title =  f.Title,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
-                    Comments =  this.GetBlogComments(f.Id)
+                    Comments =  GetBlogComments(f.Id)
                     
                 });
 

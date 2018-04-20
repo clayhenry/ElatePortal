@@ -17,7 +17,7 @@ namespace ElatePortal.Models
         public bool Editor { get; set; }
         public bool Registered { get; set; }
         public DateTime CreatedAt { get; set; }
-        public virtual BlogModel BlogModel { get; set; }
+        public virtual Blog Blog { get; set; }
         public string Level { get; set; }
     }
 }

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ElatePortal.Models;
 using ElatePortal.Modules;
+using ElatePortal.Modules.Blog;
 
 namespace ElatePortal.DAL
 {
@@ -16,6 +17,6 @@ namespace ElatePortal.DAL
 
         }
 
-        public DbSet<CommentModel> Comment { get; set; }
+        public DbSet<Comments> Comments { get; set; }
     }
 }

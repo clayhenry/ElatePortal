@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ElatePortal.Models;
 
-namespace ElatePortal.Controllers
+namespace ElatePortal.Modules.Registration
 {
     public class RegisterController : Controller
     {
@@ -27,7 +27,7 @@ namespace ElatePortal.Controllers
 
         public IActionResult Index(string email, string name)
         {
-
+//redirects here after post
             {
   
                 return View();

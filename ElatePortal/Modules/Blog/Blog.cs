@@ -5,10 +5,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 using System.Linq;
 using System.Threading.Tasks;
+using ElatePortal.Modules.Blog;
 
 namespace ElatePortal.Models
 {
-    public class BlogModel
+    public class Blog
     {
 
         [Key]
@@ -29,7 +30,7 @@ namespace ElatePortal.Models
         public int CategoryId { get; set; }
         public string Status { get; set; }
 
-        public List<CommentModel> Comments { get; set; }
+        public List<Comments> Comments { get; set; }
 
 
     }

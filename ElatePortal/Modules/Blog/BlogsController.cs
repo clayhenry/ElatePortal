@@ -19,19 +19,19 @@ namespace ElatePortal.Modules.Blog
     public class BlogsController : Controller
     {
         private readonly BlogContext _blogcontext;
-        private readonly PortalRepository _protalreposirory;
+        private readonly PortalRepository _portalreposirory;
         private readonly CommentContext _commentcontext;
 
         public BlogsController(BlogContext BlogContext, PortalRepository PortalRepository, CommentContext CommentContext)
         {
             this._blogcontext = BlogContext;
-            this._protalreposirory = PortalRepository;
+            this._portalreposirory = PortalRepository;
             this._commentcontext = CommentContext;
         }
 
         // GET: api/Blogs
         [HttpGet]
-        public IEnumerable<BlogModel> GetBlog()
+        public IEnumerable<Models.Blog> GetBlog()
         {
             return _blogcontext.Blog;
         }
@@ -57,7 +57,7 @@ namespace ElatePortal.Modules.Blog
 
         // PUT: api/Blogs/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutBlog([FromRoute] int id, [FromBody] BlogModel blog)
+        public async Task<IActionResult> PutBlog([FromRoute] int id, [FromBody] Models.Blog blog)
         {
             if (!ModelState.IsValid)
             {
@@ -92,10 +92,9 @@ namespace ElatePortal.Modules.Blog
         
         
 
-
         // POST: api/Blogs
         [HttpPost]
-        public async Task<IActionResult> PostBlog([FromBody] BlogModel blog)
+        public async Task<IActionResult> PostBlog([FromBody] Models.Blog blog)
         {
             if (!ModelState.IsValid)
             {
@@ -136,15 +135,15 @@ namespace ElatePortal.Modules.Blog
 
 
         [HttpPost("create/comment/{blogid}")]
-        public async Task<IActionResult> CreateComment(int blogid, string Comment, CommentModel commentModel)
+        public async Task<IActionResult> CreateComment(int blogid, string Comment, Comments comments)
         {
 
-            commentModel.BlogId = blogid;
-            commentModel.ProfileId = _protalreposirory.GetProfileId(HttpContext.GetEmail());
-            commentModel.Comment = Comment;
-            commentModel.CreatedAt = DateTime.Now;
+            comments.BlogId = blogid;
+            comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
+            comments.Comment = Comment;
+            comments.CreatedAt = DateTime.Now;
 
-            _commentcontext.Update(commentModel);
+            _commentcontext.Update(comments);
             await _commentcontext.SaveChangesAsync();
 
             return Content(blogid.ToString());
@@ -153,10 +152,27 @@ namespace ElatePortal.Modules.Blog
         [HttpGet("post/{id}")]
         public IActionResult Post(int id)
         {
-            var post = this._protalreposirory.GetBlogPost(id);
+            var post = this._portalreposirory.GetBlogPost(id);
             return View("~/Modules/Blog/Views/Post.cshtml", post);
 
         }
+        [HttpGet("/Admin/Blog/List")]
+        public IActionResult List()
+        {
+            var Bloglist = this._portalreposirory.GetBlogList();
+            
+            var lists = new Dictionary<string, IQueryable>(){
+            { "blogs" ,  Bloglist },
+            {"comments", this._portalreposirory.GetCommentsAndBlogTitle()}
+              
+            };
+            return View("~/Modules/Blog/Views/List.cshtml", lists);
+
+        }
+
+        
+        
+        
    
     }
 }
