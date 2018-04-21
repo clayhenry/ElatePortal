@@ -6,6 +6,8 @@
 
 <body>
 
+
+
 <h1>Posts</h1>    
 
 <ul>  
@@ -16,14 +18,13 @@
 }
 </ul>
 <h1>Comments need to be moderated</h1>  
-
+<form action="/Admin/Blog/ModerateCommet" method="post">
 
 <ul>  
     @foreach (var post in Model["comments"])
     {
        
-                
-        
+               
         <h2>@post.Title</h2>
             
         <div>All Comments:@post.Comments.Count </div>
@@ -57,7 +58,7 @@
                    
                 <li>
                    <div>
-                        <input type="checkbox" name="comment"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a>
+                        <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a>
                    </div>
                    <div>@comment.Comment (in modal) </div>
                    <div>Status:<strong> Pending Approval</strong></div>
@@ -66,9 +67,9 @@
 
                if (!comment.Status.Equals(0))
                {
-                   
+                  
                    <li>
-                       <div> <input type="checkbox" name="comment"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a></div>
+                       <div> <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a></div>
                        <div>@comment.Comment (in modal) </div>
                        <div>Status:<strong> Approved</strong></div>
                    </li>
@@ -77,9 +78,9 @@
            }
             
         </ul>
-        <div>Approve Disapprove</div>
+        <div><input type="submit" name="update" value="Approve"/> <input type="submit" name="update" value="Disapprove"/> </div>
     }
 </ul>
-
+</form>
 
 </body>

@@ -40,17 +40,26 @@
                     <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
                     <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
                 </ul>
+                
                 @await Html.PartialAsync("_LoginPartial")
             </div>
         </div>
     </nav>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; 2018 - ElatePortal</p>
-        </footer>
-    </div>
+<div class="container body-content">
+    
+    @if (TempData["message"] != null)
+    {
+        <span>@TempData["message"]</span>
+    }
+    
+    @RenderBody()
+    
+    
+    <hr/>
+    <footer>
+        <p>&copy; 2018 - ElatePortal</p>
+    </footer>
+</div>
 
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery.js"></script>

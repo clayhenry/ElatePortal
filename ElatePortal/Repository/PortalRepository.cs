@@ -73,7 +73,8 @@ namespace ElatePortal.Repository
                                 Preview = new HomeViewModel().TruncateString(com.Comment, 6),
                                 Comment = com.Comment,
                                 Author = _profileContext.Profile.Where(pr=>pr.Id.Equals(com.ProfileId)).ToList(),                              
-                                Status = com.Status
+                                Status = com.Status,
+                                Id = com.Id
                             }).ToList()
                     }
 

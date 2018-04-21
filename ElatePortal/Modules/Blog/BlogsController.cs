@@ -156,6 +156,8 @@ namespace ElatePortal.Modules.Blog
             return View("~/Modules/Blog/Views/Post.cshtml", post);
 
         }
+      
+        
         [HttpGet("/Admin/Blog/List")]
         public IActionResult List()
         {
@@ -166,8 +168,43 @@ namespace ElatePortal.Modules.Blog
             {"comments", this._portalreposirory.GetCommentsAndBlogTitle()}
               
             };
+    
+              //  TempData["message"] = message;
+          
+            
             return View("~/Modules/Blog/Views/List.cshtml", lists);
 
+        }
+
+        [HttpPost]
+        [Route("/Admin/Blog/ModerateCommet")]
+        public async Task<IActionResult> ModeeateComments(List<int> commentId, string update)
+        {
+            if (ModelState.IsValid) {
+            var updateComments = _commentcontext.Comments.Where(x => commentId.Contains(x.Id));
+
+            foreach (var comment in updateComments)
+            {
+                if(update == "Approve"){
+                    comment.Status = 1;
+                }
+                else
+                {
+                    comment.Status = 0;
+                }
+                _commentcontext.Comments.Update(comment);
+            }
+     
+                await _commentcontext.SaveChangesAsync();
+               
+                TempData["message"] = "Updated";
+               
+                return RedirectToAction("List");
+
+            }
+            
+            return Content("zsdkhkj");
+            
         }
 
         
