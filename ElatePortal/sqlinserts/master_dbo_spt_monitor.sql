@@ -1,0 +1,1 @@
+INSERT INTO master.dbo.spt_monitor (lastrun, cpu_busy, io_busy, idle, pack_received, pack_sent, connections, pack_errors, total_read, total_write, total_errors) VALUES ('2016-04-30 00:46:37.563', 11, 6, 703, 39, 39, 34, 0, 0, 0, 0);

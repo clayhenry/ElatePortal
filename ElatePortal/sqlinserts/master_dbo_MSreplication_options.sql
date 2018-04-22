@@ -1,0 +1,3 @@
+INSERT INTO master.dbo.MSreplication_options (optname, value, major_version, minor_version, revision, install_failures) VALUES ('transactional', 1, 90, 0, 0, 0);
+INSERT INTO master.dbo.MSreplication_options (optname, value, major_version, minor_version, revision, install_failures) VALUES ('merge', 1, 90, 0, 0, 0);
+INSERT INTO master.dbo.MSreplication_options (optname, value, major_version, minor_version, revision, install_failures) VALUES ('security_model', 1, 90, 0, 0, 0);
