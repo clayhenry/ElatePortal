@@ -107,6 +107,9 @@ namespace ElatePortal.Modules.Blog
             return CreatedAtAction("GetBlog", new { id = blog.Id }, blog);
         }
 
+       
+        
+        
         // DELETE: api/Blogs/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBlog([FromRoute] int id)
@@ -149,12 +152,21 @@ namespace ElatePortal.Modules.Blog
             return Content(blogid.ToString());
         }
 
-        [HttpGet("post/{id}")]
+        [HttpGet("/Admin/Blog/Post/{id}")]
         public IActionResult Post(int id)
         {
             var post = this._portalreposirory.GetBlogPost(id);
             return View("~/Modules/Blog/Views/Post.cshtml", post);
 
+        }
+
+        [HttpGet("/Admin/Blog/Create")]
+        public IActionResult Create()
+        {
+            
+//            var departments = this._portalreposirory.GetDepartments();
+
+            return View("~/Modules/Blog/Views/Create.cshtml");
         }
       
         
@@ -168,17 +180,14 @@ namespace ElatePortal.Modules.Blog
             {"comments", this._portalreposirory.GetCommentsAndBlogTitle()}
               
             };
-    
-              //  TempData["message"] = message;
-          
-            
+         
             return View("~/Modules/Blog/Views/List.cshtml", lists);
 
         }
 
         [HttpPost]
         [Route("/Admin/Blog/ModerateCommet")]
-        public async Task<IActionResult> ModeeateComments(List<int> commentId, string update)
+        public async Task<IActionResult> ModerateComments(List<int> commentId, string update)
         {
             if (ModelState.IsValid) {
             var updateComments = _commentcontext.Comments.Where(x => commentId.Contains(x.Id));

@@ -90,6 +90,7 @@
           <e p="AuthorsContext.cs" t="Include" />
           <e p="BlogContext.cs" t="Include" />
           <e p="CommentContext.cs" t="Include" />
+          <e p="DepartmentsContext.cs" t="Include" />
           <e p="GalleryContext.cs" t="Include" />
           <e p="ProfileContext.cs" t="Include" />
         </e>
@@ -125,6 +126,7 @@
         <e p="Models" t="Include">
           <e p="Authors.cs" t="Include" />
           <e p="Content.cs" t="Include" />
+          <e p="DepartmentModel.cs" t="Include" />
           <e p="EmployeeViewComponent.cs" t="Include" />
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="Helper.cs" t="Include" />
@@ -293,6 +295,7 @@
             <e p="4db77ac92f9b4866933f9871a388f88a.jpg" t="Include" />
             <e p="6885d4a57bb94abbb58a4044579258c2.jpg" t="Include" />
             <e p="69d35f2ce12a4e749b026c0d6aa6cfdd.jpg" t="Include" />
+            <e p="6ce617c8c80043f6bd64524291176403.jpg" t="Include" />
             <e p="a12642f1127b48c7ae90221ac2f35a57.jpg" t="Include" />
           </e>
         </e>

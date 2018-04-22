@@ -1,0 +1,38 @@
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+View Post
+<form>
+    
+
+        @for (int i = 0; i < Model.Count; i++)
+        {
+            <input type="checkbox" name="department[]" value="@Model[i].Id"/>@Model[i].DepartmentName
+         
+        }
+  
+ 
+    
+    <select name="Status" >
+        
+        <option value="0">Draft</option>
+        <option value="2">Published</option>
+    </select>
+
+    Title:
+    <input type="text" name="title"/>
+    
+    
+    <div class="form-group">
+        <div class="col-md-10">
+            <p>Cover Image:</p>
+            <input type="file" name="files" multiple />
+        </div>
+    </div>
+    
+    <textarea></textarea>
+    
+    
+</form>

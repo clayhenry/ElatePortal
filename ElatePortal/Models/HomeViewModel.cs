@@ -18,6 +18,9 @@ namespace ElatePortal.Models
         public string Title { get; set; }
         [NotMapped]
         public List<Comments> Comments { get; set; }
+//        public List<Departments> Departments { get; set; }
+        public List<DepartmentsBlog> DepartmentsBlog { get; set; }
+        
         public string Preview { get; set; }
        
 

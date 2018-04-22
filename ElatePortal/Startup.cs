@@ -38,7 +38,7 @@ namespace ElatePortal
             services.AddDbContext<ProfileContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<CommentContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDbContext<GalleryContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-
+//            services.AddDbContext<DepartmentsContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddAuthentication(sharedOptions =>
             {
@@ -48,7 +48,7 @@ namespace ElatePortal
             .AddAzureAd(options => Configuration.Bind("AzureAd", options))
             .AddCookie();
 
-            services.AddScoped<IModule, Test>();
+        
             services.AddScoped<RegisterModel>();
             services.AddScoped<PortalRepository>();
             services.AddScoped<Helper>();

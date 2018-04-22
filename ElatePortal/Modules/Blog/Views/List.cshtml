@@ -4,19 +4,16 @@
     Layout = "_Layout";
 }
 
-<body>
+
 
 
 
 <h1>Posts</h1>    
 
-<ul>  
-@foreach (var posts in Model["blogs"])
-{
-    <li>@posts.Title</li>
 
-}
-</ul>
+<a href="/Admin/Blog/Create">Create Post</a>
+
+
 <h1>Comments need to be moderated</h1>  
 <form action="/Admin/Blog/ModerateCommet" method="post">
 
@@ -78,9 +75,11 @@
            }
             
         </ul>
-        <div><input type="submit" name="update" value="Approve"/> <input type="submit" name="update" value="Disapprove"/> </div>
+        <div>Select all
+            <input type="submit" name="update" value="Approve"/>
+            <input type="submit" name="update" value="Disapprove"/>
+        </div>
     }
 </ul>
 </form>
 
-</body>

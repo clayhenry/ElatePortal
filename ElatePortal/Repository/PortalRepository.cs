@@ -16,13 +16,20 @@ namespace ElatePortal.Repository
         private readonly ProfileContext _profileContext;
         private readonly BlogContext _blogContext;
         private readonly CommentContext _commentContext;
+//        private readonly DepartmentsContext _departmentContext;
   
-        public PortalRepository(CommentContext CommentContext, BlogContext BlogContext, ProfileContext ProfileContext)
+        public PortalRepository(
+            CommentContext CommentContext, 
+            BlogContext BlogContext, 
+            ProfileContext ProfileContext
+//            DepartmentsContext DepartmentsContext
+            )
         {
             this._commentContext = CommentContext;
             this._blogContext = BlogContext;
             this._profileContext = ProfileContext;
-           }
+//            this._departmentContext = DepartmentsContext;
+        }
 
 
         public int GetProfileId(string email)
@@ -58,27 +65,28 @@ namespace ElatePortal.Repository
         public IQueryable<HomeViewModel> GetCommentsAndBlogTitle()
         {
 
-            var g = (from p in _blogContext.Blog
-                    
-                select new HomeViewModel
+            var g = (from p in _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments)
+
+                    select new HomeViewModel
                     {
                         Content = p.Content,
                         BlogId = p.Id,
                         Title = p.Title,
-                      
-                      //  Preview = new HomeViewModel().TruncateString(p.Content, 3),
-                        Comments = _commentContext.Comments.Where(x=>x.BlogId.Equals(p.Id))
+                        DepartmentsBlog = p.DepartmentsBlog,
+        
+                        Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(p.Id))
                             .Select(com => new Comments()
                             {
                                 Preview = new HomeViewModel().TruncateString(com.Comment, 6),
                                 Comment = com.Comment,
-                                Author = _profileContext.Profile.Where(pr=>pr.Id.Equals(com.ProfileId)).ToList(),                              
+                                Author = _profileContext.Profile.Where(pr => pr.Id.Equals(com.ProfileId)).ToList(),
                                 Status = com.Status,
                                 Id = com.Id
                             }).ToList()
                     }
 
                 );
+
            
             return g;
         }
@@ -120,5 +128,12 @@ namespace ElatePortal.Repository
         }
 
 
+        public List<Blog> GetDepartments()
+        {
+            var dep = _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments).ToList();
+
+            return dep;
+        }
+        
     }
 }
