@@ -88,6 +88,7 @@ namespace ElatePortal.Repository
                 );
 
            
+            
             return g;
         }
         
@@ -119,6 +120,7 @@ namespace ElatePortal.Repository
                     Name = t.Name,
                     BlogId = f.Id,
                     Title =  f.Title,
+                    
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
                     Comments =  GetBlogComments(f.Id)
                     

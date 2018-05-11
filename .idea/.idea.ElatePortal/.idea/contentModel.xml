@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\pawel\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ElatePortal.-1249926830.00" t="ExcludeRecursive" />
+    <e p="C:\Users\pawel\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ElatePortal.-1249926830.00" t="ExcludeRecursive" />
     <e p="C:\Users\pawel\source\repos\ElatePortal" t="IncludeFlat">
       <e p="ElatePortal" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
@@ -182,6 +182,23 @@
         </e>
         <e p="Repository" t="Include">
           <e p="PortalRepository.cs" t="Include" />
+        </e>
+        <e p="sqlinserts" t="Include">
+          <e p="master_dbo___EFMigrationsHistory.sql" t="Include" />
+          <e p="master_dbo_Authors.sql" t="Include" />
+          <e p="master_dbo_Blog.sql" t="Include" />
+          <e p="master_dbo_Comments.sql" t="Include" />
+          <e p="master_dbo_Departments.sql" t="Include" />
+          <e p="master_dbo_DepartmentsBlog.sql" t="Include" />
+          <e p="master_dbo_GalleryImages.sql" t="Include" />
+          <e p="master_dbo_ImageTags.sql" t="Include" />
+          <e p="master_dbo_MSreplication_options.sql" t="Include" />
+          <e p="master_dbo_Profile.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_db.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_dev.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_usg.sql" t="Include" />
+          <e p="master_dbo_spt_monitor.sql" t="Include" />
+          <e p="master_dbo_Tags.sql" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">

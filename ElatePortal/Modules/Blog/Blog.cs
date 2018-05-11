@@ -41,13 +41,7 @@ namespace ElatePortal.Models
 
         public List<DepartmentsBlog> DepartmentsBlog { get; set; }
     
-     
-        
-
     }    
-
-
-
 
 
     public class DepartmentsBlog      
@@ -60,11 +54,7 @@ namespace ElatePortal.Models
         
         public int BlogId { get; set; }
         public Blog Blog { get; set; }
- 
-  
 
-
-        
     }
     
     
