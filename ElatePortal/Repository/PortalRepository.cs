@@ -16,19 +16,19 @@ namespace ElatePortal.Repository
         private readonly ProfileContext _profileContext;
         private readonly BlogContext _blogContext;
         private readonly CommentContext _commentContext;
-//        private readonly DepartmentsContext _departmentContext;
+        private readonly DepartmentsContext _departmentContext;
   
         public PortalRepository(
             CommentContext CommentContext, 
             BlogContext BlogContext, 
-            ProfileContext ProfileContext
-//            DepartmentsContext DepartmentsContext
+            ProfileContext ProfileContext,
+            DepartmentsContext DepartmentsContext
             )
         {
             this._commentContext = CommentContext;
             this._blogContext = BlogContext;
             this._profileContext = ProfileContext;
-//            this._departmentContext = DepartmentsContext;
+            this._departmentContext = DepartmentsContext;
         }
 
 
@@ -94,7 +94,7 @@ namespace ElatePortal.Repository
         
         public IQueryable<HomeViewModel> GetBlogList()
         {  
-            var g = (from f in _blogContext.Blog
+            var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(f=> f.Departments)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id
                
                 select new HomeViewModel {
@@ -103,7 +103,8 @@ namespace ElatePortal.Repository
                     BlogId = f.Id,
                     Title =  f.Title,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
-                    Comments =  GetBlogComments(f.Id)
+                    Comments =  GetBlogComments(f.Id),
+                    DepartmentsBlog = f.DepartmentsBlog
                     
                 });
 
@@ -112,7 +113,7 @@ namespace ElatePortal.Repository
         
         public IQueryable<HomeViewModel> GetBlogPost(int id)
         {  
-            var post = (from f in _blogContext.Blog
+            var post = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(c=>c.Departments)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id
                 where  f.Id.Equals(id)
                 select new HomeViewModel {
@@ -120,6 +121,7 @@ namespace ElatePortal.Repository
                     Name = t.Name,
                     BlogId = f.Id,
                     Title =  f.Title,
+                    DepartmentsBlog = f.DepartmentsBlog,
                     
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
                     Comments =  GetBlogComments(f.Id)
@@ -130,10 +132,9 @@ namespace ElatePortal.Repository
         }
 
 
-        public List<Blog> GetDepartments()
+        public IQueryable<Departments> GetDepartments()
         {
-            var dep = _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments).ToList();
-
+            var dep = from d in this._departmentContext.Departments select d;
             return dep;
         }
         

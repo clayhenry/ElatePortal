@@ -13,8 +13,6 @@
 
 <a href="/Admin/Blog/Create">Create Post</a>
 
-
-<h1>Comments need to be moderated</h1>  
 <form action="/Admin/Blog/ModerateCommet" method="post">
 
 <ul>  
@@ -22,7 +20,16 @@
     {
        
                
-        <h2>@post.Title</h2>
+        <h2> <a href="/Admin/Blog/Edit/@post.BlogId">@post.Title </a></h2>
+                       
+        <div>
+            
+            @foreach (var dep in post.DepartmentsBlog)
+            {
+                <span> @dep.Departments.DepartmentName </span>
+            }
+            
+        </div>
             
         <div>All Comments:@post.Comments.Count </div>
 

@@ -23,8 +23,6 @@ namespace ElatePortal.Models
         
         public string Preview { get; set; }
        
-
-      
         public string TruncateString(string content, int wordCount)
         {
            

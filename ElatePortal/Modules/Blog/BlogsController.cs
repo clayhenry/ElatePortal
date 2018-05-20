@@ -152,11 +152,21 @@ namespace ElatePortal.Modules.Blog
             return Content(blogid.ToString());
         }
 
-        [HttpGet("/Admin/Blog/Post/{id}")]
+        [HttpGet("/Admin/Blog/Edit/{id}")]
         public IActionResult Post(int id)
         {
-            var post = this._portalreposirory.GetBlogPost(id);
-            return View("~/Modules/Blog/Views/Post.cshtml", post);
+ 
+        
+            var editBlog = new Dictionary<string, IQueryable>()
+            {
+                {"post", this._portalreposirory.GetBlogPost(id)},
+                {"tags" , this._portalreposirory.GetDepartments() }
+         
+              };
+            
+           
+            
+            return View("~/Modules/Blog/Views/Post.cshtml", editBlog);
 
         }
 
@@ -203,8 +213,9 @@ namespace ElatePortal.Modules.Blog
                 }
                 _commentcontext.Comments.Update(comment);
             }
-     
+                
                 await _commentcontext.SaveChangesAsync();
+                
                
                 TempData["message"] = "Updated";
                

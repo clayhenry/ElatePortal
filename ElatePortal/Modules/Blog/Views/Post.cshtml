@@ -1,25 +1,51 @@
-@using ElatePortal.Models
-@model IQueryable<ElatePortal.Models.HomeViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
 
 <body>
 
-@foreach (var post in Model)
+@foreach (var post in Model["post"])
 {
 
-   <h1>@post.Title</h1>
-   @post.Content
-   
-    <ul>
-   @foreach (var comment in post.Comments)
+    <h1>@post.Title</h1>
+    <textarea> @post.Content </textarea>
+
+
+    foreach (var tags in Model["tags"])
     {
-       
-        <li>  @comment.Comment</li>
         
+        if (post.DepartmentsBlog.Count > 0)
+        {
+
+            var checkmark = "";
+            
+            for (int i = 0; i < post.DepartmentsBlog.Count; i++)
+            {
+                
+                if (tags.DepartmentName.Contains(post.DepartmentsBlog[i].Departments.DepartmentName))
+                {
+                    checkmark = "checked";
+                }     
+            }
+         
+          <input type="checkbox" @checkmark /> @tags.DepartmentName  
+
+        }
+        else
+        {
+            
+            <input type="checkbox"/> @tags.DepartmentName  
+        }
+
     }
 
-    </ul>
-
 }
+
+
+
 
 
 </body>
