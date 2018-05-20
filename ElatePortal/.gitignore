@@ -1,5 +1,6 @@
 /Properties/launchSettings.json
-/appsetings.json
+/appsettings.json
+../.idea/
 
 
 ## Ignore Visual Studio temporary files, build results, and
