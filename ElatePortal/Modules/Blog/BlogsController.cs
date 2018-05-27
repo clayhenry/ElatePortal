@@ -21,12 +21,19 @@ namespace ElatePortal.Modules.Blog
         private readonly BlogContext _blogcontext;
         private readonly PortalRepository _portalreposirory;
         private readonly CommentContext _commentcontext;
+        private Helper _helper;
 
-        public BlogsController(BlogContext BlogContext, PortalRepository PortalRepository, CommentContext CommentContext)
+        public BlogsController(
+            
+            BlogContext BlogContext, 
+            PortalRepository PortalRepository, 
+            CommentContext CommentContext,  
+            Helper helper)
         {
             this._blogcontext = BlogContext;
             this._portalreposirory = PortalRepository;
             this._commentcontext = CommentContext;
+            this._helper = helper;
         }
 
         // GET: api/Blogs
@@ -91,7 +98,6 @@ namespace ElatePortal.Modules.Blog
         }
         
         
-
         // POST: api/Blogs
         [HttpPost]
         public async Task<IActionResult> PostBlog([FromBody] Models.Blog blog)
@@ -106,8 +112,6 @@ namespace ElatePortal.Modules.Blog
 
             return CreatedAtAction("GetBlog", new { id = blog.Id }, blog);
         }
-
-       
         
         
         // DELETE: api/Blogs/5
@@ -156,15 +160,12 @@ namespace ElatePortal.Modules.Blog
         public IActionResult Post(int id)
         {
  
-        
             var editBlog = new Dictionary<string, IQueryable>()
             {
                 {"post", this._portalreposirory.GetBlogPost(id)},
-                {"tags" , this._portalreposirory.GetDepartments() }
+                {"tags" , this._portalreposirory.GetDepartments() },
          
               };
-            
-           
             
             return View("~/Modules/Blog/Views/Post.cshtml", editBlog);
 
@@ -178,7 +179,13 @@ namespace ElatePortal.Modules.Blog
 
             return View("~/Modules/Blog/Views/Create.cshtml");
         }
-      
+
+        [HttpPost("/Admin/Blog/Update/{id}")]
+        public IActionResult Update(List<IFormFile> files)
+        {
+            
+            return Content("gkjhkjhjk");
+        }
         
         [HttpGet("/Admin/Blog/List")]
         public IActionResult List()

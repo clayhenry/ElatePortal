@@ -16,6 +16,8 @@ namespace ElatePortal.Models
         public int BlogId { get; set; }
         public string Comment { get; set; }
         public string Title { get; set; }
+        public string CoverImage { get; set; }
+        public string Status { get; set; }
         [NotMapped]
         public List<Comments> Comments { get; set; }
 //        public List<Departments> Departments { get; set; }

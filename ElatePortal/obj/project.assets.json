@@ -7114,10 +7114,10 @@
       "path": "microsoft.netcore.platforms/2.0.0",
       "files": [
         "LICENSE.TXT",
-        "Microsoft.NETCore.Platforms.2.0.0.nupkg.sha512",
-        "Microsoft.NETCore.Platforms.nuspec",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
         "runtime.json",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -12440,33 +12440,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pawel\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/home/pawel/.nuget/packages/": {},
+    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\ElatePortal.csproj",
+      "projectUniqueName": "/home/pawel/RiderProjects/elate/ElatePortal/ElatePortal.csproj",
       "projectName": "ElatePortal",
-      "projectPath": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\ElatePortal.csproj",
-      "packagesPath": "C:\\Users\\pawel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\obj\\",
+      "projectPath": "/home/pawel/RiderProjects/elate/ElatePortal/ElatePortal.csproj",
+      "packagesPath": "/home/pawel/.nuget/packages/",
+      "outputPath": "/home/pawel/RiderProjects/elate/ElatePortal/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\pawel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "/home/pawel/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

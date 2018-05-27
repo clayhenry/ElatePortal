@@ -1,0 +1,1924 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e7f72bdf-43db-48c4-8ae8-777324d2e3f8" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal.sln.DotSettings.user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csprojResolveAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/ElatePortal.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Release/netcoreapp2.0/ElatePortal.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Release/netcoreapp2.0/ElatePortal.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Release/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/26426b452d4d45f3a7c439ec603db3d5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/4db77ac92f9b4866933f9871a388f88a.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/6885d4a57bb94abbb58a4044579258c2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/69d35f2ce12a4e749b026c0d6aa6cfdd.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/6ce617c8c80043f6bd64524291176403.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ElatePortal/wwwroot/uploads/a12642f1127b48c7ae90221ac2f35a57.jpg" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DB_9A9F33_altimeter@SQL5036.site4now.net" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DB_9A9F33_altimeter@SQL5036.site4now.net" type="feb32156:DbDataSourceImpl" />
+        <item name="DB_9A9F33_altimeter: database" type="bdf80c8a:MssqlImplModel$Database" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DB_9A9F33_altimeter@SQL5036.site4now.net" type="feb32156:DbDataSourceImpl" />
+        <item name="DB_9A9F33_altimeter: database" type="bdf80c8a:MssqlImplModel$Database" />
+        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DB_9A9F33_altimeter@SQL5036.site4now.net" type="feb32156:DbDataSourceImpl" />
+        <item name="DB_9A9F33_altimeter: database" type="bdf80c8a:MssqlImplModel$Database" />
+        <item name="dbo: schema" type="3adcb6a6:MssqlImplModel$Schema" />
+        <item name="Blog: table" type="a00791b9:MssqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="PortalRepository.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="125" column="38" selection-start-line="125" selection-start-column="38" selection-end-line="125" selection-end-column="38" />
+              <folding>
+                <marker date="1527434745429" expanded="false" signature="6:252" ph="..." />
+                <marker date="1527434745429" expanded="true" signature="286:4757" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="323:4755" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="783:1008" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1056:1404" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1094:1241" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1286:1383" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1463:1612" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1675:1817" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="1893:2964" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="2084:2886" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="2461:2854" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="3028:3702" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="3286:3667" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="3772:4560" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="4055:4522" ph="{...}" />
+                <marker date="1527434745429" expanded="true" signature="4618:4740" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlogsController.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="354">
+              <caret line="188" column="8" lean-forward="true" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+              <folding>
+                <marker date="1527437698011" expanded="false" signature="6:349" ph="..." />
+                <marker date="1527437698011" expanded="true" signature="385:6605" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="509:6603" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="920:1126" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="1221:1279" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="1403:1746" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="1450:1525" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="1643:1706" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="1899:2602" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="1946:2021" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2053:2118" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2203:2286" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2335:2559" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2386:2461" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2482:2545" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="2745:3046" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="2792:2867" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="3196:3634" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="3243:3318" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="3435:3498" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="3675:3754" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="3904:4288" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="4374:4721" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="4463:4625" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="4800:4970" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="5076:5150" ph="{...}" />
+                <marker date="1527437698011" expanded="false" signature="5233:5614" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="5382:5524" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="5774:6565" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="5821:6490" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="5971:6253" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="6025:6084" ph="{...}" />
+                <marker date="1527437698011" expanded="true" signature="6105:6181" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HomeViewModel.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="15" column="25" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="25" />
+              <folding>
+                <marker date="1527434450430" expanded="false" signature="6:203" ph="..." />
+                <marker date="1527434450430" expanded="true" signature="233:1372" ph="{...}" />
+                <marker date="1527434450430" expanded="true" signature="266:1359" ph="{...}" />
+                <marker date="1527434450430" expanded="true" signature="904:1335" ph="{...}" />
+                <marker date="1527434450430" expanded="true" signature="1061:1218" ph="{...}" />
+                <marker date="1527434450430" expanded="true" signature="1114:1204" ph="{...}" />
+                <marker date="1527434450430" expanded="true" signature="1235:1299" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UploadController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="50" />
+              <folding>
+                <marker date="1526356575709" expanded="false" signature="6:352" ph="..." />
+                <marker date="1526356575709" expanded="true" signature="387:2509" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="436:2507" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="621:720" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="772:2268" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="852:1032" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="901:1001" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1094:1264" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1153:1250" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1344:1975" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1414:1655" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1708:1943" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="2085:2170" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="2347:2499" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+              <folding>
+                <marker date="1526356575709" expanded="false" signature="6:295" ph="..." />
+                <marker date="1526356575709" expanded="true" signature="325:1730" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="351:1715" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="516:579" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="642:1692" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="755:1609" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="810:1595" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1192:1286" ph="{...}" />
+                <marker date="1526356575709" expanded="true" signature="1363:1575" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Post.cshtml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="28" column="42" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="42" />
+              <folding>
+                <marker date="1527437418514" expanded="true" signature="7:73" ph="..." />
+                <marker date="1527437418514" expanded="true" signature="75:132" ph="@..." />
+                <marker date="1527437418514" expanded="true" signature="135:2137" ph="&lt;body.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="143:197" ph="@..." />
+                <marker date="1527437418514" expanded="true" signature="199:2129" ph="&lt;form.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="319:1979" ph="@..." />
+                <marker date="1527437418514" expanded="true" signature="355:1979" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="474:673" ph="&lt;div.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="507:662" ph="&lt;div.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="777:1392" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="836:1279" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="957:1188" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="1090:1169" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="1292:1385" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="1402:1976" ph="&lt;div.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="1423:1606" ph="@..." />
+                <marker date="1527437418514" expanded="true" signature="1513:1595" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="1621:1961" ph="&lt;select.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="1656:1942" ph="@..." />
+                <marker date="1527437418514" expanded="true" signature="1707:1914" ph="{...}" />
+                <marker date="1527437418514" expanded="true" signature="1986:2119" ph="&lt;div.../&gt;" />
+                <marker date="1527437418514" expanded="true" signature="2019:2108" ph="&lt;div.../&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blog" pinned="false" current-in-tab="false">
+        <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/Blog">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Test/Test.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/DAL/ProfileContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/DAL/DepartmentsContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Admin/AdminController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/DAL/BlogContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Admin/Views/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/DAL/CommentContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryIndexModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/DAL/GalleryContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryImage.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/ImageTag.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/Views/Gallery.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Middleware/LoginMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Middleware/RegisterMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Home/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/ClientApp/package.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Home/Register.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Controllers/AccountController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Home/About.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Controllers/HomeController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Controllers/AuthorsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Controllers/SampleDataController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Shared/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Shared/Register.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Extensions/AzureAdAuthenticationBuilderExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Authors/Delete.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Extensions/AzureAdOptions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Extensions/ElateExtensions.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Views/Register/Index.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/Authors.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/EmployeeViewComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/DepartmentModel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Models/Profile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/IModule.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Comments.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Blog.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/List.cshtml" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/ElatePortal/appsettings.json" />
+        <option value="$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs" />
+        <option value="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" />
+        <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" />
+        <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/ElatePortal/ClientApp/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="266" />
+    <option name="y" value="119" />
+    <option name="width" value="1158" />
+    <option name="height" value="758" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Modules" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Modules" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Blog" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Modules" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Blog" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Views" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="wwwroot" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="SQL Server (jTds)" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+  </component>
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="Account/Auth" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="Account/auth" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blogs/Auth" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blogs/auth" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blogs/authentication" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blogs/post/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blog/authentication" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/jjjjj" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/AccessDenied" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667309000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzhNk21VcRxH1ZmpFXD65CZhHoPk6x1AO0rmiSw6jwlEhAw0qgCTTOM8LY3lIUUptSOhOLzGsEREGHFXs3iYTk3W0XN0rjTbYvnobOe4n3XE8gAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/SignedOut" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667198000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzXgWa4VPjGYEf1WifzlmdkPITAzoPTIHNAS_--oIzQ6bThj2yrSSLgQC_cWjPX6hBsSofPcphvkc0djrxRnJbs2JLiJ21oS4w2PZGCm8r9WcgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/SignIn" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667198000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHzXgWa4VPjGYEf1WifzlmdkPITAzoPTIHNAS_--oIzQ6bThj2yrSSLgQC_cWjPX6hBsSofPcphvkc0djrxRnJbs2JLiJ21oS4w2PZGCm8r9WcgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/CheckAuthentication" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667163000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHztv0c1zeRVIgKUhWNhcw8HNkEdC-LAEaWAVVxwdeXsLnajEV6C9u_wOdljyfcthZqxPURK7YyjuVNsCAKR5V0yhBeF_ZF17LwUdNRm19NwEsgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/SignIn" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="biscuits">
+            <list>
+              <Biscuit>
+                <option name="date" value="1523667163000" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="buid" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAEAAABHh4kmS_aKT5XrjzxRAtHztv0c1zeRVIgKUhWNhcw8HNkEdC-LAEaWAVVxwdeXsLnajEV6C9u_wOdljyfcthZqxPURK7YyjuVNsCAKR5V0yhBeF_ZF17LwUdNRm19NwEsgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="esctx" />
+                <option name="path" value="/" />
+                <option name="value" value="AQABAAAAAABHh4kmS_aKT5XrjzxRAtHzXFTutghrOd9MRFY5GRWSadhz0XGIU32Zyx9vJ5AfBmOA-tQwdHJtstYrxk-L0JnglFutSXhWbQYR7udv5TbMla2-YpWvaSBQYcqEps-LQ1PNRgBO2y94BDo7nEib8tY6NV6g9zuLJKLJpCPf9wcg0nqdQmlhGANcxduc-MMjDBYgAA" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="stsservicecookie" />
+                <option name="path" value="/" />
+                <option name="value" value="ests" />
+              </Biscuit>
+              <Biscuit>
+                <option name="date" value="-1" />
+                <option name="domain" value="login.microsoftonline.com" />
+                <option name="name" value="x-ms-gateway-slice" />
+                <option name="path" value="/" />
+                <option name="value" value="006" />
+              </Biscuit>
+            </list>
+          </option>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/Index" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Home/Index" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/HomeController/Index" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/Account/CheckAuthentication" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/AccountController/CheckAuthentication" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:5000" />
+          <option name="urlPath" value="/api/Blogs/post/1" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="*/*" />
+              </KeyValuePair>
+              <KeyValuePair>
+                <option name="key" value="Cache-Control" />
+                <option name="value" value="no-cache" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="textToSend" value="" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ElatePortal" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <envs>
+        <env name="ASPNETCORE_ENVIRONMENT" value="Development" />
+        <env name="ASPNETCORE_URLS" value="http://localhost:5000" />
+      </envs>
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/ElatePortal/ElatePortal.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value=".NETCoreApp,Version=v2.0" />
+      <browser url="http://localhost:5000" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e7f72bdf-43db-48c4-8ae8-777324d2e3f8" name="Default" comment="" />
+      <created>1518756700866</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518756700866</updated>
+      <workItem from="1518756703114" duration="1268000" />
+      <workItem from="1518758011834" duration="323000" />
+      <workItem from="1518758351534" duration="11546000" />
+      <workItem from="1519357341022" duration="8577000" />
+      <workItem from="1520135363037" duration="1821000" />
+      <workItem from="1520137233000" duration="762000" />
+      <workItem from="1520138043533" duration="3184000" />
+      <workItem from="1520391773221" duration="2537000" />
+      <workItem from="1520986377074" duration="4249000" />
+      <workItem from="1520999453226" duration="25315000" />
+      <workItem from="1521251328557" duration="9991000" />
+      <workItem from="1521688898953" duration="1483000" />
+      <workItem from="1521769956443" duration="16312000" />
+      <workItem from="1522295165288" duration="1779000" />
+      <workItem from="1524181073658" duration="1790000" />
+      <workItem from="1524183269269" duration="83630000" />
+      <workItem from="1525530759229" duration="2499000" />
+      <workItem from="1525913542137" duration="2923000" />
+      <workItem from="1526786400958" duration="1561000" />
+      <workItem from="1526959906773" duration="7387000" />
+    </task>
+    <task id="LOCAL-00001" summary="Home Page Blog">
+      <created>1518838665371</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518838665371</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Refactor blog list to repository">
+      <created>1518839103596</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518839103596</updated>
+    </task>
+    <task id="LOCAL-00003" summary="error handeling">
+      <created>1518840252069</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518840252069</updated>
+    </task>
+    <task id="LOCAL-00004" summary="blog details page">
+      <created>1519702987060</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519702987060</updated>
+    </task>
+    <task id="LOCAL-00005" summary="spa and angular implementation">
+      <created>1520391908991</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520391908991</updated>
+    </task>
+    <task id="LOCAL-00006" summary="angular added">
+      <created>1520987885884</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1520987885884</updated>
+    </task>
+    <task id="LOCAL-00007" summary="angular added">
+      <created>1520987924242</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520987924242</updated>
+    </task>
+    <task id="LOCAL-00008" summary="angular added">
+      <created>1521055841448</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521055841448</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Image upload and resizing">
+      <created>1521770014065</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1521770014066</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Helper for upload">
+      <created>1521935280549</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1521935280549</updated>
+    </task>
+    <task id="LOCAL-00011" summary="sub routes for router-outlest -ng">
+      <created>1522115595138</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1522115595138</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="9658000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="34" width="1920" height="1046" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32934782" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50319827" side_tool="true" weight="0.32934782" />
+      <window_info anchor="bottom" id="Unit Tests" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="REST Client" order="8" weight="0.32934782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.41949618" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32979852" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32786885" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.4978678" weight="0.57173914" />
+      <window_info anchor="bottom" id="Database Console" order="8" weight="0.32858709" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17022412" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4968017" weight="0.32858709" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14514408" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32896176" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39868566" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32934782" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="NuGet" order="11" sideWeight="0.4978678" weight="0.57173914" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42065218" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28498727" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32934782" />
+      <window_info anchor="bottom" id="Unit Tests" order="8" />
+      <window_info anchor="bottom" id="REST Client" order="14" weight="0.32934782" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="Errors In Solution" order="3" />
+      <window_info anchor="right" id="Database" order="4" visible="true" weight="0.24936387" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32934782" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50319827" side_tool="true" weight="0.32934782" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Build" order="13" sideWeight="0.4968017" weight="0.32934782" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32979852" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/ElatePortal/ClientApp/node_modules/karma/config.tpl.js" />
+      </list>
+    </option>
+  </component>
+  <component name="UnityProjectConfiguration" isUnityUI="false" />
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs</url>
+          <line>186</line>
+          <properties documentPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" initialLine="186">
+            <startOffsets>
+              <startOffset value="5112" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="5140" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="65" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Views/Shared/_Layout.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="47" column="36" lean-forward="true" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/DAL/CommentContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/HomeController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="46" column="39" lean-forward="true" selection-start-line="46" selection-start-column="39" selection-end-line="46" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/Views/Gallery.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="10" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/DepartmentModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Blog" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-143">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="file://$PROJECT_DIR$/ElatePortal/DAL/DepartmentsContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="3" lean-forward="true" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.DepartmentsBlog" />
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Blog.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/DAL/BlogContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/ClientApp/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="41" column="36" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/share/dotnet/sdk/2.0.0/Sdks/Microsoft.NET.Sdk/build/Microsoft.PackageDependencyResolution.targets">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2788">
+          <caret line="164" column="4" selection-start-line="164" selection-start-column="4" selection-end-line="164" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="30" column="13" lean-forward="true" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/EmployeeViewComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:128" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="158:377" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="202:375" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="315:365" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Test/Test.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:96" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="127:288" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="161:285" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="202:279" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/IModule.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding>
+            <marker date="1526356575709" expanded="true" signature="29:99" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="60:97" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/d38c6a7a-72a1-4a96-808f-bffd082e2ef0/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:315" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="345:1099" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="378:1097" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="494:565" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="646:1090" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="765:1078" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="937:1037" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/Comments">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/DepartmentsBlog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/ImageTag.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1526356575709" expanded="true" signature="28:163" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="56:161" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryIndexModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1526356575709" expanded="true" signature="63:224" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="100:222" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Gallery/GalleryImage.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:47" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="77:360" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="109:358" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="125" column="38" selection-start-line="125" selection-start-column="38" selection-end-line="125" selection-end-column="38" />
+          <folding>
+            <marker date="1527434745429" expanded="false" signature="6:252" ph="..." />
+            <marker date="1527434745429" expanded="true" signature="286:4757" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="323:4755" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="783:1008" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1056:1404" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1094:1241" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1286:1383" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1463:1612" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1675:1817" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="1893:2964" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="2084:2886" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="2461:2854" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="3028:3702" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="3286:3667" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="3772:4560" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="4055:4522" ph="{...}" />
+            <marker date="1527434745429" expanded="true" signature="4618:4740" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/Blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/wwwroot/uploads/26426b452d4d45f3a7c439ec603db3d5.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/wwwroot/uploads/a12642f1127b48c7ae90221ac2f35a57.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:295" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="325:1730" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="351:1715" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="516:579" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="642:1692" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="755:1609" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="810:1595" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1192:1286" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1363:1575" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/List.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <marker date="1526785654835" expanded="true" signature="1:58" ph="@..." />
+            <marker date="1526785654835" expanded="true" signature="131:2509" ph="&lt;form.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="189:2501" ph="&lt;ul.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="200:2495" ph="@..." />
+            <marker date="1526785654835" expanded="true" signature="240:2495" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="378:570" ph="&lt;div.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="409:542" ph="@..." />
+            <marker date="1526785654835" expanded="true" signature="451:542" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="760:1017" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="821:885" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="937:994" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="1177:2317" ph="&lt;ul.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="1193:2290" ph="@..." />
+            <marker date="1526785654835" expanded="true" signature="1232:2290" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="1312:1774" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="1350:1757" ph="&lt;li.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="1374:1605" ph="&lt;div.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="1821:2265" ph="{...}" />
+            <marker date="1526785654835" expanded="true" signature="1877:2248" ph="&lt;li.../&gt;" />
+            <marker date="1526785654835" expanded="true" signature="2326:2489" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="25" />
+          <folding>
+            <marker date="1527434450430" expanded="false" signature="6:203" ph="..." />
+            <marker date="1527434450430" expanded="true" signature="233:1372" ph="{...}" />
+            <marker date="1527434450430" expanded="true" signature="266:1359" ph="{...}" />
+            <marker date="1527434450430" expanded="true" signature="904:1335" ph="{...}" />
+            <marker date="1527434450430" expanded="true" signature="1061:1218" ph="{...}" />
+            <marker date="1527434450430" expanded="true" signature="1114:1204" ph="{...}" />
+            <marker date="1527434450430" expanded="true" signature="1235:1299" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="28" column="42" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="42" />
+          <folding>
+            <marker date="1527437418514" expanded="true" signature="7:73" ph="..." />
+            <marker date="1527437418514" expanded="true" signature="75:132" ph="@..." />
+            <marker date="1527437418514" expanded="true" signature="135:2137" ph="&lt;body.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="143:197" ph="@..." />
+            <marker date="1527437418514" expanded="true" signature="199:2129" ph="&lt;form.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="319:1979" ph="@..." />
+            <marker date="1527437418514" expanded="true" signature="355:1979" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="474:673" ph="&lt;div.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="507:662" ph="&lt;div.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="777:1392" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="836:1279" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="957:1188" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="1090:1169" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="1292:1385" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="1402:1976" ph="&lt;div.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="1423:1606" ph="@..." />
+            <marker date="1527437418514" expanded="true" signature="1513:1595" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="1621:1961" ph="&lt;select.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="1656:1942" ph="@..." />
+            <marker date="1527437418514" expanded="true" signature="1707:1914" ph="{...}" />
+            <marker date="1527437418514" expanded="true" signature="1986:2119" ph="&lt;div.../&gt;" />
+            <marker date="1527437418514" expanded="true" signature="2019:2108" ph="&lt;div.../&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/UploadController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="83" column="35" selection-start-line="83" selection-start-column="35" selection-end-line="83" selection-end-column="50" />
+          <folding>
+            <marker date="1526356575709" expanded="false" signature="6:352" ph="..." />
+            <marker date="1526356575709" expanded="true" signature="387:2509" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="436:2507" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="621:720" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="772:2268" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="852:1032" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="901:1001" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1094:1264" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1153:1250" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1344:1975" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1414:1655" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="1708:1943" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="2085:2170" ph="{...}" />
+            <marker date="1526356575709" expanded="true" signature="2347:2499" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="188" column="8" lean-forward="true" selection-start-line="188" selection-start-column="8" selection-end-line="188" selection-end-column="8" />
+          <folding>
+            <marker date="1527437698011" expanded="false" signature="6:349" ph="..." />
+            <marker date="1527437698011" expanded="true" signature="385:6605" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="509:6603" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="920:1126" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="1221:1279" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="1403:1746" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="1450:1525" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="1643:1706" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="1899:2602" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="1946:2021" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2053:2118" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2203:2286" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2335:2559" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2386:2461" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2482:2545" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="2745:3046" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="2792:2867" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="3196:3634" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="3243:3318" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="3435:3498" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="3675:3754" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="3904:4288" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="4374:4721" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="4463:4625" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="4800:4970" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="5076:5150" ph="{...}" />
+            <marker date="1527437698011" expanded="false" signature="5233:5614" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="5382:5524" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="5774:6565" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="5821:6490" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="5971:6253" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="6025:6084" ph="{...}" />
+            <marker date="1527437698011" expanded="true" signature="6105:6181" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="DB_9A9F33_altimeter@SQL5036.site4now.net" uuid="d38c6a7a-72a1-4a96-808f-bffd082e2ef0">
+      <database-info product="Microsoft SQL Server" version="13.00.4001" jdbc-version="3.0" driver-name="jTDS Type 4 JDBC Driver for MS SQL Server and Sybase" driver-version="1.3.1">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>DB_9A9F33_altimeter_admin</user-name>
+      <introspection-schemas>DB_9A9F33_altimeter:dbo</introspection-schemas>
+    </data-source>
+  </component>
+</project>
