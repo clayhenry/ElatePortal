@@ -141,25 +141,10 @@ namespace ElatePortal.Repository
         }
 
 
-        public bool UpdateDepartments(List<int> departmentIds)
-        {
-            foreach (var dep in departmentIds)
-            {
-
-               
-
-            }
-
-            var deps = _departmentContext.Departments .Where(x => departmentIds.Contains(x.Id));
-            
-            return true;
-        }
-
         public bool UpdateBlogPost( Blog payload )
         {
 
-            var blogdb = _blogContext.Blog.FirstOrDefault(x =>x.Id.Equals(payload.Id ));
-        
+            var blogdb = _blogContext.Blog.Include(c=> c.DepartmentsBlog).FirstOrDefault(x =>x.Id.Equals(payload.Id ) );    
           
             blogdb.Title = payload.Title;
             blogdb.Content = payload.Content;
@@ -169,7 +154,7 @@ namespace ElatePortal.Repository
             blogdb.DepartmentsBlog = payload.DepartmentsBlog;
 
             this._blogContext.Blog.Update(blogdb);
-            this. _blogContext.SaveChanges();
+            this._blogContext.SaveChanges();
                 
             return true;
 

@@ -3,14 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e7f72bdf-43db-48c4-8ae8-777324d2e3f8" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ElatePortal/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal.sln.DotSettings.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/bin/Debug/netcoreapp2.0/ElatePortal.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/ElatePortal/obj/Debug/netcoreapp2.0/ElatePortal.pdb" afterDir="false" />
     </list>
@@ -53,32 +48,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PortalRepository.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PortalRepository.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="170" column="50" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
+            <state relative-caret-position="622">
+              <caret line="156" column="44" lean-forward="true" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
               <folding>
-                <marker date="1527470401325" expanded="false" signature="6:269" ph="..." />
-                <marker date="1527470401325" expanded="true" signature="303:5707" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="340:5705" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="800:1025" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1073:1421" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1111:1258" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1303:1400" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1480:1629" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1692:1834" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="1910:2981" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="2101:2903" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="2478:2871" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="3045:3719" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="3303:3684" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="3789:4577" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="4072:4539" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="4635:4757" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="4822:5071" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="4879:4925" ph="{...}" />
-                <marker date="1527470401325" expanded="true" signature="5123:5690" ph="{...}" />
+                <marker date="1527477146587" expanded="false" signature="6:269" ph="..." />
+                <marker date="1527477146587" expanded="true" signature="303:5420" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="340:5418" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="800:1025" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1073:1421" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1111:1258" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1303:1400" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1480:1629" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1692:1834" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="1910:2981" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="2101:2903" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="2478:2871" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="3045:3719" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="3303:3684" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="3789:4577" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="4072:4539" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="4635:4757" ph="{...}" />
+                <marker date="1527477146587" expanded="true" signature="4810:5403" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -93,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogsController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlogsController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="207" column="12" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+            <state relative-caret-position="426">
+              <caret line="246" column="54" selection-start-line="246" selection-start-column="38" selection-end-line="246" selection-end-column="54" />
               <folding>
                 <marker date="1527470812953" expanded="false" signature="6:349" ph="..." />
                 <marker date="1527470812953" expanded="true" signature="385:7389" ph="{...}" />
@@ -130,7 +123,7 @@
                 <marker date="1527470812953" expanded="true" signature="5517:5838" ph="{...}" />
                 <marker date="1527470812953" expanded="false" signature="6017:6398" ph="{...}" />
                 <marker date="1527470812953" expanded="true" signature="6166:6308" ph="{...}" />
-                <marker date="1527470812953" expanded="false" signature="6558:7349" ph="{...}" />
+                <marker date="1527470812953" expanded="true" signature="6558:7349" ph="{...}" />
                 <marker date="1527470812953" expanded="true" signature="6605:7274" ph="{...}" />
                 <marker date="1527470812953" expanded="true" signature="6755:7037" ph="{...}" />
                 <marker date="1527470812953" expanded="true" signature="6809:6868" ph="{...}" />
@@ -171,6 +164,7 @@
     <findStrings>
       <find>update</find>
       <find>SaveChanges</find>
+      <find>Save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -235,8 +229,8 @@
         <option value="$PROJECT_DIR$/ElatePortal/Models/BlogViewModel.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogViewModel.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/Blog.cs" />
-        <option value="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" />
+        <option value="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" />
       </list>
     </option>
   </component>
@@ -1233,7 +1227,7 @@
       <workItem from="1526786400958" duration="1561000" />
       <workItem from="1526959906773" duration="9569000" />
       <workItem from="1527446049982" duration="7684000" />
-      <workItem from="1527466380749" duration="4431000" />
+      <workItem from="1527466380749" duration="6560000" />
     </task>
     <task id="LOCAL-00001" summary="Home Page Blog">
       <created>1518838665371</created>
@@ -1315,7 +1309,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23955000" />
+    <option name="totallyTimeSpent" value="26084000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1338,15 +1332,15 @@
       <window_info anchor="bottom" id="REST Client" order="8" weight="0.32934782" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41857922" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32979852" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3274918" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32677597" />
       <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.4978678" weight="0.57173914" />
       <window_info anchor="bottom" id="Database Console" order="8" weight="0.32786885" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17342582" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4968017" weight="0.32786885" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.18196371" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.18196371" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3092896" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.55956286" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="TypeScript" order="8" weight="0.32934782" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -1401,7 +1395,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="79" />
+      <option name="time" value="83" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1410,26 +1404,24 @@
         <state relative-caret-position="2664">
           <caret line="148" column="15" lean-forward="true" selection-start-line="148" selection-start-column="15" selection-end-line="148" selection-end-column="15" />
           <folding>
-            <marker date="1527470401325" expanded="false" signature="6:269" ph="..." />
-            <marker date="1527470401325" expanded="true" signature="303:5707" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="340:5705" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="800:1025" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1073:1421" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1111:1258" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1303:1400" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1480:1629" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1692:1834" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1910:2981" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="2101:2903" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="2478:2871" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3045:3719" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3303:3684" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3789:4577" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4072:4539" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4635:4757" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4822:5071" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4879:4925" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="5123:5690" ph="{...}" />
+            <marker date="1527477146587" expanded="false" signature="6:269" ph="..." />
+            <marker date="1527477146587" expanded="true" signature="303:5420" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="340:5418" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="800:1025" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1073:1421" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1111:1258" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1303:1400" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1480:1629" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1692:1834" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1910:2981" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="2101:2903" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="2478:2871" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3045:3719" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3303:3684" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3789:4577" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4072:4539" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4635:4757" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4810:5403" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1470,7 +1462,7 @@
             <marker date="1527470812953" expanded="true" signature="5517:5838" ph="{...}" />
             <marker date="1527470812953" expanded="false" signature="6017:6398" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6166:6308" ph="{...}" />
-            <marker date="1527470812953" expanded="false" signature="6558:7349" ph="{...}" />
+            <marker date="1527470812953" expanded="true" signature="6558:7349" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6605:7274" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6755:7037" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6809:6868" ph="{...}" />
@@ -1529,7 +1521,7 @@
             <marker date="1527470812953" expanded="true" signature="5517:5838" ph="{...}" />
             <marker date="1527470812953" expanded="false" signature="6017:6398" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6166:6308" ph="{...}" />
-            <marker date="1527470812953" expanded="false" signature="6558:7349" ph="{...}" />
+            <marker date="1527470812953" expanded="true" signature="6558:7349" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6605:7274" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6755:7037" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6809:6868" ph="{...}" />
@@ -1751,46 +1743,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="170" column="50" selection-start-line="170" selection-start-column="50" selection-end-line="170" selection-end-column="50" />
-          <folding>
-            <marker date="1527470401325" expanded="false" signature="6:269" ph="..." />
-            <marker date="1527470401325" expanded="true" signature="303:5707" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="340:5705" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="800:1025" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1073:1421" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1111:1258" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1303:1400" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1480:1629" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1692:1834" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="1910:2981" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="2101:2903" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="2478:2871" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3045:3719" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3303:3684" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="3789:4577" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4072:4539" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4635:4757" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4822:5071" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="4879:4925" ph="{...}" />
-            <marker date="1527470401325" expanded="true" signature="5123:5690" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/DepartmentsBlog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="207" column="12" selection-start-line="207" selection-start-column="12" selection-end-line="207" selection-end-column="12" />
+        <state relative-caret-position="426">
+          <caret line="246" column="54" selection-start-line="246" selection-start-column="38" selection-end-line="246" selection-end-column="54" />
           <folding>
             <marker date="1527470812953" expanded="false" signature="6:349" ph="..." />
             <marker date="1527470812953" expanded="true" signature="385:7389" ph="{...}" />
@@ -1823,11 +1779,45 @@
             <marker date="1527470812953" expanded="true" signature="5517:5838" ph="{...}" />
             <marker date="1527470812953" expanded="false" signature="6017:6398" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6166:6308" ph="{...}" />
-            <marker date="1527470812953" expanded="false" signature="6558:7349" ph="{...}" />
+            <marker date="1527470812953" expanded="true" signature="6558:7349" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6605:7274" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6755:7037" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6809:6868" ph="{...}" />
             <marker date="1527470812953" expanded="true" signature="6889:6965" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://d38c6a7a-72a1-4a96-808f-bffd082e2ef0/database/DB_9A9F33_altimeter/schema/dbo/table/DepartmentsBlog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="622">
+          <caret line="156" column="44" lean-forward="true" selection-start-line="156" selection-start-column="44" selection-end-line="156" selection-end-column="44" />
+          <folding>
+            <marker date="1527477146587" expanded="false" signature="6:269" ph="..." />
+            <marker date="1527477146587" expanded="true" signature="303:5420" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="340:5418" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="800:1025" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1073:1421" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1111:1258" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1303:1400" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1480:1629" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1692:1834" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="1910:2981" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="2101:2903" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="2478:2871" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3045:3719" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3303:3684" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="3789:4577" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4072:4539" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4635:4757" ph="{...}" />
+            <marker date="1527477146587" expanded="true" signature="4810:5403" ph="{...}" />
           </folding>
         </state>
       </provider>
