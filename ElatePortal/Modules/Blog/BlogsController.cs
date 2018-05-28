@@ -181,10 +181,33 @@ namespace ElatePortal.Modules.Blog
         }
 
         [HttpPost("/Admin/Blog/Update/{id}")]
-        public IActionResult Update(List<IFormFile> files)
+        public IActionResult Update(int Id, List<IFormFile> files, string title, string content, string status, List<int> tag)
         {
+
+            var deps = new List<DepartmentsBlog>();
+            foreach (var t in tag)
+            {
+                deps.Add(new DepartmentsBlog(){ DepartmentsId= t, BlogId = Id});
+            }
             
+            if (ModelState.IsValid)
+            {
+                var update = this._portalreposirory.UpdateBlogPost( new Models.Blog()
+                {
+                    Id = Id,
+                    Title = title,
+                    CoverImage = files[0].FileName,
+                    UpdatedAt = DateTime.Now,
+                    Status = status,
+                    DepartmentsBlog = deps,
+                    Content = content
+                    
+                });
+
+            }
+               
             return Content("gkjhkjhjk");
+           
         }
         
         [HttpGet("/Admin/Blog/List")]

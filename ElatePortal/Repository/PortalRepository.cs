@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using ElatePortal.Models;
 using ElatePortal.Modules.Blog;
 using Microsoft.EntityFrameworkCore;
+using SQLitePCL;
 
 namespace ElatePortal.Repository
 {
@@ -137,6 +138,41 @@ namespace ElatePortal.Repository
         {
             var dep = from d in this._departmentContext.Departments select d;
             return dep;
+        }
+
+
+        public bool UpdateDepartments(List<int> departmentIds)
+        {
+            foreach (var dep in departmentIds)
+            {
+
+               
+
+            }
+
+            var deps = _departmentContext.Departments .Where(x => departmentIds.Contains(x.Id));
+            
+            return true;
+        }
+
+        public bool UpdateBlogPost( Blog payload )
+        {
+
+            var blogdb = _blogContext.Blog.FirstOrDefault(x =>x.Id.Equals(payload.Id ));
+        
+          
+            blogdb.Title = payload.Title;
+            blogdb.Content = payload.Content;
+            blogdb.CoverImage = payload.CoverImage;
+            blogdb.UpdatedAt = payload.UpdatedAt;
+            blogdb.Status = payload.Status;
+            blogdb.DepartmentsBlog = payload.DepartmentsBlog;
+
+            this._blogContext.Blog.Update(blogdb);
+            this. _blogContext.SaveChanges();
+                
+            return true;
+
         }
         
     }

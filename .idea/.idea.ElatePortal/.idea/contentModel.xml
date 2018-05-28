@@ -16,7 +16,11 @@
             <e p="tsconfig.e2e.json" t="Include" />
           </e>
           <e p="karma.conf.js" t="Include" />
+          <e p="npm-debug.log.2432496566" t="Include" />
+          <e p="npm-debug.log.3219979029" t="Include" />
+          <e p="npm-debug.log.3234028868" t="Include" />
           <e p="npm-debug.log.3871297784" t="Include" />
+          <e p="npm-debug.log.417307095" t="Include" />
           <e p="npm-debug.log.863187957" t="Include" />
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
@@ -140,6 +144,7 @@
           </e>
           <e p="Blog" t="Include">
             <e p="Blog.cs" t="Include" />
+            <e p="BlogViewModel.cs" t="Include" />
             <e p="BlogsController.cs" t="Include" />
             <e p="Comments.cs" t="Include" />
             <e p="Views" t="Include">
