@@ -192,21 +192,32 @@ namespace ElatePortal.Modules.Blog
             
             if (ModelState.IsValid)
             {
-                var update = this._portalreposirory.UpdateBlogPost( new Models.Blog()
+                
+                try
                 {
-                    Id = Id,
-                    Title = title,
-                    CoverImage = files[0].FileName,
-                    UpdatedAt = DateTime.Now,
-                    Status = status,
-                    DepartmentsBlog = deps,
-                    Content = content
+                   var filename = this._helper.UploadImages(files, 4 , 2);
                     
-                });
-
+                   var update = this._portalreposirory.UpdateBlogPost( new Models.Blog()
+                    {
+                        Id = Id,
+                        Title = title,
+                        CoverImage = filename[1],
+                        UpdatedAt = DateTime.Now,
+                        Status = status,
+                        DepartmentsBlog = deps,
+                        Content = content
+                    });
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                    throw;
+                }
             }
                
-            return Content("gkjhkjhjk");
+            TempData["message"] = "Updated";
+               
+            return RedirectToAction("Post");
            
         }
         

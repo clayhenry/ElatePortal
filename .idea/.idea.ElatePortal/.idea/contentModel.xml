@@ -315,7 +315,16 @@
               <e p="jquery.validate.unobtrusive.min.js" t="Include" />
             </e>
           </e>
-          <e p="uploads" t="Include" />
+          <e p="uploads" t="Include">
+            <e p="239c862e21f940fdb66108953c132cf1.jpeg" t="Include" />
+            <e p="29fa6b31846244c58dde84b2fcef076d.jpeg" t="Include" />
+            <e p="35787387b34f47dfaa8e236f50ad2222.jpeg" t="Include" />
+            <e p="4613a7df1fa9446b8af4fe234dce36e8.jpeg" t="Include" />
+            <e p="4b7486ef5fcb4b4e8a551f0b5b7044ab.jpeg" t="Include" />
+            <e p="7da7dad0f54940caab62f396a79435ac.jpeg" t="Include" />
+            <e p="803c0bd097a94c858325ed875a83927d.jpeg" t="Include" />
+            <e p="ea53e69edb7c421cb99370454598e25e.jpeg" t="Include" />
+          </e>
         </e>
       </e>
       <e p="ElatePortal.sln" t="IncludeFlat" />

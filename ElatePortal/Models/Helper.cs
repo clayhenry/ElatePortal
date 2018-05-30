@@ -15,6 +15,7 @@ namespace ElatePortal.Models
     {
 
         public string FilePath { get; set; }
+        public string FileName { get; set; }
 
         private IHostingEnvironment _he;
         
@@ -23,7 +24,7 @@ namespace ElatePortal.Models
             this._he = hostingEnvironment;
         }
  
-        public string[] UploadImages (List<IFormFile> files)
+        public string[] UploadImages (List<IFormFile> files, int x = 1, int y = 1)
         {
             long size = files.Sum(f => f.Length);
         
@@ -31,8 +32,8 @@ namespace ElatePortal.Models
             {
                 if (formFile.Length > 0)
                 {
-                    var fileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(formFile.FileName);
-                    var uploadFilePath = Path.Combine(this._he.WebRootPath, "uploads", fileName);
+                    this.FileName = Guid.NewGuid().ToString().Replace("-", "") + Path.GetExtension(formFile.FileName);
+                    var uploadFilePath = Path.Combine(this._he.WebRootPath, "uploads", this.FileName);
                     this.FilePath = Path.GetTempFileName();
                     using (var stream = new FileStream(this.FilePath, FileMode.Create))
                     {
@@ -42,14 +43,14 @@ namespace ElatePortal.Models
                     using (Image<Rgba32> image = Image.Load(this.FilePath))
                     {
                       
-                        image.Mutate(ctx => ctx.Resize(image.Width / 2, image.Height / 2));
+                        image.Mutate(ctx => ctx.Resize(image.Width / x, image.Height / y));
                         image.Save(uploadFilePath); 
                     } 
 
                 }
             }
             
-            return new string[]{FilePath = this.FilePath};
+            return new string[]{FilePath = this.FilePath, FileName = this.FileName};
 
         }
             

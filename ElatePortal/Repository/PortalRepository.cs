@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ElatePortal.Models;
 using ElatePortal.Modules.Blog;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
 
@@ -148,7 +149,10 @@ namespace ElatePortal.Repository
           
             blogdb.Title = payload.Title;
             blogdb.Content = payload.Content;
-            blogdb.CoverImage = payload.CoverImage;
+            
+            if(!string.IsNullOrEmpty(payload.CoverImage) ){
+                blogdb.CoverImage = payload.CoverImage;
+            }
             blogdb.UpdatedAt = payload.UpdatedAt;
             blogdb.Status = payload.Status;
             blogdb.DepartmentsBlog = payload.DepartmentsBlog;
