@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Primitives;
 
 namespace ElatePortal.Models
 {
@@ -19,6 +20,7 @@ namespace ElatePortal.Models
         public DateTime CreatedAt { get; set; }
         public virtual Blog Blog { get; set; }
         public string Level { get; set; }
+        public string Title { get; set; }    
     }
 }
 

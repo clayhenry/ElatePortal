@@ -195,7 +195,7 @@ namespace ElatePortal.Modules.Blog
                 
                 try
                 {
-                   var filename = this._helper.UploadImages(files, 4 , 2);
+                   var filename = this._helper.UploadImages(files, 3 , 3);
                     
                    var update = this._portalreposirory.UpdateBlogPost( new Models.Blog()
                     {
@@ -224,10 +224,10 @@ namespace ElatePortal.Modules.Blog
         [HttpGet("/Admin/Blog/List")]
         public IActionResult List()
         {
-            var Bloglist = this._portalreposirory.GetBlogList();
+          
             
             var lists = new Dictionary<string, IQueryable>(){
-            { "blogs" ,  Bloglist },
+         
             {"comments", this._portalreposirory.GetCommentsAndBlogTitle()}
               
             };

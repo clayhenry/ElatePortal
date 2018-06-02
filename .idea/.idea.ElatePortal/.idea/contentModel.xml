@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.Rider2018.1/system/resharper-host/local/Transient/ReSharperHost/v12/SolutionCaches/_ElatePortal.1526776361.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\Users\pawel\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_ElatePortal.-1249926830.00" t="ExcludeRecursive" />
+    <e p="C:\Users\pawel\source\repos\ElatePortal" t="IncludeFlat">
       <e p="ElatePortal" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="bundleconfig.json" t="Include" />
         <e p="ClientApp" t="Include">
           <e p=".angular-cli.json" t="Include" />
           <e p=".editorconfig" t="Include" />
           <e p=".gitignore" t="Include" />
-          <e p="README.md" t="Include" />
           <e p="e2e" t="Include">
             <e p="app.e2e-spec.ts" t="Include" />
             <e p="app.po.ts" t="Include" />
@@ -26,6 +29,7 @@
           <e p="package-lock.json" t="Include" />
           <e p="package.json" t="Include" />
           <e p="protractor.conf.js" t="Include" />
+          <e p="README.md" t="Include" />
           <e p="src" t="Include">
             <e p="app" t="Include">
               <e p="app-routing.module.ts" t="Include" />
@@ -33,7 +37,7 @@
               <e p="app.component.html" t="Include" />
               <e p="app.component.ts" t="Include" />
               <e p="app.module.ts" t="Include" />
-              <e p="blog" t="Include">
+              <e p="Blog" t="Include">
                 <e p="blog.component.css" t="Include" />
                 <e p="blog.component.html" t="Include" />
                 <e p="blog.component.spec.ts" t="Include" />
@@ -50,7 +54,7 @@
                 <e p="fetch-data.component.html" t="Include" />
                 <e p="fetch-data.component.ts" t="Include" />
               </e>
-              <e p="home" t="Include">
+              <e p="Home" t="Include">
                 <e p="home.component.html" t="Include" />
                 <e p="home.component.ts" t="Include" />
               </e>
@@ -108,21 +112,21 @@
           <e p="RegisterMiddleware.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20180102032909_InitialCreate.Designer.cs" t="Include" />
           <e p="20180102032909_InitialCreate.cs" t="Include" />
-          <e p="20180102034403_UpdateTime.Designer.cs" t="Include" />
+          <e p="20180102032909_InitialCreate.Designer.cs" t="Include" />
           <e p="20180102034403_UpdateTime.cs" t="Include" />
-          <e p="20180102040203_generateTime.Designer.cs" t="Include" />
+          <e p="20180102034403_UpdateTime.Designer.cs" t="Include" />
           <e p="20180102040203_generateTime.cs" t="Include" />
+          <e p="20180102040203_generateTime.Designer.cs" t="Include" />
           <e p="AuthorsContextModelSnapshot.cs" t="Include" />
           <e p="Blog" t="Include">
-            <e p="20180126020024_AddBlog.Designer.cs" t="Include" />
             <e p="20180126020024_AddBlog.cs" t="Include" />
+            <e p="20180126020024_AddBlog.Designer.cs" t="Include" />
             <e p="BlogContextModelSnapshot.cs" t="Include" />
           </e>
           <e p="Profile" t="Include">
-            <e p="20180104011352_Profile.Designer.cs" t="Include" />
             <e p="20180104011352_Profile.cs" t="Include" />
+            <e p="20180104011352_Profile.Designer.cs" t="Include" />
             <e p="ProfileContextModelSnapshot.cs" t="Include" />
           </e>
         </e>
@@ -145,8 +149,8 @@
           </e>
           <e p="Blog" t="Include">
             <e p="Blog.cs" t="Include" />
-            <e p="BlogViewModel.cs" t="Include" />
             <e p="BlogsController.cs" t="Include" />
+            <e p="BlogViewModel.cs" t="Include" />
             <e p="Comments.cs" t="Include" />
             <e p="Views" t="Include">
               <e p="Create.cshtml" t="Include" />
@@ -172,6 +176,14 @@
             <e p="Test.cs" t="Include" />
           </e>
         </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.0" t="Include">
+              <e p="ElatePortal.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="package-lock.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -179,8 +191,27 @@
         <e p="Repository" t="Include">
           <e p="PortalRepository.cs" t="Include" />
         </e>
+        <e p="sqlinserts" t="Include">
+          <e p="master_dbo___EFMigrationsHistory.sql" t="Include" />
+          <e p="master_dbo_Authors.sql" t="Include" />
+          <e p="master_dbo_Blog.sql" t="Include" />
+          <e p="master_dbo_Comments.sql" t="Include" />
+          <e p="master_dbo_Departments.sql" t="Include" />
+          <e p="master_dbo_DepartmentsBlog.sql" t="Include" />
+          <e p="master_dbo_GalleryImages.sql" t="Include" />
+          <e p="master_dbo_ImageTags.sql" t="Include" />
+          <e p="master_dbo_MSreplication_options.sql" t="Include" />
+          <e p="master_dbo_Profile.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_db.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_dev.sql" t="Include" />
+          <e p="master_dbo_spt_fallback_usg.sql" t="Include" />
+          <e p="master_dbo_spt_monitor.sql" t="Include" />
+          <e p="master_dbo_Tags.sql" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
         <e p="Views" t="Include">
+          <e p="_ViewImports.cshtml" t="Include" />
+          <e p="_ViewStart.cshtml" t="Include" />
           <e p="Account" t="Include">
             <e p="AccessDenied.cshtml" t="Include" />
             <e p="SignedOut.cshtml" t="Include" />
@@ -202,6 +233,9 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
+            <e p="_Layout.cshtml" t="Include" />
+            <e p="_LoginPartial.cshtml" t="Include" />
+            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Components" t="Include">
               <e p="Employee" t="Include">
                 <e p="Default.cshtml" t="Include" />
@@ -209,41 +243,7 @@
             </e>
             <e p="Error.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
-            <e p="_Layout.cshtml" t="Include" />
-            <e p="_LoginPartial.cshtml" t="Include" />
-            <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           </e>
-          <e p="_ViewImports.cshtml" t="Include" />
-          <e p="_ViewStart.cshtml" t="Include" />
-        </e>
-        <e p="appsettings.Development.json" t="Include" />
-        <e p="appsettings.json" t="Include" />
-        <e p="bin" t="ExcludeRecursive" />
-        <e p="bundleconfig.json" t="Include" />
-        <e p="obj" t="ExcludeRecursive">
-          <e p="Debug" t="Include">
-            <e p="netcoreapp2.0" t="Include">
-              <e p="ElatePortal.AssemblyInfo.cs" t="Include" />
-            </e>
-          </e>
-        </e>
-        <e p="package-lock.json" t="Include" />
-        <e p="sqlinserts" t="Include">
-          <e p="master_dbo_Authors.sql" t="Include" />
-          <e p="master_dbo_Blog.sql" t="Include" />
-          <e p="master_dbo_Comments.sql" t="Include" />
-          <e p="master_dbo_Departments.sql" t="Include" />
-          <e p="master_dbo_DepartmentsBlog.sql" t="Include" />
-          <e p="master_dbo_GalleryImages.sql" t="Include" />
-          <e p="master_dbo_ImageTags.sql" t="Include" />
-          <e p="master_dbo_MSreplication_options.sql" t="Include" />
-          <e p="master_dbo_Profile.sql" t="Include" />
-          <e p="master_dbo_Tags.sql" t="Include" />
-          <e p="master_dbo___EFMigrationsHistory.sql" t="Include" />
-          <e p="master_dbo_spt_fallback_db.sql" t="Include" />
-          <e p="master_dbo_spt_fallback_dev.sql" t="Include" />
-          <e p="master_dbo_spt_fallback_usg.sql" t="Include" />
-          <e p="master_dbo_spt_monitor.sql" t="Include" />
         </e>
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
@@ -264,7 +264,6 @@
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">
               <e p=".bower.json" t="Include" />
-              <e p="LICENSE" t="Include" />
               <e p="dist" t="Include">
                 <e p="css" t="Include">
                   <e p="bootstrap-theme.css" t="Include" />
@@ -289,25 +288,26 @@
                   <e p="npm.js" t="Include" />
                 </e>
               </e>
+              <e p="LICENSE" t="Include" />
             </e>
             <e p="jquery" t="Include">
               <e p=".bower.json" t="Include" />
-              <e p="LICENSE.txt" t="Include" />
               <e p="dist" t="Include">
                 <e p="jquery.js" t="Include" />
                 <e p="jquery.min.js" t="Include" />
                 <e p="jquery.min.map" t="Include" />
               </e>
+              <e p="LICENSE.txt" t="Include" />
             </e>
             <e p="jquery-validation" t="Include">
               <e p=".bower.json" t="Include" />
-              <e p="LICENSE.md" t="Include" />
               <e p="dist" t="Include">
                 <e p="additional-methods.js" t="Include" />
                 <e p="additional-methods.min.js" t="Include" />
                 <e p="jquery.validate.js" t="Include" />
                 <e p="jquery.validate.min.js" t="Include" />
               </e>
+              <e p="LICENSE.md" t="Include" />
             </e>
             <e p="jquery-validation-unobtrusive" t="Include">
               <e p=".bower.json" t="Include" />
@@ -319,10 +319,14 @@
             <e p="239c862e21f940fdb66108953c132cf1.jpeg" t="Include" />
             <e p="29fa6b31846244c58dde84b2fcef076d.jpeg" t="Include" />
             <e p="35787387b34f47dfaa8e236f50ad2222.jpeg" t="Include" />
+            <e p="408b97694481495e8901f3098cb39ac9.jpg" t="Include" />
             <e p="4613a7df1fa9446b8af4fe234dce36e8.jpeg" t="Include" />
             <e p="4b7486ef5fcb4b4e8a551f0b5b7044ab.jpeg" t="Include" />
             <e p="7da7dad0f54940caab62f396a79435ac.jpeg" t="Include" />
             <e p="803c0bd097a94c858325ed875a83927d.jpeg" t="Include" />
+            <e p="8facfbd305fd466f9f96b0734d417e72.jpg" t="Include" />
+            <e p="ba7c168b61e3435ea2c3e85b1e62050e.jpg" t="Include" />
+            <e p="d65967ab5cfa4b8887c216c649e157a1.jpg" t="Include" />
             <e p="ea53e69edb7c421cb99370454598e25e.jpeg" t="Include" />
           </e>
         </e>

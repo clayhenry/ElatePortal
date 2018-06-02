@@ -67,13 +67,17 @@ namespace ElatePortal.Repository
         public IQueryable<HomeViewModel> GetCommentsAndBlogTitle()
         {
 
-            var g = (from p in _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments)
+            var g = (from p in _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments) 
+                    join t in _profileContext.Profile on p.ProfileId equals t.Id
 
                     select new HomeViewModel
                     {
                         Content = p.Content,
                         BlogId = p.Id,
                         Title = p.Title,
+                        Name = t.Name,
+                        UserTitle = t.Title,
+                        
                         DepartmentsBlog = p.DepartmentsBlog,
         
                         Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(p.Id))
