@@ -22,11 +22,11 @@
 
     <h1><input name="title" value="@post.Title" /></h1>
                 
-     <img src="@post.CoverImage"/>              
+     <img src="/uploads/@post.CoverImage"/>              
                    
     <div class="form-group">
         <div class="col-md-10">
-            <p>Upload one or more files using this form:</p>
+          
             <input type="file" name="files" multiple />
         </div>
     </div>
@@ -66,20 +66,19 @@
     <div>Status:
         @{
               
-            var Statuses = new Dictionary<string, string>()
+            var statuses = new List<string>()
             {
-                {"Draft", "0"},
-                {"Published", "1"}
+                "Draft", "Published"
             };
         } 
     
         <select name="status">
             @{
-                foreach (var status in Statuses)
+                foreach (var status in statuses)
                 {
-                    var selected = (post.Status.Equals(status.Value)) ?  "selected" : "";
+                    var selected = (post.Status.Equals(status)) ?  "selected" : "";
                     
-                    <option @selected >@status.Key</option>
+                    <option @selected >@status</option>
                 }              
             }
 

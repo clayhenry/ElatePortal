@@ -12440,28 +12440,33 @@
     ]
   },
   "packageFolders": {
-    "/home/pawel/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\pawel\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/pawel/RiderProjects/elate/ElatePortal/ElatePortal.csproj",
+      "projectUniqueName": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\ElatePortal.csproj",
       "projectName": "ElatePortal",
-      "projectPath": "/home/pawel/RiderProjects/elate/ElatePortal/ElatePortal.csproj",
-      "packagesPath": "/home/pawel/.nuget/packages/",
-      "outputPath": "/home/pawel/RiderProjects/elate/ElatePortal/obj/",
+      "projectPath": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\ElatePortal.csproj",
+      "packagesPath": "C:\\Users\\pawel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\pawel\\source\\repos\\ElatePortal\\ElatePortal\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/pawel/.config/NuGet/NuGet.Config"
+        "C:\\Users\\pawel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
