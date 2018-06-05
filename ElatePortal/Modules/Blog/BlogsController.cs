@@ -175,9 +175,9 @@ namespace ElatePortal.Modules.Blog
         public IActionResult Create()
         {
             
-//            var departments = this._portalreposirory.GetDepartments();
+            var departments = this._portalreposirory.GetDepartments();
 
-            return View("~/Modules/Blog/Views/Create.cshtml");
+            return View("~/Modules/Blog/Views/Create.cshtml", departments);
         }
 
         [HttpPost("/Admin/Blog/Update/{id}")]
