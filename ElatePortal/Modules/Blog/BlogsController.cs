@@ -28,7 +28,9 @@ namespace ElatePortal.Modules.Blog
             BlogContext BlogContext, 
             PortalRepository PortalRepository, 
             CommentContext CommentContext,  
-            Helper helper)
+            Helper helper
+            
+            )
         {
             this._blogcontext = BlogContext;
             this._portalreposirory = PortalRepository;
@@ -170,14 +172,46 @@ namespace ElatePortal.Modules.Blog
             return View("~/Modules/Blog/Views/Post.cshtml", editBlog);
 
         }
-
+        
         [HttpGet("/Admin/Blog/Create")]
         public IActionResult Create()
-        {
-            
+        {           
             var departments = this._portalreposirory.GetDepartments();
-
             return View("~/Modules/Blog/Views/Create.cshtml", departments);
+        }
+
+        [HttpPost("/Admin/Blog/Create/Post")]
+        public async Task<IActionResult> CreatePost(Models.Blog blog,List<IFormFile> files, List<int> tag)
+        {
+
+         //fot this, all you need to do is bind model and evaluate the missing elements.
+            if (ModelState.IsValid)
+            {
+                var filename = this._helper.UploadImages(files, 3 , 3); 
+               
+                var deps = new List<DepartmentsBlog>();
+                
+                blog.CoverImage = filename[1];
+                blog.ProfileId = this._portalreposirory.GetProfileId(HttpContext.GetEmail());
+               
+               
+                foreach (var t in tag)
+                {
+                    deps.Add(new DepartmentsBlog(){ DepartmentsId= t, BlogId = blog.Id});
+                }
+
+                this._blogcontext.Blog.Add(blog);
+               
+                blog.DepartmentsBlog = deps;
+
+                await this._blogcontext.SaveChangesAsync();
+
+            }
+
+
+            return Content("dasas");
+
+
         }
 
         [HttpPost("/Admin/Blog/Update/{id}")]

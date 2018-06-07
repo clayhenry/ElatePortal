@@ -56,8 +56,8 @@
       <file leaf-file-name="PortalRepository.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="36" column="44" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="44" />
+            <state relative-caret-position="640">
+              <caret line="161" column="60" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="60" />
               <folding>
                 <marker date="1527909978446" expanded="false" signature="6:302" ph="..." />
                 <marker date="1527909978446" expanded="true" signature="336:5735" ph="{...}" />
@@ -76,57 +76,137 @@
                 <marker date="1527909978446" expanded="false" signature="4013:4801" ph="{...}" />
                 <marker date="1527909978446" expanded="true" signature="4296:4763" ph="{...}" />
                 <marker date="1527909978446" expanded="false" signature="4859:4981" ph="{...}" />
-                <marker date="1527909978446" expanded="false" signature="5034:5718" ph="{...}" />
+                <marker date="1527909978446" expanded="true" signature="5034:5718" ph="{...}" />
                 <marker date="1527909978446" expanded="true" signature="5341:5412" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlogsController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BlogsController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="179" selection-start-line="179" selection-end-line="179" />
+            <state relative-caret-position="160">
+              <caret line="216" column="45" lean-forward="true" selection-start-line="216" selection-start-column="45" selection-end-line="216" selection-end-column="45" />
               <folding>
-                <marker date="1527959574366" expanded="false" signature="6:349" ph="..." />
-                <marker date="1527959574366" expanded="true" signature="385:7705" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="509:7703" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="920:1126" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="1221:1279" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="1403:1746" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="1450:1525" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="1643:1706" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="1899:2602" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="1946:2021" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2053:2118" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2203:2286" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2335:2559" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2386:2461" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2482:2545" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="2745:3046" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="2792:2867" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="3196:3634" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="3243:3318" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="3435:3498" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="3675:3754" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="3904:4288" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="4374:4721" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="4463:4625" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="4800:4981" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="5155:6331" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="5253:5362" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="5411:6187" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="5462:6032" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="5686:6012" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="6068:6173" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="6414:6714" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="6509:6624" ph="{...}" />
-                <marker date="1527959574366" expanded="false" signature="6874:7665" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="6921:7590" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="7071:7353" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="7125:7184" ph="{...}" />
-                <marker date="1527959574366" expanded="true" signature="7205:7281" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="6:349" ph="..." />
+                <marker date="1528167173029" expanded="true" signature="385:8779" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="509:8777" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="946:1152" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="1247:1305" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="1429:1772" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="1476:1551" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="1669:1732" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="1925:2628" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="1972:2047" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2079:2144" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2229:2312" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2361:2585" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2412:2487" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2508:2571" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="2771:3072" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="2818:2893" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="3222:3660" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="3269:3344" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="3461:3524" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="3701:3780" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="3930:4314" ph="{...}" />
+                <marker date="1528167173029" expanded="false" signature="4400:4747" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="4489:4651" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="4834:5012" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="5166:6055" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="5302:6004" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="5690:5816" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="6229:7405" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="6327:6436" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="6485:7261" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="6536:7106" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="6760:7086" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="7142:7247" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="7488:7788" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="7583:7698" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="7948:8739" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="7995:8664" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="8145:8427" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="8199:8258" ph="{...}" />
+                <marker date="1528167173029" expanded="true" signature="8279:8355" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Blog" pinned="false" current-in-tab="true">
+        <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/Blog">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DepartmentsBlog" pinned="false" current-in-tab="false">
+        <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/DepartmentsBlog">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Helper.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="52" column="66" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="66" />
+              <folding>
+                <marker date="1527824300565" expanded="false" signature="6:295" ph="..." />
+                <marker date="1527824300565" expanded="true" signature="325:1829" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="351:1814" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="561:624" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="709:1791" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="822:1682" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="877:1668" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="1265:1359" ph="{...}" />
+                <marker date="1527824300565" expanded="true" signature="1436:1648" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorsController.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/AuthorsController.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="64" column="24" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
+              <folding>
+                <marker date="1516157256877" expanded="false" signature="6:298" ph="..." />
+                <marker date="1516157256877" expanded="true" signature="333:4561" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="442:4559" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="556:608" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="689:772" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="865:1210" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="903:966" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="1103:1166" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="1280:1327" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="1337:1547" ph="/* POST: Authors/Create ... */" />
+                <marker date="1516157256877" expanded="true" signature="1731:1993" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="1777:1950" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2080:2407" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2118:2181" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2301:2364" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2417:2627" ph="/* POST: Authors/Edit/5 ... */" />
+                <marker date="1516157256877" expanded="true" signature="2817:3569" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2860:2923" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2960:3526" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="2994:3130" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3183:3456" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3251:3338" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3363:3438" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3660:4005" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3698:3761" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="3898:3961" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="4181:4432" ph="{...}" />
+                <marker date="1516157256877" expanded="true" signature="4475:4553" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -135,10 +215,10 @@
       <file leaf-file-name="RegisterController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="18" column="76" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="76" />
               <folding>
-                <marker date="1524183623377" expanded="false" signature="6:305" ph="..." />
+                <marker date="1524183623377" expanded="true" signature="6:305" ph="..." />
                 <marker date="1524183623377" expanded="true" signature="349:1582" ph="{...}" />
                 <marker date="1524183623377" expanded="true" signature="400:1580" ph="{...}" />
                 <marker date="1524183623377" expanded="true" signature="660:821" ph="{...}" />
@@ -185,15 +265,15 @@
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
+              <caret line="30" column="24" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="24" />
               <folding>
-                <marker date="1527959983329" expanded="true" signature="0:57" ph="@..." />
-                <marker date="1527959983329" expanded="true" signature="69:656" ph="&lt;form.../&gt;" />
-                <marker date="1527959983329" expanded="true" signature="85:217" ph="&lt;select.../&gt;" />
-                <marker date="1527959983329" expanded="true" signature="282:452" ph="&lt;div.../&gt;" />
-                <marker date="1527959983329" expanded="true" signature="315:441" ph="&lt;div.../&gt;" />
-                <marker date="1527959983329" expanded="true" signature="508:638" ph="@..." />
-                <marker date="1527959983329" expanded="true" signature="536:638" ph="{...}" />
+                <marker date="1528164347436" expanded="true" signature="0:57" ph="@..." />
+                <marker date="1528164347436" expanded="true" signature="69:772" ph="&lt;form.../&gt;" />
+                <marker date="1528164347436" expanded="true" signature="163:295" ph="&lt;select.../&gt;" />
+                <marker date="1528164347436" expanded="true" signature="360:530" ph="&lt;div.../&gt;" />
+                <marker date="1528164347436" expanded="true" signature="393:519" ph="&lt;div.../&gt;" />
+                <marker date="1528164347436" expanded="true" signature="586:716" ph="@..." />
+                <marker date="1528164347436" expanded="true" signature="614:716" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -202,8 +282,8 @@
       <file leaf-file-name="Post.cshtml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="54" column="100" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="100" />
+            <state relative-caret-position="238">
+              <caret line="15" column="49" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="49" />
               <folding>
                 <marker date="1527959667806" expanded="false" signature="7:73" ph="..." />
                 <marker date="1527959667806" expanded="true" signature="75:132" ph="@..." />
@@ -240,6 +320,7 @@
       <find>SaveChanges</find>
       <find>Save</find>
       <find>Help</find>
+      <find>GetProfileId</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -309,9 +390,9 @@
         <option value="$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/List.cshtml" />
-        <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml" />
         <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml" />
+        <option value="$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs" />
       </list>
     </option>
   </component>
@@ -329,7 +410,7 @@
       <path value="$PROJECT_DIR$/ElatePortal/ClientApp/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="266" />
     <option name="y" value="119" />
     <option name="width" value="1158" />
@@ -352,6 +433,12 @@
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
               <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ElatePortal (1 project)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ElatePortal" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Controllers" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -1387,7 +1474,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39491000" />
+    <option name="totallyTimeSpent" value="45407000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1413,10 +1500,11 @@
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32979852" />
       <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.32897604" />
       <window_info anchor="bottom" id="NuGet" order="17" sideWeight="0.4978678" weight="0.5708061" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23347548" />
+      <window_info anchor="bottom" id="Database Console" order="8" sideWeight="0.49946696" weight="0.32461873" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23347548" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Build" order="12" sideWeight="0.4968017" weight="0.32897604" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1663113" />
+      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1663113" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.40849674" />
@@ -1444,7 +1532,6 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50319827" side_tool="true" weight="0.32934782" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.55956286" />
-      <window_info anchor="bottom" id="Database Console" order="8" sideWeight="0.49946696" weight="0.3267974" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
@@ -1493,13 +1580,10 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="92" />
+      <option name="time" value="98" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
-    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
-    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Departments" />
     <entry file="file://$PROJECT_DIR$/ElatePortal/DAL/DepartmentsContext.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -1590,13 +1674,6 @@
         <state relative-caret-position="-486" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Startup.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1621,13 +1698,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/appsettings.Development.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Blog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/ClientApp/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1692,13 +1762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/Blog">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Models/HomeViewModel.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -1751,22 +1814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="43" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <marker date="1527959983329" expanded="true" signature="0:57" ph="@..." />
-            <marker date="1527959983329" expanded="true" signature="69:656" ph="&lt;form.../&gt;" />
-            <marker date="1527959983329" expanded="true" signature="85:217" ph="&lt;select.../&gt;" />
-            <marker date="1527959983329" expanded="true" signature="282:452" ph="&lt;div.../&gt;" />
-            <marker date="1527959983329" expanded="true" signature="315:441" ph="&lt;div.../&gt;" />
-            <marker date="1527959983329" expanded="true" signature="508:638" ph="@..." />
-            <marker date="1527959983329" expanded="true" signature="536:638" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/Departments">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1776,8 +1823,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Post.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="54" column="100" selection-start-line="54" selection-start-column="10" selection-end-line="54" selection-end-column="100" />
+        <state relative-caret-position="238">
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="49" />
           <folding>
             <marker date="1527959667806" expanded="false" signature="7:73" ph="..." />
             <marker date="1527959667806" expanded="true" signature="75:132" ph="@..." />
@@ -1805,10 +1852,101 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Controllers/AuthorsController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="24" />
+          <folding>
+            <marker date="1516157256877" expanded="false" signature="6:298" ph="..." />
+            <marker date="1516157256877" expanded="true" signature="333:4561" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="442:4559" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="556:608" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="689:772" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="865:1210" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="903:966" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="1103:1166" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="1280:1327" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="1337:1547" ph="/* POST: Authors/Create ... */" />
+            <marker date="1516157256877" expanded="true" signature="1731:1993" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="1777:1950" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2080:2407" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2118:2181" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2301:2364" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2417:2627" ph="/* POST: Authors/Edit/5 ... */" />
+            <marker date="1516157256877" expanded="true" signature="2817:3569" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2860:2923" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2960:3526" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="2994:3130" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3183:3456" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3251:3338" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3363:3438" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3660:4005" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3698:3761" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="3898:3961" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="4181:4432" ph="{...}" />
+            <marker date="1516157256877" expanded="true" signature="4475:4553" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Models/Helper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="52" column="66" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="66" />
+          <folding>
+            <marker date="1527824300565" expanded="false" signature="6:295" ph="..." />
+            <marker date="1527824300565" expanded="true" signature="325:1829" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="351:1814" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="561:624" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="709:1791" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="822:1682" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="877:1668" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="1265:1359" ph="{...}" />
+            <marker date="1527824300565" expanded="true" signature="1436:1648" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/eb8f0523/24fd55eb-0fba-44b7-9418-914b699234dc/master.dbo.Blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="18" column="76" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="76" />
+          <folding>
+            <marker date="1524183623377" expanded="true" signature="6:305" ph="..." />
+            <marker date="1524183623377" expanded="true" signature="349:1582" ph="{...}" />
+            <marker date="1524183623377" expanded="true" signature="400:1580" ph="{...}" />
+            <marker date="1524183623377" expanded="true" signature="660:821" ph="{...}" />
+            <marker date="1524183623377" expanded="true" signature="884:1007" ph="{...}" />
+            <marker date="1524183623377" expanded="true" signature="1101:1574" ph="{...}" />
+            <marker date="1524183623377" expanded="true" signature="1148:1536" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Extensions/ElateExtensions.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding>
+            <marker date="1524183550141" expanded="false" signature="6:520" ph="..." />
+            <marker date="1524183550141" expanded="true" signature="554:780" ph="{...}" />
+            <marker date="1524183550141" expanded="true" signature="596:778" ph="{...}" />
+            <marker date="1524183550141" expanded="true" signature="668:771" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Repository/PortalRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="36" column="44" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="44" />
+        <state relative-caret-position="640">
+          <caret line="161" column="60" selection-start-line="161" selection-start-column="45" selection-end-line="161" selection-end-column="60" />
           <folding>
             <marker date="1527909978446" expanded="false" signature="6:302" ph="..." />
             <marker date="1527909978446" expanded="true" signature="336:5735" ph="{...}" />
@@ -1827,72 +1965,89 @@
             <marker date="1527909978446" expanded="false" signature="4013:4801" ph="{...}" />
             <marker date="1527909978446" expanded="true" signature="4296:4763" ph="{...}" />
             <marker date="1527909978446" expanded="false" signature="4859:4981" ph="{...}" />
-            <marker date="1527909978446" expanded="false" signature="5034:5718" ph="{...}" />
+            <marker date="1527909978446" expanded="true" signature="5034:5718" ph="{...}" />
             <marker date="1527909978446" expanded="true" signature="5341:5412" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Registration/RegisterController.cs">
+    <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/Views/Create.cshtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
+        <state relative-caret-position="510">
+          <caret line="30" column="24" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="24" />
           <folding>
-            <marker date="1524183623377" expanded="false" signature="6:305" ph="..." />
-            <marker date="1524183623377" expanded="true" signature="349:1582" ph="{...}" />
-            <marker date="1524183623377" expanded="true" signature="400:1580" ph="{...}" />
-            <marker date="1524183623377" expanded="true" signature="660:821" ph="{...}" />
-            <marker date="1524183623377" expanded="true" signature="884:1007" ph="{...}" />
-            <marker date="1524183623377" expanded="true" signature="1101:1574" ph="{...}" />
-            <marker date="1524183623377" expanded="true" signature="1148:1536" ph="{...}" />
+            <marker date="1528164347436" expanded="true" signature="0:57" ph="@..." />
+            <marker date="1528164347436" expanded="true" signature="69:772" ph="&lt;form.../&gt;" />
+            <marker date="1528164347436" expanded="true" signature="163:295" ph="&lt;select.../&gt;" />
+            <marker date="1528164347436" expanded="true" signature="360:530" ph="&lt;div.../&gt;" />
+            <marker date="1528164347436" expanded="true" signature="393:519" ph="&lt;div.../&gt;" />
+            <marker date="1528164347436" expanded="true" signature="586:716" ph="@..." />
+            <marker date="1528164347436" expanded="true" signature="614:716" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/DepartmentsBlog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ElatePortal/Modules/Blog/BlogsController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="179" selection-start-line="179" selection-end-line="179" />
+        <state relative-caret-position="160">
+          <caret line="216" column="45" lean-forward="true" selection-start-line="216" selection-start-column="45" selection-end-line="216" selection-end-column="45" />
           <folding>
-            <marker date="1527959574366" expanded="false" signature="6:349" ph="..." />
-            <marker date="1527959574366" expanded="true" signature="385:7705" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="509:7703" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="920:1126" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="1221:1279" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="1403:1746" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="1450:1525" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="1643:1706" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="1899:2602" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="1946:2021" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2053:2118" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2203:2286" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2335:2559" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2386:2461" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2482:2545" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="2745:3046" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="2792:2867" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="3196:3634" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="3243:3318" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="3435:3498" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="3675:3754" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="3904:4288" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="4374:4721" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="4463:4625" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="4800:4981" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="5155:6331" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="5253:5362" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="5411:6187" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="5462:6032" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="5686:6012" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="6068:6173" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="6414:6714" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="6509:6624" ph="{...}" />
-            <marker date="1527959574366" expanded="false" signature="6874:7665" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="6921:7590" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="7071:7353" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="7125:7184" ph="{...}" />
-            <marker date="1527959574366" expanded="true" signature="7205:7281" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="6:349" ph="..." />
+            <marker date="1528167173029" expanded="true" signature="385:8779" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="509:8777" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="946:1152" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="1247:1305" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="1429:1772" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="1476:1551" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="1669:1732" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="1925:2628" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="1972:2047" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2079:2144" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2229:2312" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2361:2585" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2412:2487" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2508:2571" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="2771:3072" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="2818:2893" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="3222:3660" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="3269:3344" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="3461:3524" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="3701:3780" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="3930:4314" ph="{...}" />
+            <marker date="1528167173029" expanded="false" signature="4400:4747" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="4489:4651" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="4834:5012" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="5166:6055" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="5302:6004" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="5690:5816" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="6229:7405" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="6327:6436" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="6485:7261" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="6536:7106" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="6760:7086" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="7142:7247" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="7488:7788" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="7583:7698" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="7948:8739" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="7995:8664" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="8145:8427" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="8199:8258" ph="{...}" />
+            <marker date="1528167173029" expanded="true" signature="8279:8355" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://dde92ff9-be6b-4b21-942c-6fbfe20d5a42/database/DB_9A9F33_altimeter/schema/dbo/table/Blog">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
