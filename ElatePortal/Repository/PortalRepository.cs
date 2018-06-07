@@ -69,7 +69,7 @@ namespace ElatePortal.Repository
 
             var g = (from p in _blogContext.Blog.Include(c => c.DepartmentsBlog).ThenInclude(f => f.Departments) 
                     join t in _profileContext.Profile on p.ProfileId equals t.Id
-
+                    orderby p.CreatedAt descending 
                     select new HomeViewModel
                     {
                         Content = p.Content,
@@ -77,10 +77,12 @@ namespace ElatePortal.Repository
                         Title = p.Title,
                         Name = t.Name,
                         UserTitle = t.Title,
-                        
                         DepartmentsBlog = p.DepartmentsBlog,
-        
+                        CreatedAt = p.CreatedAt,
+                        Status = p.Status,
+                        
                         Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(p.Id))
+                            
                             .Select(com => new Comments()
                             {
                                 Preview = new HomeViewModel().TruncateString(com.Comment, 6),

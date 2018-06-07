@@ -18,24 +18,26 @@
 <ul>  
     @foreach (var post in Model["comments"])
     {
-       
-               
+
+
         <h2> <a href="/Admin/Blog/Edit/@post.BlogId">@post.Title </a></h2>
-        <span>@post.Name, @post.UserTitle </span>       
+        <span>@post.CreatedAt </span> <span>@post.Status </span>
+        <span>@post.Name, @post.UserTitle </span>
         <div>
-            
+
             @foreach (var dep in post.DepartmentsBlog)
             {
                 <span> @dep.Departments.DepartmentName </span>
             }
-            
+
         </div>
-            
+        if (post.Comments.Count != 0)
+        {
         <div>All Comments:@post.Comments.Count </div>
 
         int pendingApproval = 0;
         int approved = 0;
-        
+
         for (int i = 0; i < post.Comments.Count; i++)
         {
             if (post.Comments[i].Status.Equals(0))
@@ -46,47 +48,52 @@
 
             if (post.Comments[i].Status.Equals(1))
             {
-                approved ++;
+                approved++;
             }
-            
-        }
-        <div>Pending Approval:@pendingApproval </div> 
-        <div>Approved:@approved </div> 
-                                                       
-        <ul>
-           @foreach(var comment in post.Comments )
-           {
-         
-            
-               if(comment.Status.Equals(0)){
-                   
-                <li>
-                   <div>
-                        <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a>
-                   </div>
-                   <div>@comment.Comment (in modal) </div>
-                   <div>Status:<strong> Pending Approval</strong></div>
-               </li>
-               }
 
-               if (!comment.Status.Equals(0))
-               {
-                  
-                   <li>
-                       <div> <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a></div>
-                       <div>@comment.Comment (in modal) </div>
-                       <div>Status:<strong> Approved</strong></div>
-                   </li>
-               }
-           
-           }
-            
-        </ul>
-        <div>Select all
-            <input type="submit" name="update" value="Approve"/>
-            <input type="submit" name="update" value="Disapprove"/>
-        </div>
+        }
+        <div>Pending Approval:@pendingApproval </div>
+        <div>Approved:@approved </div>
+
+             <ul>
+
+                 @foreach (var comment in post.Comments)
+                 {
+
+
+                 if (comment.Status.Equals(0))
+                 {
+
+                 <li>
+                     <div>
+                         <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a>
+                     </div>
+                     <div>@comment.Comment (in modal) </div>
+                     <div>Status:<strong> Pending Approval</strong></div>
+                 </li>
+                 }
+
+                 if (!comment.Status.Equals(0))
+                 {
+
+                 <li>
+                     <div> <input type="checkbox" name="commentId[]" value="@comment.Id"> <strong> @comment.Preview ...</strong> By <a href="mailto:@comment.Author[0].Email"> @comment.Author[0].Name</a></div>
+                     <div>@comment.Comment (in modal) </div>
+                     <div>Status:<strong> Approved</strong></div>
+                 </li>
+                 }
+
+                 }
+
+             </ul>
+
+             <div>Select all
+                 <input type="submit" name="update" value="Approve"/>
+                 <input type="submit" name="update" value="Disapprove"/>
+             </div>
+         }
     }
+    
 </ul>
 </form>
 

@@ -193,7 +193,12 @@ namespace ElatePortal.Modules.Blog
                 
                 blog.CoverImage = filename[1];
                 blog.ProfileId = this._portalreposirory.GetProfileId(HttpContext.GetEmail());
-               
+                blog.CreatedAt =  Convert.ToDateTime(DateTime.Now) ;
+
+                if (blog.Status == "Published")
+                {
+                    blog.PublishAt = Convert.ToDateTime(DateTime.Now) ;
+                }
                
                 foreach (var t in tag)
                 {
@@ -207,9 +212,9 @@ namespace ElatePortal.Modules.Blog
                 await this._blogcontext.SaveChangesAsync();
 
             }
+            TempData["message"] = "Created";
 
-
-            return Content("dasas");
+             return RedirectToAction("List");
 
 
         }

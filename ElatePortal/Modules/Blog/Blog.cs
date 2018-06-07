@@ -27,9 +27,9 @@ namespace ElatePortal.Models
  
 
         public string Title { get; set; }
-        public DateTime PublishAt { get; set; }
+        public DateTime? PublishAt { get; set; }
         public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
         
         public int CategoryId { get; set; }
         public string Status { get; set; }
