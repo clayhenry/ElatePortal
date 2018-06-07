@@ -4,12 +4,12 @@
 }
 
 View Post
-<form>
+<form method="post"  action="/Admin/Blog/Create/Post" enctype="multipart/form-data">
     
     <select name="Status" >
         
-        <option value="0">Draft</option>
-        <option value="2">Published</option>
+        <option value="Draft">Draft</option>
+        <option value="Published">Published</option>
     </select>
 
     Title:
@@ -32,5 +32,5 @@ View Post
 
     }
     
-    
+    <button value="submit">Create</button>
 </form>
