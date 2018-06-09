@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="dataSourceStorageLocal">
-    <data-source name="DB_9A9F33_altimeter@SQL5036.site4now.net" uuid="dde92ff9-be6b-4b21-942c-6fbfe20d5a42">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
-      <introspection-schemas>DB_9A9F33_altimeter:dbo</introspection-schemas>
-    </data-source>
-  </component>
-</project>
