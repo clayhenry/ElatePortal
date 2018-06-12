@@ -1,6 +1,9 @@
 ﻿export interface IPosts {
 
-      title: number,
+  BlogId: number,
+  title: number,
+  userTitle : string,
+  name : string,
       content : string
       preview : string
   coverImage : string

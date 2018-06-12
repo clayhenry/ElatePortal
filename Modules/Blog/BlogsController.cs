@@ -57,7 +57,7 @@ namespace ElatePortal.Modules.Blog
                 return BadRequest(ModelState);
             }
 
-            var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id);
+            var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id && m.Status == "Published");
 
             if (blog == null)
             {

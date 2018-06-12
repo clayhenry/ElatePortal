@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElatePortal", "ElatePortal.csproj", "{EA8DDE7F-AB0E-4A21-9029-8CF40E06F912}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA8DDE7F-AB0E-4A21-9029-8CF40E06F912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA8DDE7F-AB0E-4A21-9029-8CF40E06F912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA8DDE7F-AB0E-4A21-9029-8CF40E06F912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA8DDE7F-AB0E-4A21-9029-8CF40E06F912}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

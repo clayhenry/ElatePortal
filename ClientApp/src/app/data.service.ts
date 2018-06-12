@@ -9,22 +9,19 @@ export class DataService {
 
 
   private _url = "/api/Blogs";
-  //private list = new BehaviorSubject<any>(["list item 1", "list item 2"]);
- // item = this.list.asObservable();
 
   constructor( private http: HttpClient ) { }
 
-
-  // changeItem(item){
-  //
-  //   this.list.next(item);
-  // }
-
   getBlogItemsAjax() : Observable<IPosts[]>{
-  //getBlogItemsAjax() : Observable<Array<any>>{
 
     return this.http.get<IPosts[]>(this._url);
   }
+
+  getBlogPostAjax(id: number) : Observable<Array<any>>{
+
+    return  this.http.get<Array<any>>(this._url + "/" + id);
+  }
+
   getBlogItems(){
 
     return [

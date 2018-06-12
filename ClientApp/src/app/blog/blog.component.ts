@@ -15,11 +15,13 @@ export class BlogComponent implements OnInit {
   currentId: number;
   items = [];
   blogposts = [];
+  blogpost = [];
 
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
-    //this._data.item.subscribe(res=> this.items = res);
+
+
 
   }
 
@@ -28,6 +30,7 @@ export class BlogComponent implements OnInit {
     this.itemCount = this.items.length;
     //this.blogposts = this._data.getBlogItems();
     this._data.getBlogItemsAjax().subscribe(data => this.blogposts = data)
+
   }
 
   addItem(){
@@ -45,6 +48,13 @@ export class BlogComponent implements OnInit {
   sendMeHome(){
 
     this.router.navigate(['']);//navigates to route name
+
+  }
+
+  getBlogPost(id : number){
+
+    this._data.getBlogPostAjax(id).subscribe(data => this.blogpost = data)
+    return this.blogpost
 
   }
 
