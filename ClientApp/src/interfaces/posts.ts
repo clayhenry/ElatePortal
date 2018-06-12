@@ -5,6 +5,7 @@
       preview : string
   coverImage : string
   comments : Array<any>
+  status : string
 
 
 }

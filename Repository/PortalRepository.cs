@@ -116,18 +116,19 @@ namespace ElatePortal.Repository
         public IQueryable<HomeViewModel> GetBlogList()
         {  
             var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(f=> f.Departments)
-                join t in _profileContext.Profile on f.ProfileId equals t.Id
+                join t in _profileContext.Profile on f.ProfileId equals t.Id where f.Status == "Published"
                
                 select new HomeViewModel {
                     Content = f.Content,
                     Name = t.Name,
+                    Status = f.Status,
                     BlogId = f.Id,
                     Title =  f.Title,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
                     Comments =  GetBlogComments(f.Id),
                     DepartmentsBlog = f.DepartmentsBlog
                     
-                });
+                }  );
 
             return g;
         }

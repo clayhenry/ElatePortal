@@ -19,7 +19,8 @@ count: {{itemCount}}
     {{post.title}}<br>
     {{post.coverImage}}<br>
     {{post.preview}}<br>
-    comments: {{post.comments.length}}<br>
+     {{post.comments.length != 0 ? "comments: " + post.comments.length : " "}}<br>
+    {{post.status}}
     <hr>
   <br>
   </div>
