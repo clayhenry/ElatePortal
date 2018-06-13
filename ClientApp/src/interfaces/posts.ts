@@ -9,6 +9,8 @@
   coverImage : string
   comments : Array<any>
   status : string
+  departmentsBlog : Array<any>
+
 
 
 }

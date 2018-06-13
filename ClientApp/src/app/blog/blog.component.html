@@ -1,13 +1,8 @@
 <p>
 
-  ID: {{currentId}}
 
-
-count: {{itemCount}}
-
-
-<div *ngFor="let item of items; let i=index" (click)="removeItem(i)">
-  {{item}}
+<div *ngFor="let singlepost of items; let i=index">
+  {{singlepost}}
   <br>
 </div>
 
@@ -15,15 +10,20 @@ count: {{itemCount}}
 <h1>Blog</h1>
   <div *ngFor="let post of blogposts; let i=index" (click)="removeItem(i)">
 
-
-    <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div><br>
+    <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
     {{post.coverImage}}<br>
     {{post.preview}}<br> by {{post.name}} {{post.userTitle}} <br>
      {{post.comments.length != 0 ? "comments: " + post.comments.length : " "}}<br>
+    Tags:
+
+    <span *ngFor="let tag of post.departmentsBlog; let j=index">
+      {{tag.departments.departmentName}}
+    </span>
 
     <hr>
   <br>
   </div>
+
 
 
 
