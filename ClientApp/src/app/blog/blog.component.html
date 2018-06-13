@@ -8,7 +8,7 @@
 
 
 <h1>Blog</h1>
-  <div *ngFor="let post of blogposts; let i=index" (click)="removeItem(i)">
+  <div *ngFor="let post of blogposts | async; let i=index" (click)="removeItem(i)">
 
     <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
     {{post.coverImage}}<br>
