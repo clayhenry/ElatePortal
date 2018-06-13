@@ -47,6 +47,16 @@ namespace ElatePortal.Modules.Blog
                   
          return Json(posts);
         }
+        
+        
+        [HttpGet]
+        [Route("/api/Blog/Tags")]
+        public JsonResult CurrentTags()
+        {
+            var tags = this._portalreposirory.GetDepartments();
+            return Json(tags);
+
+        }
 
         // GET: api/Blogs/5
         [HttpGet("{id}")]
@@ -265,9 +275,7 @@ namespace ElatePortal.Modules.Blog
         
         [HttpGet("/Admin/Blog/List")]
         public IActionResult List()
-        {
-          
-            
+        {        
             var lists = new Dictionary<string, IQueryable>(){
          
             {"comments", this._portalreposirory.GetCommentsAndBlogTitle()}
@@ -296,23 +304,14 @@ namespace ElatePortal.Modules.Blog
                 }
                 _commentcontext.Comments.Update(comment);
             }
-                
-                await _commentcontext.SaveChangesAsync();
-                
-               
-                TempData["message"] = "Updated";
+               await _commentcontext.SaveChangesAsync();
+               TempData["message"] = "Updated";
                
                 return RedirectToAction("List");
-
             }
             
             return Content("zsdkhkj");
             
         }
-
-        
-        
-        
-   
-    }
+            }
 }
