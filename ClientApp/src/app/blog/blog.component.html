@@ -12,7 +12,7 @@
 
     <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
     {{post.coverImage}}<br>
-    {{post.preview}}<br> by {{post.name}} {{post.userTitle}} <br>
+    {{post.preview}} ... <br> by {{post.name}} {{post.userTitle}} <br>
      {{post.comments.length != 0 ? "comments: " + post.comments.length : " "}}<br>
     Tags:
 

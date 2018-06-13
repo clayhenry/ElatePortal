@@ -125,7 +125,7 @@ namespace ElatePortal.Repository
                     BlogId = f.Id,
                     Title =  f.Title,
                     UserTitle = t.Title,
-                    Preview =  new HomeViewModel().TruncateString(f.Content, 5),
+                    Preview =  new HomeViewModel().TruncateString(f.Content, 15),
                     Comments =  GetBlogComments(f.Id),
                     DepartmentsBlog = f.DepartmentsBlog
                     
