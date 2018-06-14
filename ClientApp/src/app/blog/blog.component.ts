@@ -16,6 +16,7 @@ export class BlogComponent implements OnInit {
   items = [];
   blogposts = [];
   blogpost = [];
+  tags = [];
 
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
@@ -29,7 +30,16 @@ export class BlogComponent implements OnInit {
     //only on the first, initial load
     this.itemCount = this.items.length;
     //this.blogposts = this._data.getBlogItems();
-    this._data.getBlogItemsAjax().subscribe(data => this.blogposts = data)
+    this._data.getBlogItemsAjax().subscribe(d => {
+      this._data.getAllTags().subscribe(c => {
+
+        this.tags = c;
+        this.blogposts = d
+      })
+    })
+
+
+
 
   }
 

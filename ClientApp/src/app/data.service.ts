@@ -22,6 +22,10 @@ export class DataService {
     return  this.http.get<Array<any>>(this._url + "/" + id);
   }
 
+  getAllTags() : Observable<Array<any>> {
+    return  this.http.get<Array<any>>(this._url + "/" + "Tags");
+  }
+
   getBlogItems(){
 
     return [

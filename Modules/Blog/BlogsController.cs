@@ -50,7 +50,7 @@ namespace ElatePortal.Modules.Blog
         
         
         [HttpGet]
-        [Route("/api/Blog/Tags")]
+        [Route("/api/Blogs/Tags")]
         public JsonResult CurrentTags()
         {
             var tags = this._portalreposirory.GetDepartments();
