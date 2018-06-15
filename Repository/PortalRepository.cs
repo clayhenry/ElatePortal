@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ElatePortal.Models;
@@ -113,11 +114,14 @@ namespace ElatePortal.Repository
             return g;
         }
         
-        public IQueryable<HomeViewModel> GetBlogList()
-        {  
-            var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(f=> f.Departments)
-                join t in _profileContext.Profile on f.ProfileId equals t.Id where f.Status == "Published"
-               
+        public IEnumerable<HomeViewModel> GetBlogList()
+        {
+            
+            var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments)
+                join t in _profileContext.Profile on f.ProfileId equals t.Id 
+                
+                where f.Status == "Published" 
+              
                 select new HomeViewModel {
                     Content = f.Content,
                     Name = t.Name,
@@ -130,6 +134,7 @@ namespace ElatePortal.Repository
                     DepartmentsBlog = f.DepartmentsBlog
                     
                 }  );
+
 
             return g;
         }

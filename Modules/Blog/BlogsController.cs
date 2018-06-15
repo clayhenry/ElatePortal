@@ -40,11 +40,42 @@ namespace ElatePortal.Modules.Blog
         }
 
         // GET: api/Blogs
-        [HttpGet]
-        public JsonResult GetBlog()
+        [HttpGet("/api/Blogs/{tag?}")]
+        public JsonResult GetBlog(string tag)
         {
             var posts = this._portalreposirory.GetBlogList();
-                  
+            
+            if(! string.IsNullOrEmpty(tag)){
+                
+                var hh = new List<HomeViewModel>();
+               
+                foreach (var t in posts){
+                    {
+                        for (int i = 0; i < t.DepartmentsBlog.Count; i++)
+                        {
+                            if (tag.Contains(t.DepartmentsBlog[i].Departments.DepartmentName) )
+                            {   
+                                hh.Add(new HomeViewModel()
+                                {
+                                    Content = t.Content,
+                                    Name = t.Name,
+                                    Status = t.Status,
+                                    BlogId = t.BlogId,
+                                    Title = t.Title,
+                                    UserTitle = t.Title,
+                                    Preview = new HomeViewModel().TruncateString(t.Content, 15),
+                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
+                                    DepartmentsBlog = t.DepartmentsBlog
+                                });
+           
+                            }
+                        }
+                    }
+                }
+                
+                return Json(hh);
+            }
+                 
          return Json(posts);
         }
         

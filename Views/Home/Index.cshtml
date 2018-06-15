@@ -7,22 +7,7 @@
 
 <ul>
 
-    @foreach (var post in Model)
-    {
-        <li><a href="/api/Blogs/post/@post.BlogId">  @post.Title </a></li>
-        <li>@post.Preview ...</li>
-        <li>Comments: @post.Comments.Count </li>        
-                          
-        <li>
-            
-            @post.Name <br/>
 
-            <form action="/api/Blogs/create/comment/@post.BlogId" method="post">
-                <textarea name="Comment"></textarea> <input type="submit" name="submit" value="submit comment"/>
-            </form>
-        </li>
-        
-    }
 
 </ul>
 
