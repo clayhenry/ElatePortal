@@ -13,6 +13,7 @@
 
  <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
 </div>
+<div (click)="getAllBlogs()">All</div>
 
   <div *ngFor="let post of blogposts; let i=index">
 
@@ -22,9 +23,9 @@
      {{post.comments.length != 0 ? "comments: " + post.comments.length : " "}}<br>
     Tags:
 
-    <span *ngFor="let tag of post.departmentsBlog; let j=index">
-      {{tag.departments.departmentName}}
-    </span>
+    <div *ngFor="let tag of post.departmentsBlog; let j=index">
+     <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
+    </div>
 
     <hr>
   <br>

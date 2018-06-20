@@ -60,6 +60,11 @@ export class BlogComponent implements OnInit {
 
   }
 
+  getAllBlogs(){
+
+    this._data.getBlogItemsAjax().subscribe(d => this.blogposts = d);
+  }
+
   sendMeHome(){
 
     this.router.navigate(['']);//navigates to route name
