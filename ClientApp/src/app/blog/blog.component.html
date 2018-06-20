@@ -11,7 +11,7 @@
 
 <div *ngFor="let tag of tags ">
 
-  {{tag.departmentName}}
+ <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
 </div>
 
   <div *ngFor="let post of blogposts; let i=index">

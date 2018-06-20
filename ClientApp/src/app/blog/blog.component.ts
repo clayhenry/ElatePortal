@@ -55,6 +55,11 @@ export class BlogComponent implements OnInit {
     this.items.splice(index, 1);
   }
 
+  filterByTag(tag: string){
+    this._data.getBlogByTagAjax(tag).subscribe(d => this.blogposts = d);
+
+  }
+
   sendMeHome(){
 
     this.router.navigate(['']);//navigates to route name

@@ -17,6 +17,11 @@ export class DataService {
     return this.http.get<IPosts[]>(this._url);
   }
 
+  getBlogByTagAjax(filter:string) : Observable<IPosts[]>{
+
+    return this.http.get<IPosts[]>(this._url + "?tag=" + filter);
+  }
+
   getBlogPostAjax(id: number) : Observable<Array<any>>{
 
     return  this.http.get<Array<any>>(this._url + "/" + id);
