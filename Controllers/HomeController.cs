@@ -52,8 +52,8 @@ namespace ElatePortal.Controllers
         public IActionResult Index()
 
         {
-       
-            return View();
+
+            return Redirect("Portal");
         }
 
 

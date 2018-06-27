@@ -82,6 +82,11 @@ namespace ElatePortal
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
+                
+                routes.MapRoute(
+                    name: "spa",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+                
             });
 
             app.UseLoginMiddleware();
