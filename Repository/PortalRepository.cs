@@ -48,13 +48,37 @@ namespace ElatePortal.Repository
                 Console.WriteLine(e.Message);
                 throw;
             }
-          
         }
+
+
+        public List<CommentsViewModel> GetComments(int blogId)
+        {
+            return (from p in _blogContext.Blog 
+                    join t in _profileContext.Profile on p.ProfileId equals t.Id
+                    where p.Id == blogId
+                    orderby p.CreatedAt descending 
+                    select new CommentsViewModel()
+                    {
+                        Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(blogId) && x.Status.Equals(1) )
+                            
+                            .Select(com => new Comments()
+                            {
+                                Preview = new HomeViewModel().TruncateString(com.Comment, 6),
+                                Comment = com.Comment,
+                                Author = _profileContext.Profile.Where(pr => pr.Id.Equals(com.ProfileId)).ToList(),
+                                Status = com.Status,
+                                Id = com.Id
+                            }).ToList()
+                    }
+
+                ).ToList();
+        }
+
 
         public List<Comments> GetBlogComments(int blogId)
         {
-            var comments =  _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) ).ToList();
-            return comments;
+            return _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) ).ToList();
+
         }
 
         public List<Blog> GetSelectedDepartments(int blogId)
@@ -67,7 +91,6 @@ namespace ElatePortal.Repository
             } );
 
             return deps.ToList();
-
         }
 
 

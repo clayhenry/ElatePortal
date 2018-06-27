@@ -64,7 +64,7 @@ namespace ElatePortal.Modules.Blog
                                     Title = t.Title,
                                     UserTitle = t.Title,
                                     Preview = new HomeViewModel().TruncateString(t.Content, 15),
-                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
+//                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
                                     DepartmentsBlog = t.DepartmentsBlog
                                 });
            
@@ -186,6 +186,14 @@ namespace ElatePortal.Modules.Blog
             return _blogcontext.Blog.Any(e => e.Id == id);
         }
 
+
+        [HttpGet("/api/Blogs/Comments/{blogId}")]
+        public JsonResult GetComment(int blogId)
+        {
+            
+            return Json(this._portalreposirory.GetComments(blogId));
+
+        }
 
         [HttpPost("create/comment/{blogid}")]
         public async Task<IActionResult> CreateComment(int blogid, string Comment, Comments comments)

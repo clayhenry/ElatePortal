@@ -27,6 +27,9 @@ namespace ElatePortal.Models
 
         [NotMapped]
         public List<Profile> Author { get; set; }
+        
+        [NotMapped]
+        public IQueryable Profile { get; set; }
         [NotMapped]
         public string Preview { get; set; }
 

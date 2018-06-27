@@ -49,6 +49,13 @@ namespace ElatePortal.Models
         
         
     }
+
+    public class CommentsViewModel
+    {
+        public List<Comments> Comments { get; set; }
+        
+        
+    }
     
     
 
