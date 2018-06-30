@@ -77,7 +77,7 @@ namespace ElatePortal.Repository
 
         public List<Comments> GetBlogComments(int blogId)
         {
-            return _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) ).ToList();
+            return _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) && c.Status.Equals(1) ).ToList();
 
         }
 
@@ -149,6 +149,7 @@ namespace ElatePortal.Repository
                     Content = f.Content,
                     Name = t.Name,
                     Status = f.Status,
+                    CoverImage = f.CoverImage,
                     BlogId = f.Id,
                     Title =  f.Title,
                     UserTitle = t.Title,

@@ -16,12 +16,29 @@
 <div (click)="getAllBlogs()">All</div>
 
   <div *ngFor="let post of blogposts; let i=index">
-
-    <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
-    {{post.coverImage}}<br>
+    <blockquote>
+    <h1><div (click)="getBlogPost(post.blogId)"> {{post.title}}</div></h1>
+    {{post.coverImage}} {{post.blogId}}<br>
     {{post.preview}} ... <br> by {{post.name}} {{post.userTitle}} <br>
-     {{post.comments.length != 0 ? "comments: " + post.comments.length : " "}}<br>
-    Tags:
+
+      <div (click)="getComents(post.blogId)"  style="background-color: #2aabd2">
+     {{post.comments.length != 0 ? "comments: " + post.comments.length  : " "}}
+
+        <div *ngIf="comments.length > 0" style="background-color: #9acfea">
+          <div  *ngFor="let comment of comments[post.blogId];" >
+            <ul *ngFor="let com of  comment.comments">
+              <li> {{com.comment}} </li>
+
+            </ul>
+          </div>
+
+
+        </div>
+
+
+      </div>
+    </blockquote>
+    <br>
 
     <div *ngFor="let tag of post.departmentsBlog; let j=index">
      <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>

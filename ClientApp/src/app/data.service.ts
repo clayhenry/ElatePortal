@@ -3,6 +3,7 @@ import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {HttpClient} from "@angular/common/http";
 import {IPosts} from "../interfaces/posts";
 import {Observable} from "rxjs/Observable";
+import {IComments} from "../interfaces/comments";
 
 @Injectable()
 export class DataService {
@@ -29,6 +30,11 @@ export class DataService {
 
   getAllTags() : Observable<Array<any>> {
     return  this.http.get<Array<any>>(this._url + "/" + "Tags");
+  }
+
+  getCommentsAjax(blogid: number) :Observable<IComments[]>{
+
+    return  this.http.get<Array<any>>(this._url + "/" + "Comments/" + blogid);
   }
 
   getBlogItems(){

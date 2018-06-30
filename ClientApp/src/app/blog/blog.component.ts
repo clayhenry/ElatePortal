@@ -16,6 +16,7 @@ export class BlogComponent implements OnInit {
   items = [];
   blogposts = [];
   blogpost = [];
+  comments = [];
   tags = [];
 
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
@@ -73,9 +74,18 @@ export class BlogComponent implements OnInit {
 
   getBlogPost(id : number){
 
-    this._data.getBlogPostAjax(id).subscribe(data => this.blogpost = data)
+    this._data.getBlogPostAjax(id).subscribe(data => this.blogpost = data);
     return this.blogpost
 
+  }
+
+  getComents(blogid:number){
+
+
+
+    this._data.getCommentsAjax(blogid).subscribe(data => {this.comments[blogid] = data;
+  console.log(this.comments);
+    } );
   }
 
 

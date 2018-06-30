@@ -60,11 +60,12 @@ namespace ElatePortal.Modules.Blog
                                     Content = t.Content,
                                     Name = t.Name,
                                     Status = t.Status,
+                                    CoverImage = t.CoverImage,
                                     BlogId = t.BlogId,
                                     Title = t.Title,
-                                    UserTitle = t.Title,
+                                    UserTitle = t.UserTitle,
                                     Preview = new HomeViewModel().TruncateString(t.Content, 15),
-//                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
+                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
                                     DepartmentsBlog = t.DepartmentsBlog
                                 });
            
