@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Router} from "@angular/router";
 import {DataService} from "../data.service";
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-blog',
@@ -18,6 +19,8 @@ export class BlogComponent implements OnInit {
   blogpost = [];
   comments = [];
   tags = [];
+  isCommentOpen;
+  commentForm = [];
 
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
@@ -38,8 +41,6 @@ export class BlogComponent implements OnInit {
         this.blogposts = d
       })
     })
-
-
 
 
   }
@@ -81,11 +82,17 @@ export class BlogComponent implements OnInit {
 
   getComents(blogid:number){
 
-
-
     this._data.getCommentsAjax(blogid).subscribe(data => {this.comments[blogid] = data;
   console.log(this.comments);
     } );
+  }
+
+
+  submitComment(blogid:number){
+
+      console.log(this.commentForm);
+    this.commentForm.length = 0;
+
   }
 
 

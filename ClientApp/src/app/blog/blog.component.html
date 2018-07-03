@@ -32,11 +32,20 @@
             </ul>
           </div>
 
-
         </div>
 
-
       </div>
+
+      <span (click)="isCommentOpen = post.blogId">Comment</span>
+
+      <div *ngIf="isCommentOpen == post.blogId">
+
+        <form (ngSubmit)="submitComment(post.blogId)">
+          <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
+          <button type="submit"> Comment</button>
+        </form>
+      </div>
+
     </blockquote>
     <br>
 
