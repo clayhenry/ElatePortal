@@ -37,6 +37,12 @@ export class DataService {
     return  this.http.get<Array<any>>(this._url + "/" + "Comments/" + blogid);
   }
 
+  setComment(comment: string, blogId : number){
+
+    let body = JSON.stringify(comment)
+    this.http.post("http://www.testtttt.com", body).subscribe((data) => {});
+  }
+
   getBlogItems(){
 
     return [

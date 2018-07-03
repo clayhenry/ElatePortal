@@ -81,16 +81,21 @@ export class BlogComponent implements OnInit {
   }
 
   getComents(blogid:number){
+    //todo: revisit this, as I don't like how the array keys are created
 
     this._data.getCommentsAjax(blogid).subscribe(data => {this.comments[blogid] = data;
-  console.log(this.comments);
+
+    this.isCommentOpen = blogid;
+
     } );
   }
 
-
   submitComment(blogid:number){
 
-      console.log(this.commentForm);
+      let comment = this.commentForm[blogid];
+      this._data.setComment(comment, blogid);
+
+    this.getComents(blogid);
     this.commentForm.length = 0;
 
   }
