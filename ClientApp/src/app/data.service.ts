@@ -40,7 +40,7 @@ export class DataService {
   setComment(comment: string, blogId : number){
 
     let body = JSON.stringify(comment)
-    this.http.post("http://www.testtttt.com", body).subscribe((data) => {});
+    this.http.post("/api/Blogs/create/comment/" + blogId , body).subscribe((data) => { console.log(data)});
   }
 
   getBlogItems(){

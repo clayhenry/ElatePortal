@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
@@ -196,20 +197,25 @@ namespace ElatePortal.Modules.Blog
 
         }
 
-        [HttpPost("create/comment/{blogid}")]
-        public async Task<IActionResult> CreateComment(int blogid, string Comment, Comments comments)
+        [HttpPost("/api/Blogs/create/comment/{blogid}")]
+        public async Task<IActionResult> CreateComment(int blogid, Comments comments)
         {
-
+            var request = HttpContext.Request;
+            using (var reader = new StreamReader(request.Body))
+            {
+                var comment = await reader.ReadToEndAsync();
+              
             comments.BlogId = blogid;
             comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
-            comments.Comment = Comment;
+            comments.Comment = comment;
             comments.CreatedAt = DateTime.Now;
 
             _commentcontext.Update(comments);
             await _commentcontext.SaveChangesAsync();
 
             return Content(blogid.ToString());
-        }
+            
+        } }
 
         [HttpGet("/Admin/Blog/Edit/{id}")]
         public IActionResult Post(int id)

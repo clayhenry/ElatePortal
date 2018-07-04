@@ -92,10 +92,14 @@ export class BlogComponent implements OnInit {
 
   submitComment(blogid:number){
 
+
+    this.getComents(blogid);
+
+
       let comment = this.commentForm[blogid];
       this._data.setComment(comment, blogid);
 
-    this.getComents(blogid);
+
     this.commentForm.length = 0;
 
   }

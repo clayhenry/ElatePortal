@@ -22,7 +22,7 @@ namespace ElatePortal.Extensions
         public static string GetEmail (this HttpContext context ){
 
             var cList = context.User.Claims.ToList();
-            return cList[11].Value;
+            return  cList[9].Value;
 
         }
 
