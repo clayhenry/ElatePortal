@@ -26,8 +26,20 @@
     {{post.coverImage}} {{post.blogId}}<br>
     {{post.preview}} ... <br> by {{post.name}} {{post.userTitle}} <br>
 
+
       <div (click)="getComents(post.blogId)"  style="background-color: #2aabd2">
-     {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : " "}}
+
+
+
+        <div *ngIf="isCommentOpen == post.blogId">
+
+          <form (ngSubmit)="submitComment(post.blogId)">
+            <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
+            <button type="submit"> Post</button>
+          </form>
+        </div>
+
+     {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}}
 
         <div *ngIf="comments.length > 0" style="background-color: #9acfea">
           <div  *ngFor="let comment of comments[post.blogId];" >
@@ -38,18 +50,8 @@
           </div>
 
         </div>
-
       </div>
 
-      <span (click)="isCommentOpen = post.blogId">Comment</span>
-
-      <div *ngIf="isCommentOpen == post.blogId">
-
-        <form (ngSubmit)="submitComment(post.blogId)">
-          <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
-          <button type="submit"> Post</button>
-        </form>
-      </div>
 
     </blockquote>
     <br>
