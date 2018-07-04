@@ -38,7 +38,7 @@
 
      {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}}
 
-        <div *ngIf="comments.length > 0 && isCommentOpen == post.blogId" style="background-color: #9acfea">
+        <div *ngIf="comments.length > 0 && isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
 
           <form (ngSubmit)="submitComment(post.blogId)">
             <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>

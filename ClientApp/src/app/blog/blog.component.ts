@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
   blogpost = [];
   comments = [];
   tags = [];
-  isCommentOpen;
+  isCommentOpen = [];
   commentForm = [];
   commentsCount = {};
 
@@ -105,7 +105,7 @@ export class BlogComponent implements OnInit {
 
     this._data.getCommentsAjax(blogid).subscribe(data => {this.comments[blogid] = data;
 
-    this.isCommentOpen = blogid;
+    this.isCommentOpen[blogid] = blogid;
 
 
     } );
