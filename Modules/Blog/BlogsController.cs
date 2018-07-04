@@ -66,7 +66,7 @@ namespace ElatePortal.Modules.Blog
                                     Title = t.Title,
                                     UserTitle = t.UserTitle,
                                     Preview = new HomeViewModel().TruncateString(t.Content, 15),
-                                    Comments = this._portalreposirory.GetBlogComments(t.BlogId),
+                                    CommentsCount = this._portalreposirory.GetBlogCommentCount(t.BlogId),
                                     DepartmentsBlog = t.DepartmentsBlog
                                 });
            
@@ -205,10 +205,11 @@ namespace ElatePortal.Modules.Blog
             {
                 var comment = await reader.ReadToEndAsync();
               
-            comments.BlogId = blogid;
-            comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
-            comments.Comment = comment;
-            comments.CreatedAt = DateTime.Now;
+                comments.BlogId = blogid;
+                comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
+                comments.Comment = comment;
+                comments.CreatedAt = DateTime.Now;
+                comments.Status = 1;    
 
             _commentcontext.Update(comments);
             await _commentcontext.SaveChangesAsync();

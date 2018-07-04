@@ -80,6 +80,12 @@ namespace ElatePortal.Repository
             return _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) && c.Status.Equals(1) ).ToList();
 
         }
+        
+        
+        public int GetBlogCommentCount(int blogId)
+        {
+            return _commentContext.Comments.Where(c => c.BlogId.Equals(blogId) && c.Status.Equals(1)).Count();
+        }
 
         public List<Blog> GetSelectedDepartments(int blogId)
         {
@@ -137,7 +143,7 @@ namespace ElatePortal.Repository
             return g;
         }
         
-        public IEnumerable<HomeViewModel> GetBlogList()
+        public IQueryable<HomeViewModel> GetBlogList()
         {
             
             var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments)
@@ -154,8 +160,9 @@ namespace ElatePortal.Repository
                     Title =  f.Title,
                     UserTitle = t.Title,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 15),
-                    Comments =  GetBlogComments(f.Id),
-                    DepartmentsBlog = f.DepartmentsBlog
+                    //Comments =  GetBlogComments(f.Id),
+                    DepartmentsBlog = f.DepartmentsBlog,
+                    CommentsCount = GetBlogCommentCount(f.Id)
                     
                 }  );
 

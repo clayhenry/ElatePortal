@@ -21,6 +21,7 @@ export class BlogComponent implements OnInit {
   tags = [];
   isCommentOpen;
   commentForm = [];
+  commentsCount = {};
 
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
@@ -38,8 +39,16 @@ export class BlogComponent implements OnInit {
       this._data.getAllTags().subscribe(c => {
 
         this.tags = c;
-        this.blogposts = d
-      })
+        this.blogposts = d;
+
+        for (let i = 0; i< d.length; i++){
+          this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
+        }
+
+      }
+
+
+      )
     })
 
 
@@ -64,7 +73,12 @@ export class BlogComponent implements OnInit {
 
   getAllBlogs(){
 
-    this._data.getBlogItemsAjax().subscribe(d => this.blogposts = d);
+    this._data.getBlogItemsAjax().subscribe(d =>
+    {
+      this.blogposts = d
+
+    }
+      );
   }
 
   sendMeHome(){
@@ -75,7 +89,13 @@ export class BlogComponent implements OnInit {
 
   getBlogPost(id : number){
 
-    this._data.getBlogPostAjax(id).subscribe(data => this.blogpost = data);
+    this._data.getBlogPostAjax(id).subscribe(data =>
+    {
+      this.blogpost = data
+
+      console.log(data)
+
+    });
     return this.blogpost
 
   }
@@ -87,20 +107,24 @@ export class BlogComponent implements OnInit {
 
     this.isCommentOpen = blogid;
 
+
     } );
+
+    return true;
+
   }
 
   submitComment(blogid:number){
+    let comment = this.commentForm[blogid];
+    this._data.setComment(comment, blogid).subscribe((data) => {
+
+     this.getComents(blogid);
+     this.commentsCount[blogid]++;
+     this.commentForm.length = 0;
+
+   });
 
 
-    this.getComents(blogid);
-
-
-      let comment = this.commentForm[blogid];
-      this._data.setComment(comment, blogid);
-
-
-    this.commentForm.length = 0;
 
   }
 

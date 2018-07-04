@@ -24,6 +24,7 @@ namespace ElatePortal.Models
         public List<Comments> Comments { get; set; }
 //        public List<Departments> Departments { get; set; }
         public List<DepartmentsBlog> DepartmentsBlog { get; set; }
+        public int CommentsCount { get; set; }
 
         
         public string Preview { get; set; }

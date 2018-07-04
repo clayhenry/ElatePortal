@@ -22,8 +22,18 @@ namespace ElatePortal.Extensions
         public static string GetEmail (this HttpContext context ){
 
             var cList = context.User.Claims.ToList();
-            return  cList[9].Value;
 
+            try
+            {
+                return cList[9].Value;
+            }
+            catch (IndexOutOfRangeException)
+            {
+                return cList[8].Value;
+                
+            }
+            
+        
         }
 
     }
