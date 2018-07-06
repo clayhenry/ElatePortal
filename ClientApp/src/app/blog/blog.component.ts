@@ -26,12 +26,15 @@ export class BlogComponent implements OnInit {
   constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
-
-
-
   }
 
   ngOnInit() {
+    
+    this.route.paramMap.subscribe(params => {
+    console.log(params.get('username'));
+    this.username = params.get('username');
+  });
+    
     //only on the first, initial load
     this.itemCount = this.items.length;
     //this.blogposts = this._data.getBlogItems();
