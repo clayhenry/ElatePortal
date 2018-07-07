@@ -19,9 +19,6 @@ export class PostComponent implements OnChanges, OnInit {
 
   constructor(private location: Location, private route: ActivatedRoute) {
 
-    this.route.params.subscribe( params => {
-      this.getBlogPost(params.id)
-    } );
 
 
   }
@@ -31,19 +28,23 @@ export class PostComponent implements OnChanges, OnInit {
     let postid = changes.postid;
     this.postid = postid.currentValue;
 
-    this.getBlogPost(postid.currentValue)
+    if (postid.currentValue) {
+      this.getBlogPost(postid.currentValue)
+    }
 
 
   }
 
   ngOnInit() {
+    this.route.params.subscribe( params => {
+      this.getBlogPost(params.id);
 
+    } );
 
   }
 
 
   getBlogPost(postid:number){
-
 
     console.log(postid);
   }
