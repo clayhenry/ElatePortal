@@ -21,7 +21,6 @@ export class PostComponent implements OnChanges, OnInit {
 
   }
 
-
   ngOnChanges(changes: SimpleChanges) {
     let postid = changes.postid;
     this.postid = postid.currentValue;
@@ -29,7 +28,6 @@ export class PostComponent implements OnChanges, OnInit {
     if (postid.currentValue) {
       this.getBlogPost(postid.currentValue)
     }
-
 
   }
 
