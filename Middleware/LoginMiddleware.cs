@@ -29,7 +29,7 @@ namespace ElatePortal.Middleware
             if (!httpContext.User.Identity.IsAuthenticated)
             {
 
-                httpContext.Response.Redirect("/Portal");
+                httpContext.Response.Redirect("/Home");
 
             } else
             {

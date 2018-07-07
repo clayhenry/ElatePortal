@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 
 namespace ElatePortal
 {
@@ -83,9 +84,14 @@ namespace ElatePortal
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
                 
-                routes.MapRoute(
-                    name: "spa",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                
+//                routes.MapRoute(
+//                    name: "spa-fallback",
+//                    template: "{*url}",
+//                    defaults: new { controller = "Home", action = "Index" }
+//                    
+//                    );
+
                 
             });
 
@@ -98,6 +104,7 @@ namespace ElatePortal
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
+                
 
                 if (env.IsDevelopment())
                 {

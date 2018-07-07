@@ -53,7 +53,12 @@ namespace ElatePortal.Controllers
 
         {
 
-            return Redirect("Portal");
+            if (User.Identity.IsAuthenticated)
+            {
+                return Redirect("Portal");
+            }               
+
+            return Content("sd");
         }
 
 
