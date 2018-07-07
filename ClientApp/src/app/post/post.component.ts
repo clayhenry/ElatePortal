@@ -1,21 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input,  OnChanges, SimpleChanges, SimpleChange } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-post',
   templateUrl: './post.component.html',
-  styleUrls: ['./post.component.css']
+  styleUrls: ['./post.component.css'],
+  inputs: ['postid']
+
 })
-export class PostComponent implements OnInit {
 
-  postid: number = 4;
 
-  constructor(private route: ActivatedRoute) {
+export class PostComponent implements OnChanges, OnInit {
 
-    this.route.params.subscribe( params => {console.log(params) ; this.postid = params.id });
+
+
+  postid: number;
+
+  constructor(private location: Location, private route: ActivatedRoute) {
+
+    this.route.params.subscribe( params => {
+      this.getBlogPost(params.id)
+    } );
+
+
+  }
+
+
+  ngOnChanges(changes: SimpleChanges) {
+    let postid = changes.postid;
+    this.postid = postid.currentValue;
+
+    this.getBlogPost(postid.currentValue)
+
+
   }
 
   ngOnInit() {
+
+
+  }
+
+
+  getBlogPost(postid:number){
+
+
+    console.log(postid);
   }
 
 }

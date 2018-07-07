@@ -33,9 +33,8 @@ import { PostComponent } from './post/post.component';
     RouterModule.forRoot([
       { path: 'fetch-data', component: FetchDataComponent, pathMatch: 'full'},
       { path: 'Portal', component: BlogComponent, pathMatch: 'full' },
-      { path: 'Portal', component: BlogComponent, pathMatch: 'full' },
-      { path: 'Portal/blog/post/:id', component: PostComponent, pathMatch: 'full' },
-      { path: 'Portal/blog/post', component: PostComponent, pathMatch: 'full' },
+      { path: 'Portal/post/:id', component: BlogComponent, pathMatch: 'full' },
+      { path: 'Portal/post', component: PostComponent, pathMatch: 'full' },
 
       { path: 'counter', component: CounterComponent,
         children: [{

@@ -3,6 +3,9 @@ import {ActivatedRoute} from "@angular/router";
 import {Router} from "@angular/router";
 import {DataService} from "../data.service";
 import { FormGroup, FormControl } from '@angular/forms';
+import {Location} from '@angular/common';
+
+
 
 @Component({
   selector: 'app-blog',
@@ -21,20 +24,19 @@ export class BlogComponent implements OnInit {
   tags = [];
   isCommentOpen = [];
   commentForm = [];
+  postid;
   commentsCount = {};
 
-  constructor(private route: ActivatedRoute, private router: Router, private _data: DataService) {
+  constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
   }
 
   ngOnInit() {
 
-
-
     //only on the first, initial load
     this.itemCount = this.items.length;
-    //this.blogposts = this._data.getBlogItems();
+
     this._data.getBlogItemsAjax().subscribe(d => {
       this._data.getAllTags().subscribe(c => {
 
@@ -46,7 +48,6 @@ export class BlogComponent implements OnInit {
         }
 
       }
-
 
       )
     })
@@ -89,14 +90,19 @@ export class BlogComponent implements OnInit {
 
   getBlogPost(id : number){
 
-    this._data.getBlogPostAjax(id).subscribe(data =>
-    {
-      this.blogpost = data
+this.location.replaceState('Portal/post/'+ id);
+this.postid = id;
 
-      console.log(data)
-
-    });
-    return this.blogpost
+    //this.router.navigate(['Portal/post/'+ id]);
+    //
+    // this._data.getBlogPostAjax(id).subscribe(data =>
+    // {
+    //   this.blogpost = data
+    //
+    //   console.log(data)
+    //
+    // });
+    // return this.blogpost
 
   }
 

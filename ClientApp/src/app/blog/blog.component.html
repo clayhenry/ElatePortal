@@ -5,8 +5,6 @@
   {{singlepost}}
   <br>
 </div>
-
-
 <h1>Blog</h1>
 
 <div *ngFor="let tag of tags ">
@@ -28,12 +26,6 @@
 
 
       <div (click)="getComents(post.blogId)"  style="background-color: #2aabd2">
-
-
-
-
-
-
 
 
      {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}}
@@ -65,8 +57,8 @@
   <br>
   </div>
 
-
-<app-post></app-post>
+{{postid}}
+<app-post [postid]="postid"></app-post>
 
 Title: {{blogpost["title"]}} <br>
 Content: {{blogpost["content"]}}
