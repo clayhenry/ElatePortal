@@ -19,8 +19,6 @@ export class PostComponent implements OnChanges, OnInit {
 
   constructor(private location: Location, private route: ActivatedRoute) {
 
-
-
   }
 
 
