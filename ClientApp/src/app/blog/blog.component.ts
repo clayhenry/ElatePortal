@@ -134,7 +134,4 @@ this.postid = id;
 
   }
 
-
-
-
 }
