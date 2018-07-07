@@ -29,12 +29,9 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit() {
-    
-    this.route.paramMap.subscribe(params => {
-    console.log(params.get('username'));
-    this.username = params.get('username');
-  });
-    
+
+
+
     //only on the first, initial load
     this.itemCount = this.items.length;
     //this.blogposts = this._data.getBlogItems();

@@ -12,7 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BlogComponent } from './blog/blog.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
+import { PostComponent } from './post/post.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AppRoutingModule } from './/app-routing.module';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    BlogComponent
+    BlogComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -31,13 +33,22 @@ import { AppRoutingModule } from './/app-routing.module';
     RouterModule.forRoot([
       { path: 'fetch-data', component: FetchDataComponent, pathMatch: 'full'},
       { path: 'Portal', component: BlogComponent, pathMatch: 'full' },
+      { path: 'Portal', component: BlogComponent, pathMatch: 'full' },
+      { path: 'Portal/blog/post/:id', component: PostComponent, pathMatch: 'full' },
+      { path: 'Portal/blog/post', component: PostComponent, pathMatch: 'full' },
+
       { path: 'counter', component: CounterComponent,
         children: [{
-
           path: 'fetch-data', component: FetchDataComponent, outlet:'here'
         }]
       },
-      { path: 'blog/:id', component: BlogComponent },
+      { path: 'blog', component: BlogComponent,
+
+        children:[{
+            path: '', component: PostComponent,  pathMatch: 'full'
+
+        }]
+      },
     ]),
     AppRoutingModule
   ],
