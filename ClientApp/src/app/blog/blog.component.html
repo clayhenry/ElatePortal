@@ -1,4 +1,3 @@
-<p>
 
 
 <div *ngFor="let singlepost of items; let i=index">
@@ -39,7 +38,17 @@
 
           <div  *ngFor="let comment of comments[post.blogId];" >
             <ul *ngFor="let com of  comment.comments">
-              <li> {{com.comment}} </li>
+              <li>
+                {{com.comment}}
+
+                <div>
+                  {{com.createdAt | date: 'dd/MM/yyyy'}}
+                  <div  *ngFor="let author of com.author ;" >
+                  <a href="mailto:{{author.email}}">  {{author.name}}</a> {{author.title}}
+                  </div>
+                </div>
+
+              </li>
 
             </ul>
           </div>

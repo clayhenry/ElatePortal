@@ -32,7 +32,7 @@ import { PostComponent } from './post/post.component';
     BrowserAnimationsModule,
     RouterModule.forRoot([
       { path: 'fetch-data', component: FetchDataComponent, pathMatch: 'full'},
-      { path: 'Portal', component: BlogComponent, pathMatch: 'full' },
+      { path: 'Portal', component: HomeComponent, pathMatch: 'full' },
       { path: 'Portal/post/:id', component: BlogComponent, pathMatch: 'full' },
       { path: 'Portal/post', component: PostComponent, pathMatch: 'full' },
 
