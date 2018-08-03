@@ -24,10 +24,9 @@
     {{post.preview}} ... <br> by {{post.name}} {{post.userTitle}} <br>
 
 
-      <div (click)="getComents(post.blogId)"  style="background-color: #2aabd2">
+      <div style="background-color: #2aabd2">
 
-
-     {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}}
+      <span  (click)="getComents(post.blogId)">  {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}} </span>
 
         <div *ngIf="comments.length > 0 && isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
 
@@ -66,11 +65,9 @@
   <br>
   </div>
 
-{{postid}}
+
 <app-post [postid]="postid"></app-post>
 
-Title: {{blogpost["title"]}} <br>
-Content: {{blogpost["content"]}}
 
   <br>
 

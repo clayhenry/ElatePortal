@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using ElatePortal.Models;
 using ElatePortal.Repository;
 
-namespace ElatePortal.Models
+namespace ElatePortal.Modules.Blog
 {
     public class Comments
     {

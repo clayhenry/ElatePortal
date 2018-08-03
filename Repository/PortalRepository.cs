@@ -67,6 +67,7 @@ namespace ElatePortal.Repository
                                 Comment = com.Comment,
                                 Author = _profileContext.Profile.Where(pr => pr.Id.Equals(com.ProfileId)).ToList(),
                                 Status = com.Status,
+                                CreatedAt = com.CreatedAt,
                                 Id = com.Id
                             }).ToList()
                     }
@@ -123,10 +124,7 @@ namespace ElatePortal.Repository
                         DepartmentsBlog = p.DepartmentsBlog,
                         CreatedAt = p.CreatedAt,
                         Status = p.Status,
-                        
-                        Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(p.Id))
-                            
-                            .Select(com => new Comments()
+                        Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(p.Id)).Select(com => new Comments()
                             {
                                 Preview = new HomeViewModel().TruncateString(com.Comment, 6),
                                 Comment = com.Comment,
@@ -135,7 +133,6 @@ namespace ElatePortal.Repository
                                 Id = com.Id
                             }).ToList()
                     }
-
                 );
 
            
@@ -168,6 +165,26 @@ namespace ElatePortal.Repository
 
 
             return g;
+        }
+
+
+        public IQueryable<Post> GetSingleBlogPost(int postId)
+        {
+            var post = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(c=>c.Departments)
+                join t in _profileContext.Profile on f.ProfileId equals t.Id
+                where  f.Id.Equals(postId) where f.Status.Equals("Published")
+                select new Post() {
+                            
+                    Title = f.Title,
+                    Content = f.Content,
+                    CoverImage = f.CoverImage,
+                    CreatedAt = f.CreatedAt,
+                    Author = _profileContext.Profile.Where(pr => pr.Id.Equals(f.ProfileId)).ToList(),
+                    DepartmentsBlog = f.DepartmentsBlog
+                    
+              });
+
+            return post;
         }
         
         public IQueryable<HomeViewModel> GetBlogPost(int id)

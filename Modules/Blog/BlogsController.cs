@@ -93,57 +93,15 @@ namespace ElatePortal.Modules.Blog
 
         // GET: api/Blogs/5
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetBlog([FromRoute] int id)
+        public JsonResult GetBlog([FromRoute] int id)
         {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
+   
+            var blog = this._portalreposirory.GetSingleBlogPost(id);
+            //var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id && m.Status == "Published");
 
-            var blog = await _blogcontext.Blog.SingleOrDefaultAsync(m => m.Id == id && m.Status == "Published");
-
-            if (blog == null)
-            {
-                return NotFound();
-            }
-
-            return Ok(blog);
+           return Json(blog);
         }
 
-        // PUT: api/Blogs/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutBlog([FromRoute] int id, [FromBody] Models.Blog blog)
-        {
-            if (!ModelState.IsValid)
-            {
-                return BadRequest(ModelState);
-            }
-
-            if (id != blog.Id)
-            {
-                return BadRequest();
-            }
-
-            _blogcontext.Entry(blog).State = EntityState.Modified;
-
-            try
-            {
-                await _blogcontext.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!BlogExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
         
         
         // POST: api/Blogs

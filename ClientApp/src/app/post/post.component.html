@@ -1,5 +1,30 @@
-<p>
-  post works!
 
-  {{postid}}
-</p>
+  <div >
+
+    <div *ngFor="let post of blogpost" >
+
+      <h1>{{post.title}}</h1>
+
+      <div *ngFor="let tag of post.departmentsBlog" >
+        {{ tag.departments.departmentName}}
+
+      </div>
+
+      <div *ngFor="let author of post.author" >
+         <a href="mailto:{{author.email}}"> {{author.name}}</a>, {{author.title}}
+      </div>
+
+      <small>{{post.createdAt | date: 'dd/MM/yyyy'}}</small>
+
+      <div>
+        {{post.content}}
+      </div>
+    </div>
+
+
+
+
+
+</div>
+
+
