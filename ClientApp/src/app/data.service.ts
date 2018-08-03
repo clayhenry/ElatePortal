@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {IPosts} from "../interfaces/posts";
 import {Observable} from "rxjs/Observable";
 import {IComments} from "../interfaces/comments";
@@ -40,7 +40,13 @@ export class DataService {
   setComment(comment: string, blogId : number ){
 
     let body = JSON.stringify(comment)
-    return  this.http.post("/api/Blogs/create/comment/" + blogId , body)
+    //let body = "comment=" + comment;
+    var headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    var options =  {
+
+      headers: headers
+    };
+    return  this.http.post("/api/Blogs/create/comment/" + blogId , body,options )
   }
 
   getBlogItems(){

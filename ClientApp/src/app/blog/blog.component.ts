@@ -122,6 +122,8 @@ this.postid = id;
 
   submitComment(blogid:number){
     let comment = this.commentForm[blogid];
+    console.log(comment);
+
     this._data.setComment(comment, blogid).subscribe((data) => {
 
      this.getComents(blogid);
