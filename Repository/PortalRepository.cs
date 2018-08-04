@@ -53,10 +53,9 @@ namespace ElatePortal.Repository
 
         public List<CommentsViewModel> GetComments(int blogId)
         {
-            return (from p in _blogContext.Blog 
+            var comments = (from p in _blogContext.Blog 
                     join t in _profileContext.Profile on p.ProfileId equals t.Id
                     where p.Id == blogId
-                    orderby p.CreatedAt descending 
                     select new CommentsViewModel()
                     {
                         Comments = _commentContext.Comments.Where(x => x.BlogId.Equals(blogId) && x.Status.Equals(1) )
@@ -69,10 +68,13 @@ namespace ElatePortal.Repository
                                 Status = com.Status,
                                 CreatedAt = com.CreatedAt,
                                 Id = com.Id
-                            }).ToList()
+                            }).OrderByDescending(v=>v.CreatedAt).ToList()
                     }
 
                 ).ToList();
+
+
+            return comments;
         }
 
 

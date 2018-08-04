@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Router} from "@angular/router";
 import {DataService} from "../data.service";
@@ -55,17 +55,6 @@ export class BlogComponent implements OnInit {
 
   }
 
-  addItem(){
-
-    this.items.push(this.listItem);
-    this.itemCount = this.items.length;
-    this.listItem ='';
-  }
-
-  removeItem(index){
-
-    this.items.splice(index, 1);
-  }
 
   filterByTag(tag: string){
     this._data.getBlogByTagAjax(tag).subscribe(d => this.blogposts = d);
@@ -90,19 +79,17 @@ export class BlogComponent implements OnInit {
 
   getBlogPost(id : number){
 
-this.location.replaceState('Portal/post/'+ id);
-this.postid = id;
+    this.location.replaceState('Portal/post/'+ id);
 
-    //this.router.navigate(['Portal/post/'+ id]);
-    //
-    // this._data.getBlogPostAjax(id).subscribe(data =>
-    // {
-    //   this.blogpost = data
-    //
-    //   console.log(data)
-    //
-    // });
-    // return this.blogpost
+    //sets component parameter
+    this.postid = id;
+
+    //change it back to engage another change action
+    setTimeout(()=> {
+      this.postid = 0;
+    }, 0);
+
+   // document.getElementsByTagName("body")[0].style.overflow = "hidden"
 
   }
 
@@ -110,7 +97,6 @@ this.postid = id;
     //todo: revisit this, as I don't like how the array keys are created
 
     this._data.getCommentsAjax(blogid).subscribe(data => {this.comments[blogid] = data;
-
     this.isCommentOpen[blogid] = blogid;
 
 

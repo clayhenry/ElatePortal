@@ -156,13 +156,9 @@ namespace ElatePortal.Modules.Blog
         }
 
         [HttpPost("/api/Blogs/create/comment/{blogid}")]
-        public async Task<IActionResult> CreateComment(int blogid, Comments comments)
+        public async Task<IActionResult> CreateComment(int blogid, Comments comments, [FromBody] string comment)
         {
-            var request = HttpContext.Request;
-            using (var reader = new StreamReader(request.Body))
-            {
-                var comment = await reader.ReadToEndAsync();
-              
+             
                 comments.BlogId = blogid;
                 comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
                 comments.Comment = comment;
@@ -173,8 +169,8 @@ namespace ElatePortal.Modules.Blog
             await _commentcontext.SaveChangesAsync();
 
             return Content(blogid.ToString());
-            
-        } }
+
+        }
 
         [HttpGet("/Admin/Blog/Edit/{id}")]
         public IActionResult Post(int id)
