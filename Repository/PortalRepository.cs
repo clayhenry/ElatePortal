@@ -145,7 +145,10 @@ namespace ElatePortal.Repository
         public IQueryable<HomeViewModel> GetBlogList()
         {
             
-            var g = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments)
+            var g = (from f in _blogContext.Blog
+                    .Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments)
+                    .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Reactions)
+                    .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Profile)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id 
                 
                 where f.Status == "Published" 
@@ -161,7 +164,8 @@ namespace ElatePortal.Repository
                     Preview =  new HomeViewModel().TruncateString(f.Content, 15),
                     //Comments =  GetBlogComments(f.Id),
                     DepartmentsBlog = f.DepartmentsBlog,
-                    CommentsCount = GetBlogCommentCount(f.Id)
+                    CommentsCount = GetBlogCommentCount(f.Id),
+                    Reactions = f.ReactionsPostProfile
                     
                 }  );
 
@@ -192,7 +196,9 @@ namespace ElatePortal.Repository
         public IQueryable<HomeViewModel> GetBlogPost(int id)
         {  
             var post = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(c=>c.Departments)
+                    .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Reactions)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id
+                
                 where  f.Id.Equals(id)
                 select new HomeViewModel {
                     Content = f.Content,
@@ -203,7 +209,9 @@ namespace ElatePortal.Repository
                     DepartmentsBlog = f.DepartmentsBlog,
                     Status = f.Status,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
-                    Comments =  GetBlogComments(f.Id)
+                    Comments =  GetBlogComments(f.Id),
+                    Reactions = f.ReactionsPostProfile
+                    
                     
                 });
 

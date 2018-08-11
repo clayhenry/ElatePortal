@@ -13,7 +13,6 @@ namespace ElatePortal.Models
     
     public class Blog
     {
-
  
         [Key]
         public int Id { get; set; }
@@ -40,6 +39,7 @@ namespace ElatePortal.Models
         public List<Comments> Comments { get; set; }
 
         public List<DepartmentsBlog> DepartmentsBlog { get; set; }
+        public List<ReactionsPostProfile> ReactionsPostProfile { get; set; }
     
     }    
 
@@ -65,7 +65,26 @@ namespace ElatePortal.Models
 
         public string DepartmentName { get; set; }
     
-
-
     }
+    
+    public class ReactionsPostProfile
+    {
+        [Key]     
+        public int Id { get; set; }
+
+        public int ProfileId { get; set; }
+        public Profile Profile { get; set; }
+        public Reactions Reactions { get; set; }
+    }
+
+
+    public class Reactions
+    {
+        [Key] 
+        public int Id { get; set; }
+        public string Name { get; set; }
+     
+    }
+
+    
 }

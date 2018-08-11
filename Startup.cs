@@ -54,7 +54,10 @@ namespace ElatePortal
             services.AddScoped<PortalRepository>();
             services.AddScoped<Helper>();
 
-            services.AddMvc().AddSessionStateTempDataProvider();
+            services.AddMvc().AddSessionStateTempDataProvider().AddJsonOptions(
+                options => options.SerializerSettings.ReferenceLoopHandling =            
+                    Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );;
             services.AddSession();
         }
 
