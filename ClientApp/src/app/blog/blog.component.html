@@ -15,7 +15,10 @@
   <div *ngFor="let post of blogposts; let i=index">
     <blockquote>
     <h1><div (click)="getBlogPost(post.blogId)"> {{post.title}}</div></h1>
+        <div *ngFor="let react of post.reactions">
+        reaction here
 
+        </div>
       <div *ngFor="let tag of post.departmentsBlog; let j=index">
         <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
       </div>

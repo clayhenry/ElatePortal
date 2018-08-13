@@ -4,6 +4,7 @@ import {Router} from "@angular/router";
 import {DataService} from "../data.service";
 import { FormGroup, FormControl } from '@angular/forms';
 import {Location} from '@angular/common';
+import {forEach} from "@angular/router/src/utils/collection";
 
 
 
@@ -43,6 +44,8 @@ export class BlogComponent implements OnInit {
         this.tags = c;
         this.blogposts = d;
 
+        this.setReactions(d);
+
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
         }
@@ -55,6 +58,38 @@ export class BlogComponent implements OnInit {
 
   }
 
+  setReactions(data: Array<any>){
+
+    let love ={"count" : 0, "profiles": {}} ;
+    let like = {"count": 0, "profiles": {}};
+    let indexer = 0;
+
+    for (let i=0; i<data.length; i++){
+      if (data[i]["reactions"] != undefined){
+      for (let j =0; j<data[i]["reactions"].length; j++){
+        if (data[i]["reactions"][j] != undefined) {
+
+          let Name = data[i]["reactions"][j]["reactions"]["name"];
+          let ProfileName = data[i]["reactions"][j]["profile"]["name"];
+
+          switch (Name) {
+            case "Love" :
+              love.count++;
+              love.profiles[indexer++] = ProfileName;
+              break;
+            case "Like" :
+              like.count++;
+              like.profiles[indexer++] = ProfileName;
+          }
+
+          this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
+        }
+
+        }
+      }
+    }
+    console.log(this.blogposts)
+  }
 
   filterByTag(tag: string){
     this._data.getBlogByTagAjax(tag).subscribe(d => this.blogposts = d);
