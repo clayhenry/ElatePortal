@@ -27,6 +27,7 @@ export class BlogComponent implements OnInit {
   commentForm = [];
   postid;
   commentsCount = {};
+  LikeNames = "kkkkk"
 
   constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
@@ -44,7 +45,7 @@ export class BlogComponent implements OnInit {
         this.tags = c;
         this.blogposts = d;
 
-        this.setReactions(d);
+        this.setReactionsAggregate(d);
 
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
@@ -58,11 +59,10 @@ export class BlogComponent implements OnInit {
 
   }
 
-  setReactions(data: Array<any>){
+  setReactionsAggregate(data: Array<any>){
 
-    let love ={"count" : 0, "profiles": {}} ;
-    let like = {"count": 0, "profiles": {}};
-    let indexer = 0;
+    let love ={"count" : 0, "profiles": []} ;
+    let like = {"count": 0, "profiles": []};
 
     for (let i=0; i<data.length; i++){
       if (data[i]["reactions"] != undefined){
@@ -71,15 +71,16 @@ export class BlogComponent implements OnInit {
 
           let Name = data[i]["reactions"][j]["reactions"]["name"];
           let ProfileName = data[i]["reactions"][j]["profile"]["name"];
+          let UserTitle = data[i]["reactions"][j]["profile"]["title"];
 
           switch (Name) {
             case "Love" :
               love.count++;
-              love.profiles[indexer++] = ProfileName;
+              love.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
               break;
             case "Like" :
               like.count++;
-              like.profiles[indexer++] = ProfileName;
+              like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
           }
 
           this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
