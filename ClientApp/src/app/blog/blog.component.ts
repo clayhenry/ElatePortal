@@ -14,24 +14,26 @@ import {forEach} from "@angular/router/src/utils/collection";
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+
   itemCount: number;
   btn: string = "Add an item";
-  listItem: string = "my first list itmem";
   currentId: number;
   items = [];
   blogposts = [];
-  blogpost = [];
   comments = [];
   tags = [];
   isCommentOpen = [];
   commentForm = [];
   postid;
   commentsCount = {};
-  LikeNames = "kkkkk"
+  reactionToggle = [];
+  currentlyLikePost = [];
+  canReactLike = [];
 
   constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
+
   }
 
   ngOnInit() {
@@ -55,17 +57,22 @@ export class BlogComponent implements OnInit {
 
       )
     })
-
-
   }
+
 
   setReactionsAggregate(data: Array<any>){
 
-    let love ={"count" : 0, "profiles": []} ;
-    let like = {"count": 0, "profiles": []};
+    let currentProfileId = this._data.profile[0].id;
 
     for (let i=0; i<data.length; i++){
+
+      //defaults
+      let love ={"count" : 0, "profiles": []} ;
+      let like = {"count": 0, "profiles": []};
+      this.blogposts[i]['reaction']  = {"Love" : love, "Like" : like} ;
+
       if (data[i]["reactions"] != undefined){
+
       for (let j =0; j<data[i]["reactions"].length; j++){
         if (data[i]["reactions"][j] != undefined) {
 
@@ -80,7 +87,7 @@ export class BlogComponent implements OnInit {
               break;
             case "Like" :
               like.count++;
-              like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
+              like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle + " - " + data[i]["reactions"][j]["profile"]["id"];
           }
 
           this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
@@ -88,23 +95,66 @@ export class BlogComponent implements OnInit {
 
         }
       }
+
+      //modiffies if the current user can react
+      for (let k = 0 ; k< data[i]["reactions"].length; k++) {
+
+        let userId = data[i]["reactions"][k].profileId;
+        let name = data[i]["reactions"][k]['reactions'].name
+
+        if (currentProfileId === userId){
+
+          switch (name){
+
+            case "Like" :
+              this.canReactLike[ data[i].blogId ] = false;
+              this.currentlyLikePost[i] = i;
+            break;
+          }
+        }
+
+      }
     }
-    console.log(this.blogposts)
+
+  }
+
+  toggleReactionProfiles( id : number){
+
+    if (this.reactionToggle[id])
+      this.reactionToggle[id] = false;
+    else {
+      this.reactionToggle[id] = true;
+    }
+
+  }
+
+  updateReaction(index: number, blogId : number){
+
+    console.log(this.currentlyLikePost[0])
+
+    if (this.currentlyLikePost[index] != index){
+      //do ajax here
+
+      this.blogposts[index]['reaction']["Like"]["count"]++;
+      this.currentlyLikePost[index] = index;
+
+    } else {
+
+      //remove here
+      this.blogposts[index]['reaction']["Like"]["count"]--;
+      this.currentlyLikePost[index] = null;
+    }
+
+
   }
 
   filterByTag(tag: string){
     this._data.getBlogByTagAjax(tag).subscribe(d => this.blogposts = d);
-
   }
 
   getAllBlogs(){
 
-    this._data.getBlogItemsAjax().subscribe(d =>
-    {
-      this.blogposts = d
-
-    }
-      );
+    this._data.getBlogItemsAjax().subscribe(d => {this.blogposts = d});
   }
 
   sendMeHome(){

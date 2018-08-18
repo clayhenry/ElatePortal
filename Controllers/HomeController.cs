@@ -135,5 +135,15 @@ namespace ElatePortal.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+        [HttpGet("/api/Profile/")]
+        public JsonResult GetProfile()
+        {
+            var email = HttpContext.User.Identity.Name;
+
+            var profile = this._repositrory.GetCurrentProfile(email);
+            return Json(profile);
+
+        }
+
     }
 }

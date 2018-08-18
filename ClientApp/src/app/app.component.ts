@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {DataService} from "./data.service";
+import {IProfile} from "../interfaces/IProfile";
 
 @Component({
   selector: 'app-root',
@@ -9,8 +11,11 @@ export class AppComponent implements OnInit{
   title = 'app';
 
 
+  constructor(private _data: DataService){}
+
   ngOnInit() {
-    console.log("authenticateme")
+    console.log("authenticateme");
+    this._data.getCurrentProfileAjax();
   }
 
 

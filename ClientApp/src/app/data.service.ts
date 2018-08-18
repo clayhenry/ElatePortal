@@ -2,18 +2,20 @@ import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {IPosts} from "../interfaces/posts";
-import {Observable} from "rxjs/Observable";
+import {Observable} from "rxjs";
 import {IComments} from "../interfaces/comments";
+import {IProfile} from "../interfaces/IProfile";
 
 @Injectable()
 export class DataService {
 
 
   private _url = "/api/Blogs";
+  public profile :IProfile;
 
   constructor( private http: HttpClient ) { }
 
-  getBlogItemsAjax() : Observable<IPosts[]>{
+      getBlogItemsAjax() : Observable<IPosts[]>{
 
     return this.http.get<IPosts[]>(this._url);
   }
@@ -37,6 +39,11 @@ export class DataService {
     return  this.http.get<Array<any>>(this._url + "/" + "Comments/" + blogid);
   }
 
+  getCurrentProfileAjax() : void {
+
+    this.http.get<IProfile>("/api/Profile/").subscribe(d => {this.profile = d;});
+
+  }
   setComment(comment: string, blogId : number ){
 
     let body = JSON.stringify(comment)

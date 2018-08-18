@@ -1,5 +1,3 @@
-
-
 <div *ngFor="let singlepost of items; let i=index">
   {{singlepost}}
   <br>
@@ -8,92 +6,104 @@
 
 <div *ngFor="let tag of tags ">
 
- <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
+  <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
 </div>
 <div (click)="getAllBlogs()">All</div>
 
-  <div *ngFor="let post of blogposts; let i=index">
-    <blockquote>
-    <h1><div (click)="getBlogPost(post.blogId)"> {{post.title}}</div></h1>
+<div *ngFor="let post of blogposts; let i=index">
+  <blockquote>
+    <h1>
+      <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
+    </h1>
 
-      <div *ngFor="let tag of post.departmentsBlog; let j=index">
-        <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
-      </div>
+    <div *ngFor="let tag of post.departmentsBlog; let j=index">
+      <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
+    </div>
 
     {{post.coverImage}} {{post.blogId}}<br>
     {{post.preview}} ... <br> by {{post.name}} {{post.userTitle}} <br>
 
 
-      <div style="background-color: #2aabd2">
+    <div style="background-color: #2aabd2">
 
-      <div  (click)="getComents(post.blogId)">
-        {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId]  : "Comment "}}
+      <div (click)="getComents(post.blogId)">
+        {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId] : "Comment "}}
       </div>
-        <div *ngIf="post.reaction">
-         Likes {{post.reaction.Like.count}}
-             <div *ngFor="let profile of post.reaction.Like.profiles">
-               <ul>
-                 <li>{{profile}}</li>
-               </ul>
 
-             </div>
+        <span (click)="updateReaction(i,post.blogId)">Like</span>
+     
+        <span (click)="toggleReactionProfiles(post.blogId)">
+          <span *ngIf="post.reaction && post.reaction.Like.count !=0">{{post.reaction.Like.count}}</span>
+        </span>
 
-          Love {{post.reaction.Love.count}}
+        Love
+      <span (click)="toggleReactionProfiles(post.blogId)">
+            <span *ngIf="post.reaction && post.reaction.Love.count !=0">{{post.reaction.Love.count}}</span>
+
+
+      </span>
+
+        <div *ngIf="reactionToggle[post.blogId] == true">
+          <div *ngFor="let profile of post.reaction.Like.profiles">
+            <ul>
+              <li>{{profile}} --LIKE-- </li>
+            </ul>
+          </div>
+
           <div *ngFor="let profile of post.reaction.Love.profiles">
             <ul>
-              <li>{{profile}}</li>
+              <li>{{profile}} --LOVE-- </li>
             </ul>
 
           </div>
-
-        </div>
-        <div *ngIf="!post.reaction">
-         Like Love
         </div>
 
 
-        <div *ngIf="comments.length > 0 && isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
 
-          <form (ngSubmit)="submitComment(post.blogId)">
-            <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
-            <button type="submit"> Post</button>
-          </form>
 
-          <div  *ngFor="let comment of comments[post.blogId];" >
-            <ul *ngFor="let com of  comment.comments">
-              <li>
-                {{com.comment}}
 
-                <div>
-                  {{com.createdAt | date: 'dd/MM/yyyy'}}
-                  <div  *ngFor="let author of com.author ;" >
-                  <a href="mailto:{{author.email}}">  {{author.name}}</a> {{author.title}}
-                  </div>
+
+      <div *ngIf="comments.length > 0 && isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
+
+        <form (ngSubmit)="submitComment(post.blogId)">
+          <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
+          <button type="submit"> Post</button>
+        </form>
+
+        <div *ngFor="let comment of comments[post.blogId];">
+          <ul *ngFor="let com of  comment.comments">
+            <li>
+              {{com.comment}}
+
+              <div>
+                {{com.createdAt | date: 'dd/MM/yyyy'}}
+                <div *ngFor="let author of com.author ;">
+                  <a href="mailto:{{author.email}}"> {{author.name}}</a> {{author.title}}
                 </div>
+              </div>
 
-              </li>
+            </li>
 
-            </ul>
-          </div>
-
+          </ul>
         </div>
+
       </div>
+    </div>
 
 
-    </blockquote>
-    <br>
-
-
-
-    <hr>
+  </blockquote>
   <br>
-  </div>
+
+
+  <hr>
+  <br>
+</div>
 
 
 <app-post [postid]="postid"></app-post>
 
 
-  <br>
+<br>
 
 
 <a (click)="sendMeHome()"> Go home</a>

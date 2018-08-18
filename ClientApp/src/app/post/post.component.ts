@@ -15,8 +15,6 @@ import {Router} from "@angular/router";
 
 export class PostComponent implements OnChanges, OnInit {
 
-
-
   postid: number;
   blogpost = [];
   postActive = false;
@@ -28,8 +26,6 @@ export class PostComponent implements OnChanges, OnInit {
   ngOnChanges(changes: SimpleChanges) {
     let postid = changes.postid;
     this.postid = postid.currentValue;
-
-    console.log("change" +postid )
 
     if (postid.currentValue) {
       this.getBlogPost(postid.currentValue)

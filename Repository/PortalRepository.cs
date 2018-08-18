@@ -6,9 +6,11 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using ElatePortal.Models;
+using Microsoft.AspNetCore.Authorization;
 using ElatePortal.Modules.Blog;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using SQLitePCL;
 
 namespace ElatePortal.Repository
@@ -49,6 +51,22 @@ namespace ElatePortal.Repository
                 throw;
             }
         }
+
+        public List<Profile> GetCurrentProfile(string email)
+        {
+
+            try
+            {
+                var profile = _profileContext.Profile.Where(e => e.Email.Equals(email)).ToList();
+                return profile;
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e.Message);
+                throw;
+            }
+ 
+        } 
 
 
         public List<CommentsViewModel> GetComments(int blogId)
