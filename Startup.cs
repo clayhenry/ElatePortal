@@ -45,10 +45,17 @@ namespace ElatePortal
             services.AddAuthentication(sharedOptions =>
             {
                 sharedOptions.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
-                sharedOptions.DefaultChallengeScheme = OpenIdConnectDefaults.AuthenticationScheme;
+                sharedOptions.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             })
             .AddAzureAd(options => Configuration.Bind("AzureAd", options))
             .AddCookie();
+            
+            services.AddAuthorization(options =>
+            {
+                options.AddPolicy("AtLeast21", policy => policy.Requirements.Add(new MinimumAgeRequirement(21)) );
+               
+                
+            });
 
         
             services.AddScoped<RegisterModel>();
