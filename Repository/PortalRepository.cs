@@ -22,18 +22,22 @@ namespace ElatePortal.Repository
         private readonly BlogContext _blogContext;
         private readonly CommentContext _commentContext;
         private readonly DepartmentsContext _departmentContext;
+        private readonly PortalContext _portalContext;
   
         public PortalRepository(
             CommentContext CommentContext, 
             BlogContext BlogContext, 
             ProfileContext ProfileContext,
-            DepartmentsContext DepartmentsContext
+            DepartmentsContext DepartmentsContext,
+            PortalContext portalContext
+            
             )
         {
             this._commentContext = CommentContext;
             this._blogContext = BlogContext;
             this._profileContext = ProfileContext;
             this._departmentContext = DepartmentsContext;
+            this._portalContext = portalContext;
         }
 
 
@@ -265,6 +269,41 @@ namespace ElatePortal.Repository
             return true;
 
         }
+
+
+
+        public Task PostReactionUpdate(int blogId, string name, string type, int profileId)
+        {
+
+            switch (type)
+            {
+                    case "delete" : 
+                        var reactions =
+                            this._portalContext.ReactionsPostProfile.SingleOrDefault(x =>
+                                x.ProfileId.Equals(profileId) && x.BlogId.Equals(blogId));
+
+                        if(reactions !=null){
+                            this._portalContext.ReactionsPostProfile.Remove(reactions);
+                        }
+
+                        break;
+                    
+                    case "add" :
+
+                        var reaction =  new ReactionsPostProfile {BlogId = blogId, ProfileId = profileId, ReactionsId = 2};
+                        this._portalContext.ReactionsPostProfile.Add(reaction);
+
+                        break;
+            }
+            
+            this._portalContext.SaveChanges();
+
+
+            return Task.CompletedTask;
+
+        }
+        
+        
         
     }
 }

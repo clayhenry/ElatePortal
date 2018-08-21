@@ -48,13 +48,28 @@ export class DataService {
 
     let body = JSON.stringify(comment)
     //let body = "comment=" + comment;
-    var headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
-    var options =  {
+    let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    let options =  {
 
       headers: headers
     };
     return  this.http.post("/api/Blogs/create/comment/" + blogId , body,options )
   }
+
+
+  setReaction(reaction : string,  blogId : number, updateAction : string){
+
+    let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
+    let options =  {
+      headers: headers
+    };
+    return  this.http.post("/api/Reaction/Update/" + updateAction + "/like/" + blogId, options )
+
+
+  }
+
+
+
 
   getBlogItems(){
 

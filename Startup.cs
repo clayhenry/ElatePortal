@@ -65,7 +65,7 @@ namespace ElatePortal
             services.AddMvc().AddSessionStateTempDataProvider().AddJsonOptions(
                 options => options.SerializerSettings.ReferenceLoopHandling =            
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore
-            );;
+            );
             services.AddSession();
         }
 

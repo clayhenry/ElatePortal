@@ -154,6 +154,16 @@ namespace ElatePortal.Modules.Blog
             return Json(this._portalreposirory.GetComments(blogId));
 
         }
+        
+        [HttpPost("/api/Reaction/Update/{updatetype}/{reaction}/{blogId}")]
+        public async void  UpdateReaction(int blogId, string reaction, string updatetype)
+        {
+            
+            var email = HttpContext.User.Identity.Name;
+            var profile = this._portalreposirory.GetCurrentProfile(email);
+            
+            await this._portalreposirory.PostReactionUpdate(blogId, reaction, updatetype, profile[0].Id);
+        }
 
         [HttpPost("/api/Blogs/create/comment/{blogid}")]
         public async Task<IActionResult> CreateComment(int blogid, Comments comments, [FromBody] string comment)

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ElatePortal.Modules.Admin
 {
-    [Authorize(Policy = "AtLeast21")]
+    [Authorize]
     public class AdminController : Controller
     {
         // GET

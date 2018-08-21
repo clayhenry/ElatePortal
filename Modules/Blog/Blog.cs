@@ -75,6 +75,8 @@ namespace ElatePortal.Models
         public int ProfileId { get; set; }
         public Profile Profile { get; set; }
         public Reactions Reactions { get; set; }
+        public int BlogId { get; set; }
+        public int ReactionsId { get; set; }
     }
 
 

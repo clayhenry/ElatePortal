@@ -134,6 +134,10 @@ export class BlogComponent implements OnInit {
 
     if (this.currentlyLikePost[index] != index){
       //do ajax here
+      this._data.setReaction("Like", blogId, "add").subscribe(data => {
+
+        console.log(data);
+      } )
 
       this.blogposts[index]['reaction']["Like"]["count"]++;
       this.currentlyLikePost[index] = index;
@@ -194,7 +198,6 @@ export class BlogComponent implements OnInit {
 
   submitComment(blogid:number){
     let comment = this.commentForm[blogid];
-    console.log(comment);
 
     this._data.setComment(comment, blogid).subscribe((data) => {
 
@@ -203,6 +206,10 @@ export class BlogComponent implements OnInit {
      this.commentForm.length = 0;
 
    });
+
+  }
+
+  submitReaction(blogid:number, name : string, updateAction : string){
 
 
 

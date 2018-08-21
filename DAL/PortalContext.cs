@@ -11,6 +11,6 @@ namespace ElatePortal.DAL
 
         }
         public DbSet<Reactions> Reactions { get; set; }
-//        public DbSet<Blog> Blog { get; set; }
+        public DbSet<ReactionsPostProfile> ReactionsPostProfile { get; set; }
     }
 }
