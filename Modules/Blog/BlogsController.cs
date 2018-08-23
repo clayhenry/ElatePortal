@@ -155,14 +155,14 @@ namespace ElatePortal.Modules.Blog
 
         }
         
-        [HttpPost("/api/Reaction/Update/{updatetype}/{reaction}/{blogId}")]
-        public async void  UpdateReaction(int blogId, string reaction, string updatetype)
+        [HttpPost("/api/Reaction/Update/{updatetype}/{reactionId}/{blogId}")]
+        public async void  UpdateReaction(int blogId, int reactionId, string updatetype)
         {
             
             var email = HttpContext.User.Identity.Name;
             var profile = this._portalreposirory.GetCurrentProfile(email);
             
-            await this._portalreposirory.PostReactionUpdate(blogId, reaction, updatetype, profile[0].Id);
+            await this._portalreposirory.PostReactionUpdate(blogId, reactionId, updatetype, profile[0].Id);
         }
 
         [HttpPost("/api/Blogs/create/comment/{blogid}")]

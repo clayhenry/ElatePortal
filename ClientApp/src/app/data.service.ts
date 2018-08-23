@@ -57,13 +57,13 @@ export class DataService {
   }
 
 
-  setReaction(reaction : string,  blogId : number, updateAction : string){
+  setReaction(reactionId : number,  blogId : number, updateAction : string){
 
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     let options =  {
       headers: headers
     };
-    return  this.http.post("/api/Reaction/Update/" + updateAction + "/like/" + blogId, options )
+    return  this.http.post("/api/Reaction/Update/" + updateAction + "/" +reactionId + "/"+ blogId, options )
 
 
   }

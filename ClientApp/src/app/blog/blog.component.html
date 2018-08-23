@@ -30,18 +30,18 @@
         {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId] : "Comment "}}
       </div>
 
-        <span (click)="updateReaction(i,post.blogId)">Like</span>
-     
+        <span (click)="updateReaction(i,post.blogId, 2)" [class.addedReaction]="currentlyLikePost[i] == i">Like </span>
+
         <span (click)="toggleReactionProfiles(post.blogId)">
+
           <span *ngIf="post.reaction && post.reaction.Like.count !=0">{{post.reaction.Like.count}}</span>
         </span>
 
-        Love
+<!--        Love
       <span (click)="toggleReactionProfiles(post.blogId)">
             <span *ngIf="post.reaction && post.reaction.Love.count !=0">{{post.reaction.Love.count}}</span>
 
-
-      </span>
+      </span>-->
 
         <div *ngIf="reactionToggle[post.blogId] == true">
           <div *ngFor="let profile of post.reaction.Like.profiles">
@@ -50,12 +50,12 @@
             </ul>
           </div>
 
-          <div *ngFor="let profile of post.reaction.Love.profiles">
+<!--          <div *ngFor="let profile of post.reaction.Love.profiles">
             <ul>
-              <li>{{profile}} --LOVE-- </li>
+              <li>{{profile}} &#45;&#45;LOVE&#45;&#45; </li>
             </ul>
 
-          </div>
+          </div>-->
         </div>
 
 

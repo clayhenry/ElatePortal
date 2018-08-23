@@ -233,9 +233,7 @@ namespace ElatePortal.Repository
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
                     Comments =  GetBlogComments(f.Id),
                     Reactions = f.ReactionsPostProfile
-                    
-                    
-                });
+                   });
 
             return post;
         }
@@ -271,10 +269,8 @@ namespace ElatePortal.Repository
         }
 
 
-
-        public Task PostReactionUpdate(int blogId, string name, string type, int profileId)
+        public Task PostReactionUpdate(int blogId, int reactionId, string type, int profileId)
         {
-
             switch (type)
             {
                     case "delete" : 
@@ -290,7 +286,7 @@ namespace ElatePortal.Repository
                     
                     case "add" :
 
-                        var reaction =  new ReactionsPostProfile {BlogId = blogId, ProfileId = profileId, ReactionsId = 2};
+                        var reaction =  new ReactionsPostProfile {BlogId = blogId, ProfileId = profileId, ReactionsId = reactionId};
                         this._portalContext.ReactionsPostProfile.Add(reaction);
 
                         break;
@@ -298,9 +294,7 @@ namespace ElatePortal.Repository
             
             this._portalContext.SaveChanges();
 
-
             return Task.CompletedTask;
-
         }
         
         
