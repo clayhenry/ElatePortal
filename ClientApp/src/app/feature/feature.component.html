@@ -1,0 +1,24 @@
+
+
+
+<div class="carusel">
+  <div class="carusel-container">
+<div *ngFor="let post of posts; let i=index">
+  <div *ngIf="post.feature == 1">
+      <div class="carusel-item" [attr.data-item]="i">
+        <img src="/uploads/{{post.coverImage}}">
+        <h1>
+          <div (click)="blog.getBlogPost(post.blogId)"> {{post.title}}</div>
+        </h1>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <div>
+  </div>
+</div>
+<span (click)="nav('next')">Next</span>
+<span (click)="nav('prev')" >Prev</span>
+

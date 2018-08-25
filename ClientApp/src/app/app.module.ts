@@ -14,6 +14,8 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BlogComponent } from './blog/blog.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostComponent } from './post/post.component';
+import { FeatureComponent } from './feature/feature.component';
+import {NgxSiemaModule} from "ngx-siema";
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { PostComponent } from './post/post.component';
     CounterComponent,
     FetchDataComponent,
     BlogComponent,
-    PostComponent
+    PostComponent,
+    FeatureComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    NgxSiemaModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([

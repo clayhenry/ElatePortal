@@ -19,7 +19,7 @@ export class BlogComponent implements OnInit {
   btn: string = "Add an item";
   currentId: number;
   items = [];
-  blogposts = [];
+  blogposts;
   comments = [];
   tags = [];
   isCommentOpen = [];
@@ -29,6 +29,7 @@ export class BlogComponent implements OnInit {
   reactionToggle = [];
   currentlyLikePost = [];
   canReactLike = [];
+  test = 123;
 
   constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params

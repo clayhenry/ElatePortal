@@ -10,6 +10,16 @@
 </div>
 <div (click)="getAllBlogs()">All</div>
 
+<!--Feature -->
+
+
+<app-feature [posts]="blogposts"></app-feature>
+
+
+
+
+<!--Blogroll-->
+
 <div *ngFor="let post of blogposts; let i=index">
   <div *ngIf="post.feature == 0">
   <blockquote>
