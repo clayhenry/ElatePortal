@@ -35,6 +35,7 @@ namespace ElatePortal.Models
      
    
         public string CoverImage { get; set; }
+        public int Feature { get; set; }
 
         public List<Comments> Comments { get; set; }
 

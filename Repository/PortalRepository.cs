@@ -168,12 +168,12 @@ namespace ElatePortal.Repository
         {
             
             var g = (from f in _blogContext.Blog
-                    .Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments)
+                    .Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments )
                     .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Reactions)
                     .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Profile)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id 
-                
-                where f.Status == "Published" 
+                orderby f.CreatedAt descending 
+                where f.Status == "Published"
               
                 select new HomeViewModel {
                     Content = f.Content,
@@ -187,9 +187,10 @@ namespace ElatePortal.Repository
                     //Comments =  GetBlogComments(f.Id),
                     DepartmentsBlog = f.DepartmentsBlog,
                     CommentsCount = GetBlogCommentCount(f.Id),
-                    Reactions = f.ReactionsPostProfile
-                    
-                }  );
+                    Reactions = f.ReactionsPostProfile,
+                    Feature = f.Feature
+
+                } );
 
 
             return g;
@@ -232,7 +233,8 @@ namespace ElatePortal.Repository
                     Status = f.Status,
                     Preview =  new HomeViewModel().TruncateString(f.Content, 5),
                     Comments =  GetBlogComments(f.Id),
-                    Reactions = f.ReactionsPostProfile
+                    Reactions = f.ReactionsPostProfile,
+                    Feature = f.Feature
                    });
 
             return post;
@@ -260,7 +262,7 @@ namespace ElatePortal.Repository
             blogdb.UpdatedAt = payload.UpdatedAt;
             blogdb.Status = payload.Status;
             blogdb.DepartmentsBlog = payload.DepartmentsBlog;
-
+            blogdb.Feature = payload.Feature;
             this._blogContext.Blog.Update(blogdb);
             this._blogContext.SaveChanges();
                 

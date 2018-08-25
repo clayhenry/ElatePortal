@@ -54,7 +54,7 @@ namespace ElatePortal.Modules.Blog
                     {
                         for (int i = 0; i < t.DepartmentsBlog.Count; i++)
                         {
-                            if (tag.Contains(t.DepartmentsBlog[i].Departments.DepartmentName) )
+                            if (tag.Contains(t.DepartmentsBlog[i].Departments.DepartmentName ))
                             {   
                                 hh.Add(new HomeViewModel()
                                 {
@@ -244,7 +244,7 @@ namespace ElatePortal.Modules.Blog
         }
 
         [HttpPost("/Admin/Blog/Update/{id}")]
-        public IActionResult Update(int Id, List<IFormFile> files, string title, string content, string status, List<int> tag)
+        public IActionResult Update(int Id, List<IFormFile> files, string title, string content, string status, int Feature, List<int> tag)
         {
 
             var deps = new List<DepartmentsBlog>();
@@ -268,7 +268,8 @@ namespace ElatePortal.Modules.Blog
                         UpdatedAt = DateTime.Now,
                         Status = status,
                         DepartmentsBlog = deps,
-                        Content = content
+                        Content = content,
+                        Feature = Feature
                     });
                 }
                 catch (Exception e)

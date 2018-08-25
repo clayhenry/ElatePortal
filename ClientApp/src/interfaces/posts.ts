@@ -1,4 +1,6 @@
-﻿export interface IPosts {
+﻿import {ComponentDefFeature} from "@angular/core/src/render3/definition_interfaces";
+
+export interface IPosts {
 
   BlogId: number,
   title: number,
@@ -10,6 +12,7 @@
   comments : Array<any>
   status : string
   departmentsBlog : Array<any>
+  feature : number
 
 
 

@@ -19,6 +19,7 @@ namespace ElatePortal.Models
         public string CoverImage { get; set; }
         public string Status { get; set; }
         public string UserTitle { get; set; }
+        public int Feature { get; set; }
         public DateTime CreatedAt { get; set; }
         [NotMapped]
         public List<Comments> Comments { get; set; }
