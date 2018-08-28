@@ -20,6 +20,7 @@ export class BlogComponent implements OnInit {
   currentId: number;
   items = [];
   blogposts;
+  blogFeatures;
   comments = [];
   tags = [];
   isCommentOpen = [];
@@ -42,13 +43,19 @@ export class BlogComponent implements OnInit {
     //only on the first, initial load
     this.itemCount = this.items.length;
 
-    this._data.getBlogItemsAjax().subscribe(d => {
+    let feature = this._data.getBlogItemsAjax(1);
+
+    this._data.getBlogItemsAjax(0).subscribe(d => {
       this._data.getAllTags().subscribe(c => {
 
-        this.tags = c;
-        this.blogposts = d;
+        feature.subscribe( v =>{
+          this.tags = c;
+          this.blogposts = d;
+          this.blogFeatures = v;
+          this.setReactionsAggregate(d);
+        });
 
-        this.setReactionsAggregate(d);
+
 
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
@@ -62,6 +69,7 @@ export class BlogComponent implements OnInit {
 
 
   setReactionsAggregate(data: Array<any>){
+    this.currentlyLikePost = [];
 
     let currentProfileId = this._data.profile[0].id;
 
@@ -114,6 +122,10 @@ export class BlogComponent implements OnInit {
           }
         }
 
+        console.log(this.currentlyLikePost[i])
+
+
+
       }
     }
 
@@ -133,6 +145,9 @@ export class BlogComponent implements OnInit {
 
     let updateAction = "";
 
+    console.log(this.currentlyLikePost[index])
+
+
     if (this.currentlyLikePost[index] != index){
       updateAction = "add";
 
@@ -148,19 +163,23 @@ export class BlogComponent implements OnInit {
     }
 
     this._data.setReaction(2, blogId, updateAction).subscribe(data => {
-      console.log(data);
+
     } )
 
 
   }
 
   filterByTag(tag: string){
-    this._data.getBlogByTagAjax(tag).subscribe(d => this.blogposts = d);
+    this._data.getBlogByTagAjax(tag).subscribe(d => {this.blogposts = d;
+    this.setReactionsAggregate(d)
+    });
   }
 
   getAllBlogs(){
 
-    this._data.getBlogItemsAjax().subscribe(d => {this.blogposts = d});
+    this._data.getBlogItemsAjax().subscribe(d => {this.blogposts = d;
+      this.setReactionsAggregate(d)
+    });
   }
 
   sendMeHome(){

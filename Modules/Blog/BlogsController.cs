@@ -41,10 +41,10 @@ namespace ElatePortal.Modules.Blog
         }
 
         // GET: api/Blogs
-        [HttpGet("/api/Blogs/{tag?}")]
-        public JsonResult GetBlog(string tag)
+        [HttpGet("/api/Blogs/{tag?}/{feature?}")]
+        public JsonResult GetBlog(string tag, int feature)
         {
-            var posts = this._portalreposirory.GetBlogList();
+            var posts = this._portalreposirory.GetBlogList(feature);
             
             if(! string.IsNullOrEmpty(tag)){
                 
@@ -67,7 +67,8 @@ namespace ElatePortal.Modules.Blog
                                     UserTitle = t.UserTitle,
                                     Preview = new HomeViewModel().TruncateString(t.Content, 15),
                                     CommentsCount = this._portalreposirory.GetBlogCommentCount(t.BlogId),
-                                    DepartmentsBlog = t.DepartmentsBlog
+                                    DepartmentsBlog = t.DepartmentsBlog,
+                                    Reactions = t.Reactions
                                 });
            
                             }

@@ -13,7 +13,7 @@
 <!--Feature -->
 
 
-<app-feature [posts]="blogposts"></app-feature>
+<app-feature [posts]="blogFeatures"></app-feature>
 
 
 
@@ -21,7 +21,7 @@
 <!--Blogroll-->
 
 <div *ngFor="let post of blogposts; let i=index">
-  <div *ngIf="post.feature == 0">
+
   <blockquote>
     <h1>
       <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
@@ -109,7 +109,7 @@
   <hr>
   <br>
 </div>
-</div>
+
 
 
 <app-post [postid]="postid"></app-post>

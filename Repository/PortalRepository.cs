@@ -11,6 +11,8 @@ using ElatePortal.Modules.Blog;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
+using ElatePortal.Controllers;
+using Remotion.Linq.Clauses;
 using SQLitePCL;
 
 namespace ElatePortal.Repository
@@ -164,17 +166,17 @@ namespace ElatePortal.Repository
             return g;
         }
         
-        public IQueryable<HomeViewModel> GetBlogList()
+        public IQueryable<HomeViewModel> GetBlogList(int ?feature = null)
         {
-            
+   
             var g = (from f in _blogContext.Blog
                     .Include(c=> c.DepartmentsBlog).ThenInclude(h=> h.Departments )
                     .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Reactions)
                     .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Profile)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id 
                 orderby f.CreatedAt descending 
-                where f.Status == "Published"
               
+
                 select new HomeViewModel {
                     Content = f.Content,
                     Name = t.Name,
@@ -193,7 +195,19 @@ namespace ElatePortal.Repository
                 } );
 
 
+            
+            if ( feature !=null )
+            {
+                g = g.Where(x => x.Status == "Published" && x.Feature == feature);
+            }
+           
+            else
+            {
+                g = g.Where(x => x.Status == "Published");
+            }
+            
             return g;
+
         }
 
 

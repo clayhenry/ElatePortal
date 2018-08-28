@@ -15,7 +15,6 @@ import { BlogComponent } from './blog/blog.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostComponent } from './post/post.component';
 import { FeatureComponent } from './feature/feature.component';
-import {NgxSiemaModule} from "ngx-siema";
 
 @NgModule({
   declarations: [
@@ -31,7 +30,6 @@ import {NgxSiemaModule} from "ngx-siema";
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
-    NgxSiemaModule.forRoot(),
     FormsModule,
     BrowserAnimationsModule,
     RouterModule.forRoot([

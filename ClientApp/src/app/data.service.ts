@@ -15,9 +15,9 @@ export class DataService {
 
   constructor( private http: HttpClient ) { }
 
-      getBlogItemsAjax() : Observable<IPosts[]>{
+      getBlogItemsAjax(feature = 0) : Observable<IPosts[]>{
 
-    return this.http.get<IPosts[]>(this._url);
+    return this.http.get<IPosts[]>(this._url + "?feature=" + feature);
   }
 
   getBlogByTagAjax(filter:string) : Observable<IPosts[]>{
