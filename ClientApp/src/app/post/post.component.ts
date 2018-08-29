@@ -3,6 +3,7 @@ import {ActivatedRoute} from "@angular/router";
 import {Location} from '@angular/common';
 import {DataService} from "../data.service";
 import {Router} from "@angular/router";
+import {BlogComponent} from "../blog/blog.component";
 
 @Component({
   selector: 'app-post',
@@ -18,9 +19,11 @@ export class PostComponent implements OnChanges, OnInit {
   postid: number;
   blogpost = [];
   postActive = false;
+  blog : BlogComponent;
+  comments;
 
-  constructor(private location: Location, private route: ActivatedRoute, private _data: DataService, private router: Router) {
-
+  constructor(private BlogComponent : BlogComponent, private location: Location, private route: ActivatedRoute, private _data: DataService, private router: Router) {
+    this.blog = BlogComponent;
   }
 
   ngOnChanges(changes: SimpleChanges) {
@@ -39,21 +42,29 @@ export class PostComponent implements OnChanges, OnInit {
 
   }
 
-  back(){
-   this.postActive = false;
-    this.location.replaceState('Portal');
-    document.getElementsByTagName("body")[0].style.overflow = "visible"
+  back(event){
+
+   if(event.target.id == "backgroundElement"){
+     this.postActive = false;
+      this.location.replaceState('Portal');
+      document.getElementsByTagName("body")[0].style.overflow = "visible"
+   }
 
   }
-
 
   getBlogPost(postid:number){
 
     this._data.getBlogPostAjax(postid).subscribe(c=> {
-      this.blogpost = c; if (c.length > 0){  this.postActive = true;
-        document.getElementsByTagName("body")[0].style.overflow = "hidden"
-      }
 
+      this._data.getCommentsAjax(postid).subscribe( f=>{
+        this.blogpost = c;
+        this.comments = f;
+        if (c.length > 0){
+          this.postActive = true;
+          document.getElementsByTagName("body")[0].style.overflow = "hidden"
+        }
+
+      })
     });
 
     console.log(postid);

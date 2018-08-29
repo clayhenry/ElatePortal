@@ -1,0 +1,30 @@
+<div (click)="blog.getComents(post.blogId)">
+
+  {{blog.commentsCount[post.blogId] != 0 ? "Comments: " + blog.commentsCount[post.blogId] : "Comment "}}
+</div>
+
+<div *ngIf="blog.comments.length > 0 && blog.isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
+
+  <form (ngSubmit)="blog.submitComment(post.blogId)">
+    <input type="text" name="comment" [(ngModel)]="blog.commentForm[post.blogId]"/>
+    <button type="submit"> Post</button>
+  </form>
+
+  <div *ngFor="let comment of blog.comments[post.blogId];">
+    <ul *ngFor="let com of  comment.comments">
+      <li>
+        {{com.comment}}
+
+        <div>
+          {{com.createdAt | date: 'dd/MM/yyyy'}}
+          <div *ngFor="let author of com.author ;">
+            <a href="mailto:{{author.email}}"> {{author.name}}</a> {{author.title}}
+          </div>
+        </div>
+
+      </li>
+
+    </ul>
+  </div>
+
+</div>

@@ -37,9 +37,9 @@
 
     <div style="background-color: #2aabd2">
 
-      <div (click)="getComents(post.blogId)">
-        {{commentsCount[post.blogId] != 0 ? "Comments: " + commentsCount[post.blogId] : "Comment "}}
-      </div>
+
+      <app-comments [post]="post" ></app-comments>
+
 
         <span (click)="updateReaction(i,post.blogId, 2)" [class.addedReaction]="currentlyLikePost[i] == i">Like </span>
 
@@ -74,31 +74,7 @@
 
 
 
-      <div *ngIf="comments.length > 0 && isCommentOpen[post.blogId] == post.blogId" style="background-color: #9acfea">
 
-        <form (ngSubmit)="submitComment(post.blogId)">
-          <input type="text" name="comment" [(ngModel)]="commentForm[post.blogId]"/>
-          <button type="submit"> Post</button>
-        </form>
-
-        <div *ngFor="let comment of comments[post.blogId];">
-          <ul *ngFor="let com of  comment.comments">
-            <li>
-              {{com.comment}}
-
-              <div>
-                {{com.createdAt | date: 'dd/MM/yyyy'}}
-                <div *ngFor="let author of com.author ;">
-                  <a href="mailto:{{author.email}}"> {{author.name}}</a> {{author.title}}
-                </div>
-              </div>
-
-            </li>
-
-          </ul>
-        </div>
-
-      </div>
     </div>
 
 

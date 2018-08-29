@@ -15,6 +15,7 @@ import { BlogComponent } from './blog/blog.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PostComponent } from './post/post.component';
 import { FeatureComponent } from './feature/feature.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FeatureComponent } from './feature/feature.component';
     FetchDataComponent,
     BlogComponent,
     PostComponent,
-    FeatureComponent
+    FeatureComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

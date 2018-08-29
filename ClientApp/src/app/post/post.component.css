@@ -1,3 +1,9 @@
 
-div { background-color: aqua}
+.mainPost {
+
+  margin: 50px;
+  padding: 50px;
+  background-color: white;
+  height: 80%;
+}
 /*::ng-deep body{ overflow: hidden !important;}*/

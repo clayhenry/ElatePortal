@@ -53,13 +53,19 @@ export class BlogComponent implements OnInit {
           this.blogposts = d;
           this.blogFeatures = v;
           this.setReactionsAggregate(d);
-        });
-
 
 
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
         }
+
+          for (let j = 0; j< v.length; j++){
+            this.commentsCount[ v[j]["blogId"] ] = v[j]["commentsCount"]
+          }
+
+        console.log(this.commentsCount)
+
+        });
 
       }
 
