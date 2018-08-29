@@ -122,10 +122,6 @@ export class BlogComponent implements OnInit {
           }
         }
 
-        console.log(this.currentlyLikePost[i])
-
-
-
       }
     }
 
@@ -144,9 +140,6 @@ export class BlogComponent implements OnInit {
   updateReaction(index: number, blogId : number){
 
     let updateAction = "";
-
-    console.log(this.currentlyLikePost[index])
-
 
     if (this.currentlyLikePost[index] != index){
       updateAction = "add";
