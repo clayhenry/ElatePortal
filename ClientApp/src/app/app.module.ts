@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PostComponent } from './post/post.component';
 import { FeatureComponent } from './feature/feature.component';
 import { CommentsComponent } from './comments/comments.component';
+import { ReactionComponent } from './reaction/reaction.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CommentsComponent } from './comments/comments.component';
     BlogComponent,
     PostComponent,
     FeatureComponent,
-    CommentsComponent
+    CommentsComponent,
+    ReactionComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

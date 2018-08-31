@@ -30,7 +30,6 @@ export class BlogComponent implements OnInit {
   reactionToggle = [];
   currentlyLikePost = [];
   canReactLike = [];
-  test = 123;
 
   constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
     //gets url params
@@ -63,8 +62,6 @@ export class BlogComponent implements OnInit {
             this.commentsCount[ v[j]["blogId"] ] = v[j]["commentsCount"]
           }
 
-        console.log(this.commentsCount)
-
         });
 
       }
@@ -77,14 +74,22 @@ export class BlogComponent implements OnInit {
   setReactionsAggregate(data: Array<any>){
     this.currentlyLikePost = [];
 
-    let currentProfileId = this._data.profile[0].id;
 
+    let currentProfileId = this._data.profile[0].id;
+    let post = [];
     for (let i=0; i<data.length; i++){
 
       //defaults
       let love ={"count" : 0, "profiles": []} ;
       let like = {"count": 0, "profiles": []};
-      this.blogposts[i]['reaction']  = {"Love" : love, "Like" : like} ;
+
+
+      if(this.blogposts) {
+        this.blogposts[i]['reaction'] = {"Love": love, "Like": like};
+      }
+        post['reaction'] = {"Love": love, "Like": like};
+
+
 
       if (data[i]["reactions"] != undefined){
 
@@ -105,7 +110,11 @@ export class BlogComponent implements OnInit {
               like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle + " - " + data[i]["reactions"][j]["profile"]["id"];
           }
 
-          this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
+          if(this.blogposts) {
+            this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
+          }
+            post['reaction'] = {"Love" : love, "Like" : like} ;
+
         }
 
         }
@@ -130,6 +139,10 @@ export class BlogComponent implements OnInit {
 
       }
     }
+
+
+
+    return post;
 
   }
 

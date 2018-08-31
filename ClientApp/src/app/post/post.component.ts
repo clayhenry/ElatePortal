@@ -9,7 +9,7 @@ import {BlogComponent} from "../blog/blog.component";
   selector: 'app-post',
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
-  inputs: ['postid']
+  inputs: ['postid', 'index']
 
 })
 
@@ -21,6 +21,7 @@ export class PostComponent implements OnChanges, OnInit {
   postActive = false;
   blog : BlogComponent;
   comments;
+  index;
 
   constructor(private BlogComponent : BlogComponent, private location: Location, private route: ActivatedRoute, private _data: DataService, private router: Router) {
     this.blog = BlogComponent;
@@ -58,9 +59,15 @@ export class PostComponent implements OnChanges, OnInit {
 
       this._data.getCommentsAjax(postid).subscribe( f=>{
         this.blogpost = c;
+
         this.comments = f;
         if (c.length > 0){
           this.postActive = true;
+
+          this.blogpost[0]["reaction"] = this.BlogComponent.setReactionsAggregate(c)['reaction'];
+
+
+
           document.getElementsByTagName("body")[0].style.overflow = "hidden"
         }
 

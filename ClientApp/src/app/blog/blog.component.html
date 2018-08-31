@@ -41,33 +41,7 @@
       <app-comments [post]="post" ></app-comments>
 
 
-        <span (click)="updateReaction(i,post.blogId, 2)" [class.addedReaction]="currentlyLikePost[i] == i">Like </span>
-
-        <span (click)="toggleReactionProfiles(post.blogId)">
-
-          <span *ngIf="post.reaction && post.reaction.Like.count !=0">{{post.reaction.Like.count}}</span>
-        </span>
-
-<!--        Love
-      <span (click)="toggleReactionProfiles(post.blogId)">
-            <span *ngIf="post.reaction && post.reaction.Love.count !=0">{{post.reaction.Love.count}}</span>
-
-      </span>-->
-
-        <div *ngIf="reactionToggle[post.blogId] == true">
-          <div *ngFor="let profile of post.reaction.Like.profiles">
-            <ul>
-              <li>{{profile}} --LIKE-- </li>
-            </ul>
-          </div>
-
-<!--          <div *ngFor="let profile of post.reaction.Love.profiles">
-            <ul>
-              <li>{{profile}} &#45;&#45;LOVE&#45;&#45; </li>
-            </ul>
-
-          </div>-->
-        </div>
+<app-reaction [post]="post" [index]="i"></app-reaction>
 
 
 
