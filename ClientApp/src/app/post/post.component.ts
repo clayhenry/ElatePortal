@@ -41,6 +41,7 @@ export class PostComponent implements OnChanges, OnInit {
       this.getBlogPost(params.id);
     } );
 
+    this.blog.currentlyLikePost = []
   }
 
   back(event){
@@ -65,6 +66,9 @@ export class PostComponent implements OnChanges, OnInit {
           this.postActive = true;
 
           this.blogpost[0]["reaction"] = this.BlogComponent.setReactionsAggregate(c)['reaction'];
+
+
+          this.blog.reactionIdsCount[this.blogpost[0]["blogId"]] =this.blogpost[0]["reaction"]["Like"]["count"]
 
           document.getElementsByTagName("body")[0].style.overflow = "hidden"
         }

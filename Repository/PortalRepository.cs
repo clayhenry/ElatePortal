@@ -220,16 +220,17 @@ namespace ElatePortal.Repository
                 where  f.Id.Equals(postId) where f.Status.Equals("Published")
                 select new Post() {
                             
-                    Name = t.Name,
-                    blogId = f.Id,
                     Title = f.Title,
                     Content = f.Content,
                     CoverImage = f.CoverImage,
                     CreatedAt = f.CreatedAt,
                     Author = _profileContext.Profile.Where(pr => pr.Id.Equals(f.ProfileId)).ToList(),
                     DepartmentsBlog = f.DepartmentsBlog,
-                    Reactions = f.ReactionsPostProfile
-              
+                    Reactions = f.ReactionsPostProfile,
+                    Comments =  GetBlogComments(f.Id),
+                    BlogId = f.Id,
+                    CommentsCount = GetBlogCommentCount(f.Id)
+                    
               });
 
             return post;
