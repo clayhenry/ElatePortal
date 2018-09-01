@@ -214,17 +214,22 @@ namespace ElatePortal.Repository
         public IQueryable<Post> GetSingleBlogPost(int postId)
         {
             var post = (from f in _blogContext.Blog.Include(c=> c.DepartmentsBlog).ThenInclude(c=>c.Departments)
+                    .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Reactions)
+                    .Include(v=>v.ReactionsPostProfile ).ThenInclude(v=>v.Profile)
                 join t in _profileContext.Profile on f.ProfileId equals t.Id
                 where  f.Id.Equals(postId) where f.Status.Equals("Published")
                 select new Post() {
                             
+                    Name = t.Name,
+                    blogId = f.Id,
                     Title = f.Title,
                     Content = f.Content,
                     CoverImage = f.CoverImage,
                     CreatedAt = f.CreatedAt,
                     Author = _profileContext.Profile.Where(pr => pr.Id.Equals(f.ProfileId)).ToList(),
-                    DepartmentsBlog = f.DepartmentsBlog
-                    
+                    DepartmentsBlog = f.DepartmentsBlog,
+                    Reactions = f.ReactionsPostProfile
+              
               });
 
             return post;

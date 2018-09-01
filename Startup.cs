@@ -18,6 +18,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 
+
 namespace ElatePortal
 {
     public class Startup
@@ -50,14 +51,15 @@ namespace ElatePortal
             .AddAzureAd(options => Configuration.Bind("AzureAd", options))
             .AddCookie();
             
+            
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AtLeast21", policy => policy.Requirements.Add(new MinimumAgeRequirement(21)) );
                
                 
             });
-
-        
+            
+  
             services.AddScoped<RegisterModel>();
             services.AddScoped<PortalRepository>();
             services.AddScoped<Helper>();
@@ -67,6 +69,8 @@ namespace ElatePortal
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
             services.AddSession();
+            services.AddSignalR();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -17,6 +17,7 @@ import { PostComponent } from './post/post.component';
 import { FeatureComponent } from './feature/feature.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ReactionComponent } from './reaction/reaction.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ReactionComponent } from './reaction/reaction.component';
     PostComponent,
     FeatureComponent,
     CommentsComponent,
-    ReactionComponent
+    ReactionComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
