@@ -66,15 +66,15 @@ export class PostComponent implements OnChanges, OnInit {
 
           this.blogpost[0]["reaction"] = this.BlogComponent.setReactionsAggregate(c)['reaction'];
 
-
-
           document.getElementsByTagName("body")[0].style.overflow = "hidden"
         }
-
+        this.blog.post = this.blogpost;
       })
     });
 
-    console.log(postid);
+
+
+
   }
 
 }

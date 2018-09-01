@@ -5,7 +5,7 @@ import {DataService} from "../data.service";
 import { FormGroup, FormControl } from '@angular/forms';
 import {Location} from '@angular/common';
 import {forEach} from "@angular/router/src/utils/collection";
-
+import {PostComponent} from "../post/post.component";
 
 
 @Component({
@@ -15,12 +15,14 @@ import {forEach} from "@angular/router/src/utils/collection";
 })
 export class BlogComponent implements OnInit {
 
+  post;
   itemCount: number;
   btn: string = "Add an item";
   currentId: number;
   items = [];
   blogposts;
   blogFeatures;
+  postIndex : number;
   comments = [];
   tags = [];
   isCommentOpen = [];
@@ -32,8 +34,10 @@ export class BlogComponent implements OnInit {
   canReactLike = [];
 
   constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
+
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
+  ;
 
   }
 
@@ -41,7 +45,7 @@ export class BlogComponent implements OnInit {
 
     //only on the first, initial load
     this.itemCount = this.items.length;
-
+    this.currentlyLikePost = [];
     let feature = this._data.getBlogItemsAjax(1);
 
     this._data.getBlogItemsAjax(0).subscribe(d => {
@@ -68,11 +72,12 @@ export class BlogComponent implements OnInit {
 
       )
     })
+
   }
 
 
   setReactionsAggregate(data: Array<any>){
-    this.currentlyLikePost = [];
+
 
 
     let currentProfileId = this._data.profile[0].id;
@@ -88,8 +93,6 @@ export class BlogComponent implements OnInit {
         this.blogposts[i]['reaction'] = {"Love": love, "Like": like};
       }
         post['reaction'] = {"Love": love, "Like": like};
-
-
 
       if (data[i]["reactions"] != undefined){
 
@@ -156,7 +159,19 @@ export class BlogComponent implements OnInit {
 
   }
 
+
   updateReaction(index: number, blogId : number){
+
+
+    if(!index){
+    //for individual post
+      for(let i=0; i< this.blogposts.length; i++ ){
+        if( this.blogposts[i].blogId == blogId){
+          index = i;
+          }
+      }
+    }
+
 
     let updateAction = "";
 
@@ -164,6 +179,9 @@ export class BlogComponent implements OnInit {
       updateAction = "add";
 
       this.blogposts[index]['reaction']["Like"]["count"]++;
+      if(this.post[0] != undefined){
+        this.post[0]['reaction']["Like"]["count"]++;
+      }
       this.currentlyLikePost[index] = index;
 
     } else {
@@ -171,6 +189,9 @@ export class BlogComponent implements OnInit {
       //remove here
       updateAction = "delete";
       this.blogposts[index]['reaction']["Like"]["count"]--;
+      if(this.post[0] != undefined) {
+        this.post[0]['reaction']["Like"]["count"]--;
+      }
       this.currentlyLikePost[index] = null;
     }
 
@@ -200,7 +221,7 @@ export class BlogComponent implements OnInit {
 
   }
 
-  getBlogPost(id : number){
+  getBlogPost(id : number, index : number){
 
     this.location.replaceState('Portal/post/'+ id);
 
@@ -242,9 +263,10 @@ export class BlogComponent implements OnInit {
 
   }
 
+
+
+
   submitReaction(blogid:number, name : string, updateAction : string){
-
-
 
   }
 

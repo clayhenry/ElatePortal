@@ -10,7 +10,7 @@
     width: 100%;" (click)="back($event)" >
 
   <div class="mainPost">
-    <div *ngFor="let post of blogpost" >
+    <div *ngFor="let post of blogpost; " >
 
       <h1>{{post.title}}</h1>
 
@@ -32,6 +32,7 @@
 
 
       <app-comments [post]="post" ></app-comments>
+
       <app-reaction [post]="post" [index]="index"></app-reaction>
 
     </div>

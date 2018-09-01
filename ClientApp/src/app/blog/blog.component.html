@@ -24,7 +24,8 @@
 
   <blockquote>
     <h1>
-      <div (click)="getBlogPost(post.blogId)"> {{post.title}}</div>
+      {{i}}
+      <div (click)="getBlogPost(post.blogId, i)"> {{post.title}}</div>
     </h1>
 
     <div *ngFor="let tag of post.departmentsBlog; let j=index">
@@ -62,7 +63,7 @@
 
 
 
-<app-post [postid]="postid"></app-post>
+<app-post [postid]="postid" ></app-post>
 
 
 <br>
