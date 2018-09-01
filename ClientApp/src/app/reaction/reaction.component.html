@@ -3,7 +3,8 @@
 
 <span (click)="blog.toggleReactionProfiles(post.blogId)">
 
-          <span *ngIf="post.reaction && post.reaction.Like.count !=0">{{post.reaction.Like.count}}</span>
+
+          <span *ngIf="blog.reactionIdsCount[post.blogId] !=0">{{blog.reactionIdsCount[post.blogId]}}</span>
         </span>
 
 <!--        Love

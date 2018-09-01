@@ -16,6 +16,7 @@ import {PostComponent} from "../post/post.component";
 export class BlogComponent implements OnInit {
 
   post;
+  reactionIdsCount =[];
   itemCount: number;
   btn: string = "Add an item";
   currentId: number;
@@ -43,6 +44,7 @@ export class BlogComponent implements OnInit {
 
   ngOnInit() {
 
+
     //only on the first, initial load
     this.itemCount = this.items.length;
     this.currentlyLikePost = [];
@@ -56,14 +58,19 @@ export class BlogComponent implements OnInit {
           this.blogposts = d;
           this.blogFeatures = v;
           this.setReactionsAggregate(d);
-
+          this.setReactionsAggregate(v);
 
         for (let i = 0; i< d.length; i++){
-          this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"]
+          this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"];
+          this.reactionIdsCount[d[i]["blogId"]] = d[i]['reaction']["Like"]["count"];
         }
 
           for (let j = 0; j< v.length; j++){
             this.commentsCount[ v[j]["blogId"] ] = v[j]["commentsCount"]
+
+            console.log(v)
+
+
           }
 
         });
@@ -73,11 +80,11 @@ export class BlogComponent implements OnInit {
       )
     })
 
+
   }
 
 
   setReactionsAggregate(data: Array<any>){
-
 
 
     let currentProfileId = this._data.profile[0].id;
@@ -135,7 +142,7 @@ export class BlogComponent implements OnInit {
 
             case "Like" :
               this.canReactLike[ data[i].blogId ] = false;
-              this.currentlyLikePost[i] = i;
+              this.currentlyLikePost[data[i].blogId] = data[i].blogId;
             break;
           }
         }
@@ -162,40 +169,45 @@ export class BlogComponent implements OnInit {
 
   updateReaction(index: number, blogId : number){
 
+    let updateAction = "";
+    let blogIndex = null;
 
-    if(!index){
-    //for individual post
-      for(let i=0; i< this.blogposts.length; i++ ){
-        if( this.blogposts[i].blogId == blogId){
-          index = i;
-          }
+
+    for(let i=0; i< this.blogposts.length; i++ ){
+      if( this.blogposts[i].blogId == blogId){
+        blogIndex = i;
       }
     }
 
-
-    let updateAction = "";
-
-    if (this.currentlyLikePost[index] != index){
+    if (this.currentlyLikePost[blogId] != blogId){
+      //add here
       updateAction = "add";
 
-      this.blogposts[index]['reaction']["Like"]["count"]++;
-      if(this.post[0] != undefined){
-        this.post[0]['reaction']["Like"]["count"]++;
-      }
-      this.currentlyLikePost[index] = index;
 
     } else {
-
       //remove here
       updateAction = "delete";
-      this.blogposts[index]['reaction']["Like"]["count"]--;
-      if(this.post[0] != undefined) {
-        this.post[0]['reaction']["Like"]["count"]--;
-      }
-      this.currentlyLikePost[index] = null;
+
     }
 
+
     this._data.setReaction(2, blogId, updateAction).subscribe(data => {
+
+      if(updateAction == "delete"){
+
+        console.log(this.reactionIdsCount[blogId]);
+
+        this.reactionIdsCount[blogId] --;
+        this.currentlyLikePost[blogId] = null;
+      }
+      if(updateAction == "add"){
+
+        this.reactionIdsCount[blogId] ++;
+
+        this.currentlyLikePost[blogId] = blogId;
+      }
+
+
 
     } )
 
