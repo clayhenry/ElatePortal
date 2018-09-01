@@ -58,17 +58,17 @@ export class BlogComponent implements OnInit {
           this.blogposts = d;
           this.blogFeatures = v;
           this.setReactionsAggregate(d);
-          this.setReactionsAggregate(v);
+
+          console.log(this.blogposts)
 
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"];
           this.reactionIdsCount[d[i]["blogId"]] = d[i]['reaction']["Like"]["count"];
+
         }
 
           for (let j = 0; j< v.length; j++){
             this.commentsCount[ v[j]["blogId"] ] = v[j]["commentsCount"]
-
-            console.log(v)
 
 
           }
@@ -81,10 +81,13 @@ export class BlogComponent implements OnInit {
     })
 
 
+
+
   }
 
 
   setReactionsAggregate(data: Array<any>){
+
 
 
     let currentProfileId = this._data.profile[0].id;
@@ -104,6 +107,9 @@ export class BlogComponent implements OnInit {
       if (data[i]["reactions"] != undefined){
 
       for (let j =0; j<data[i]["reactions"].length; j++){
+
+
+
         if (data[i]["reactions"][j] != undefined) {
 
           let Name = data[i]["reactions"][j]["reactions"]["name"];
@@ -116,14 +122,19 @@ export class BlogComponent implements OnInit {
               love.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
               break;
             case "Like" :
+
               like.count++;
               like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle + " - " + data[i]["reactions"][j]["profile"]["id"];
           }
 
           if(this.blogposts) {
+
+
             this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
+
           }
             post['reaction'] = {"Love" : love, "Like" : like} ;
+
 
         }
 
@@ -149,7 +160,6 @@ export class BlogComponent implements OnInit {
 
       }
     }
-
 
 
     return post;
@@ -195,7 +205,7 @@ export class BlogComponent implements OnInit {
 
       if(updateAction == "delete"){
 
-        console.log(this.reactionIdsCount[blogId]);
+
 
         this.reactionIdsCount[blogId] --;
         this.currentlyLikePost[blogId] = null;
