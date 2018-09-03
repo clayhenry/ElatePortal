@@ -80,15 +80,10 @@ export class BlogComponent implements OnInit {
       )
     })
 
-
-
-
   }
 
 
   setReactionsAggregate(data: Array<any>){
-
-
 
     let currentProfileId = this._data.profile[0].id;
     let post = [];
@@ -108,35 +103,30 @@ export class BlogComponent implements OnInit {
 
       for (let j =0; j<data[i]["reactions"].length; j++){
 
+          if (data[i]["reactions"][j] != undefined) {
 
+            let Name = data[i]["reactions"][j]["reactions"]["name"];
+            let ProfileName = data[i]["reactions"][j]["profile"]["name"];
+            let UserTitle = data[i]["reactions"][j]["profile"]["title"];
 
-        if (data[i]["reactions"][j] != undefined) {
+            switch (Name) {
+              case "Love" :
+                love.count++;
+                love.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
+                break;
+              case "Like" :
+                like.count++;
+                like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle + " - " + data[i]["reactions"][j]["profile"]["id"];
+            }
 
-          let Name = data[i]["reactions"][j]["reactions"]["name"];
-          let ProfileName = data[i]["reactions"][j]["profile"]["name"];
-          let UserTitle = data[i]["reactions"][j]["profile"]["title"];
+            if(this.blogposts) {
 
-          switch (Name) {
-            case "Love" :
-              love.count++;
-              love.profiles[(like.count-1)] = ProfileName + ", " + UserTitle;
-              break;
-            case "Like" :
+              this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
 
-              like.count++;
-              like.profiles[(like.count-1)] = ProfileName + ", " + UserTitle + " - " + data[i]["reactions"][j]["profile"]["id"];
+            }
+              post['reaction'] = {"Love" : love, "Like" : like} ;
+
           }
-
-          if(this.blogposts) {
-
-
-            this.blogposts[i]['reaction'] = {"Love" : love, "Like" : like} ;
-
-          }
-            post['reaction'] = {"Love" : love, "Like" : like} ;
-
-
-        }
 
         }
       }
@@ -180,19 +170,11 @@ export class BlogComponent implements OnInit {
   updateReaction(index: number, blogId : number){
 
     let updateAction = "";
-    let blogIndex = null;
 
-
-    for(let i=0; i< this.blogposts.length; i++ ){
-      if( this.blogposts[i].blogId == blogId){
-        blogIndex = i;
-      }
-    }
 
     if (this.currentlyLikePost[blogId] != blogId){
       //add here
       updateAction = "add";
-
 
     } else {
       //remove here
@@ -205,20 +187,15 @@ export class BlogComponent implements OnInit {
 
       if(updateAction == "delete"){
 
-
-
         this.reactionIdsCount[blogId] --;
         this.currentlyLikePost[blogId] = null;
+
       }
       if(updateAction == "add"){
 
         this.reactionIdsCount[blogId] ++;
-
         this.currentlyLikePost[blogId] = blogId;
       }
-
-
-
     } )
 
 
