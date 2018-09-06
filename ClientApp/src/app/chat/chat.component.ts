@@ -22,17 +22,17 @@ export class ChatComponent implements OnInit {
 
     connection.start().then(()=>console.log("connected"));
 
-    connection.on('send',data =>{ console.log(data.message); this.chat.push(data.message)})
+    connection.on('send',data =>{ this.chat.push(data)})
 
   }
 
   processChat(){
-    let body =  {"message" : this.chatinput};
+    let body =  {message: this.chatinput };
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     let options =  {
       headers: headers
     };
-    return this.http.post("/api/message",body, options ).subscribe(c => {})
+    return this.http.post("/api/message",body, options ).subscribe(c => {console.log(c)})
 
   }
 
