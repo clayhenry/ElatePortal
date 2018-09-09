@@ -66,30 +66,37 @@ namespace ElatePortal.Controllers
         [Route("Register")]
         public IActionResult Register()
         {
+               
+            var email = HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
+            ViewData["email"] = email;
+            ViewData["name"] = this.Profile[3].Value;
 
-            ViewData["email"] = HttpContext.GetEmail();
-            ViewData["name"] = this.Profile[4].Value;
-
-            var profile = _proileContext.Profile.SingleOrDefault(x => x.Email.Equals(HttpContext.GetEmail()));
+            var profile = _proileContext.Profile.SingleOrDefault(x => x.Email.Equals(email));
 
             return View(profile);
         }
 
         [HttpPost]
         [Route("Register")]
-        public async Task<IActionResult> Register( Profile profile ) {
+        public async Task<IActionResult> Register( [FromForm] string About ) {
 
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid)
+            {    
 
-                profile.Email = this.Profile[9].Value;
+                var email = HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
+                var profile = _proileContext.Profile.SingleOrDefault(x => x.Email.Equals(email));
+
+                profile.About = About;   
                 profile.Name = this.Profile[4].Value;
-                profile.ExternalId = Guid.Parse(this.Profile[7].Value);
+                //profile.ExternalId = Guid.Parse(this.Profile[7].Value);
                 profile.Registered = true;
                 profile.CreatedAt = DateTime.Now;
                 profile.Level = "Admin";
+                profile.InternalId = HttpContext.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
 
                 _proileContext.Update(profile);
                 await _proileContext.SaveChangesAsync();
+            
 
                 return RedirectToAction("Index");
             }

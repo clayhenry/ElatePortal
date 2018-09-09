@@ -6,6 +6,7 @@ using ElatePortal.DAL;
 using ElatePortal.Middleware;
 using ElatePortal.Models;
 using ElatePortal.Modules;
+using ElatePortal.Modules.Hubs;
 using ElatePortal.Repository;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -17,7 +18,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
-
+using ElatePortal.Modules.Hubs;
+using Microsoft.AspNetCore.SignalR;
 
 namespace ElatePortal
 {
@@ -51,25 +53,45 @@ namespace ElatePortal
             .AddAzureAd(options => Configuration.Bind("AzureAd", options))
             .AddCookie();
             
+     
             
+            /*
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("AtLeast21", policy => policy.Requirements.Add(new MinimumAgeRequirement(21)) );
                
                 
             });
-            
+            */
+
   
             services.AddScoped<RegisterModel>();
             services.AddScoped<PortalRepository>();
             services.AddScoped<Helper>();
+            
+            services.AddSession(options =>
+            {
+                // Set a short timeout for easy testing.
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+            });
 
             services.AddMvc().AddSessionStateTempDataProvider().AddJsonOptions(
                 options => options.SerializerSettings.ReferenceLoopHandling =            
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-            services.AddSession();
+         
+            
+            services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
+            {
+                builder
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .WithOrigins("http://localhost:4200");
+            }));
+
             services.AddSignalR();
+   
 
         }
 
@@ -86,13 +108,13 @@ namespace ElatePortal
                 app.UseExceptionHandler("/Home/Error");
             }
 
-             
-            app.UseSession();
             app.UseStaticFiles();
+         
             app.UseAuthentication();
+            app.UseCors("CorsPolicy");
 
           //  app.UseRegisterMiddleware();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
@@ -109,9 +131,9 @@ namespace ElatePortal
 
                 
             });
-
+       
             app.UseLoginMiddleware();
-            
+            app.UseSignalR(routes => { routes.MapHub<MessageHub>("/message"); });
 
             app.UseSpa(spa =>
             {

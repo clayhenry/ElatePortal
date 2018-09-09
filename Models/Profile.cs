@@ -20,7 +20,8 @@ namespace ElatePortal.Models
         public DateTime CreatedAt { get; set; }
         public virtual Blog Blog { get; set; }
         public string Level { get; set; }
-        public string Title { get; set; }    
+        public string Title { get; set; }
+        public string  InternalId { get; set; }
     }
 }
 

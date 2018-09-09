@@ -22,11 +22,12 @@ namespace ElatePortal.Models
 
         public void CheckIfRegistered(HttpContext httpContext, PathString Path)
         {   
-            List<Claim> Profile = httpContext.User.Claims.ToList();
+            //List<Claim> Profile = httpContext.User.Claims.ToList();
+            var email = httpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
 
             if (Path != "/Register")
             {
-                var currentProfile = _profileContext.Profile.SingleOrDefault(x => x.Email == Profile[9].Value);
+                var currentProfile = _profileContext.Profile.SingleOrDefault(x => x.Email == email);
 
                 if (currentProfile == null)
                 {

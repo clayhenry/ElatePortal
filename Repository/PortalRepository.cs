@@ -229,11 +229,36 @@ namespace ElatePortal.Repository
                     Reactions = f.ReactionsPostProfile,
                     Comments =  GetBlogComments(f.Id),
                     BlogId = f.Id,
-                    CommentsCount = GetBlogCommentCount(f.Id)
+                    CommentsCount = GetBlogCommentCount(f.Id),
+                    ReactionsAggregate = new List<ReactionsData>() //not used
+                        
+                    {
+                        new ReactionsData()
+                        {
+                            Like = new List<ReactionsMetadata>(){ new ReactionsMetadata()
+                            {
+                                Count = f.ReactionsPostProfile.Count,
+                                Profile = generateReactionProfiles(f.ReactionsPostProfile)
+                               
+                            } }
+                        }
+                    }
                     
               });
 
             return post;
+        }
+
+
+        public List<Profile> generateReactionProfiles(List< ReactionsPostProfile> profiles)
+        {
+            var profileList = new List<Profile>();     
+            foreach (var profile in profiles)
+            {
+                profileList.Add(profile.Profile); 
+            }
+
+            return profileList;
         }
         
         public IQueryable<HomeViewModel> GetBlogPost(int id)

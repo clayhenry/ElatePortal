@@ -16,5 +16,11 @@ namespace ElatePortal.Modules.Blog
         public List<ReactionsPostProfile> Reactions { get; set; }
         public List<Comments> Comments { get; set; }
         public int CommentsCount { get; set; }
+        public List<ReactionsData> ReactionsAggregate { get; set; }
+
     }
+
+    
 }
+
+

@@ -1,14 +1,61 @@
+
+using System.Linq;
+using System.Security.Claims;
+using ElatePortal.DAL;
+using ElatePortal.Extensions;
+using ElatePortal.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting.Internal;
 
 namespace ElatePortal.Modules.Hubs
 {
+    
+    [Route("api/message")]
     public class MessageController : Controller
     {
-        // GET
-        public IActionResult Index()
+    private IHubContext<MessageHub> _messageHubContext;
+    private readonly PortalRepository _portalreposirory;
+        
+        public MessageController(IHubContext<MessageHub> messageHubContext, PortalRepository portalreposirory)
         {
-            return
-            View();
+            
+           
+            this._messageHubContext = messageHubContext;
+            this._portalreposirory = portalreposirory;
+        }
+       
+        [HttpPost]
+        public IActionResult Post([FromBody] Chat message)
+        {
+            if (ModelState.IsValid)
+            {
+
+
+                var user = HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
+                var email = "pawel@elate.onmicrosoft.com";
+                var id = "PZe22SR7YS7OwIZhrd5pXWUf0dp1lYgmeV8Pk5jAVJA";
+
+                try
+                {
+
+                 
+                    _messageHubContext.Clients.User(id).SendAsync("send", message.Message);
+//                    _messageHubContext.Clients.All.SendAsync("send", message.Message);
+                }
+
+                catch (HubException e)
+                {
+
+                    return Content("error");
+                }
+//                _messageHubContext.Clients.User(userId).SendAsync(message.Message);
+                //  _messageHubContext.Clients.All.SendAsync("send", message.Message);
+
+            }
+            return Ok();
         }
     }
 }

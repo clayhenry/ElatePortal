@@ -88,6 +88,19 @@ namespace ElatePortal.Models
         public string Name { get; set; }
      
     }
+    
+    
+    public class ReactionsData
+    {
+        public List<ReactionsMetadata> Like { get; set; }
+    }
 
+    public class ReactionsMetadata
+    {
+        public int Count { get; set; }
+        public List<Profile> Profile { get; set; }    
+        
+        
+    }
     
 }
