@@ -1,4 +1,5 @@
 
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using ElatePortal.DAL;
@@ -41,8 +42,15 @@ namespace ElatePortal.Modules.Hubs
                 try
                 {
 
-                 
-                    _messageHubContext.Clients.User(id).SendAsync("send", message.Message);
+                    var ids = new List<string>
+                    {
+                        "PZe22SR7YS7OwIZhrd5pXWUf0dp1lYgmeV8Pk5jAVJA",
+                        "BRMU-Q-kV--0b-JDLwUa7uAaLLFCvYsCq-wylxr4RpM"
+
+                    };
+
+                    _messageHubContext.Clients.Users(ids).SendAsync("send", message.Message);
+                    // _messageHubContext.Clients.User(id).SendAsync("send", message.Message);
 //                    _messageHubContext.Clients.All.SendAsync("send", message.Message);
                 }
 
