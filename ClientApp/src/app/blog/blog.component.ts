@@ -59,8 +59,6 @@ export class BlogComponent implements OnInit {
           this.blogFeatures = v;
           this.setReactionsAggregate(d);
 
-          console.log(this.blogposts)
-
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"];
           this.reactionIdsCount[d[i]["blogId"]] = d[i]['reaction']["Like"]["count"];

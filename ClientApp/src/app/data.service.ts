@@ -5,6 +5,7 @@ import {IPosts} from "../interfaces/posts";
 import {Observable} from "rxjs";
 import {IComments} from "../interfaces/comments";
 import {IProfile} from "../interfaces/IProfile";
+import {IUsers} from "../interfaces/IUsers";
 
 @Injectable()
 export class DataService {
@@ -44,6 +45,13 @@ export class DataService {
     this.http.get<IProfile>("/api/Profile/").subscribe(d => {this.profile = d;});
 
   }
+
+  getAllUsersAjax(){
+
+    return this.http.get<Array<any>>("/api/message/users" );
+
+  }
+
   setComment(comment: string, blogId : number ){
 
     let body = JSON.stringify(comment)

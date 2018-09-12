@@ -33,8 +33,6 @@ namespace ElatePortal.Modules.Hubs
         {
             if (ModelState.IsValid)
             {
-
-
                 var user = HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
                 var email = "pawel@elate.onmicrosoft.com";
                 var id = "PZe22SR7YS7OwIZhrd5pXWUf0dp1lYgmeV8Pk5jAVJA";
@@ -64,6 +62,14 @@ namespace ElatePortal.Modules.Hubs
 
             }
             return Ok();
+        }
+
+        [HttpGet("users")]
+        public JsonResult UserAction()
+        {
+            var allUsers = _portalreposirory.GetAllUsers();
+            return Json(allUsers);
+
         }
     }
 }

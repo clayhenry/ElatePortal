@@ -343,6 +343,20 @@ namespace ElatePortal.Repository
 
             return Task.CompletedTask;
         }
+
+        public List<Users> GetAllUsers()
+        {
+            var users = (from u in this._profileContext.Profile
+                select new Users()
+                {
+                    Id = u.Id,
+                    InternalId = u.InternalId,
+                    Name = u.Name
+                }).ToList();
+
+            return users;
+
+        }
         
         
         

@@ -7,8 +7,13 @@
   {{message}}
 </div>
 
+<div *ngFor="let list of filteredList">
+ {{list}}
 
-<input type="text" id="message" name="message" [(ngModel)]="chatinput" >
+</div>
+
+<textarea (keyup)="parseKey($event)" id="message" name="message" [(ngModel)]="chatinput"></textarea>
+
 <button (click)="processChat()">Submit</button>
 
 
