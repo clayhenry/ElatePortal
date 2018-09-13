@@ -1,3 +1,4 @@
+
 <p>
   chat works!
 
@@ -8,12 +9,12 @@
 </div>
 
 <div *ngFor="let list of filteredList">
- {{list}}
+  <span tabindex="2">{{list}}</span>
 
 </div>
 
-<textarea (keyup)="parseKey($event)" id="message" name="message" [(ngModel)]="chatinput"></textarea>
+<div style="border: 1px solid blue" contenteditable="true" (keyup)="parseKey($event)" id="message" name="message" [(ngModel)]="chatinput"></div>
 
-<button (click)="processChat()">Submit</button>
+<button tabindex="3" (click)="processChat()">Submit</button>
 
 

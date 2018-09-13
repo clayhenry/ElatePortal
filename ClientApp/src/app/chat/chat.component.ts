@@ -26,17 +26,14 @@ export class ChatComponent implements OnInit {
 
   ngOnInit() {
 
-
-
     let connection = new HubConnectionBuilder().withUrl("message").build();
-
     connection.start().then(()=>console.log("connected"));
-
     connection.on('send',data =>{ this.chat.push(data)})
 
   }
 
   processChat(){
+
 
     let body =  {message: this.chatinput };
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
@@ -48,7 +45,8 @@ export class ChatComponent implements OnInit {
   }
 
   parseKey(event){
-
+    this.filteredList = [];
+    console.log(event.charCode)
     //include only alphanumeric
     var regex = new RegExp("^[a-zA-Z0-9]+$");
     var str = String.fromCharCode(!event.charCode ? event.which : event.charCode);
@@ -63,31 +61,21 @@ export class ChatComponent implements OnInit {
           this.currentSearchString = " ";
         } else{
             this.currentSearchString += event.key;
-
-            this._data.getAllUsersAjax().subscribe(u => {
-
-              let searchString =  this.currentSearchString.trim().toLowerCase();
-
-              console.log(searchString.toLowerCase())
-
-                for(let i = 0; i< u.length; i++){
-                  let user = u[i].name.toLowerCase()
-
-                  if(user.includes(searchString)){
-                    if(!this.filteredList.includes(u[i].name) ){
-                        this.filteredList.push(u[i].name);
-                    }
-                  }
-
-                }
-            })
+            this.UpdateUserList()
         }
       }
 
       //backspace
       if(event.keyCode == 8){
         this.currentSearchString =  this.currentSearchString.substring(0,this.currentSearchString.length -1);
-        this.filteredList = [];
+
+        if(this.currentSearchString.length == 0){
+          this.filteredList = [];
+          this.currentSearchString = "";
+        } else {
+          this.UpdateUserList()
+        }
+
       }
       //spcebar
       if(event.keyCode == 32){
@@ -99,5 +87,30 @@ export class ChatComponent implements OnInit {
     }
   }
 
+
+ UpdateUserList(){
+
+    this._data.getAllUsersAjax().subscribe(u => {
+      let searchString = "";
+      searchString =  this.currentSearchString.trim().toLowerCase();
+
+      for(let i = 0; i< u.length; i++){
+        let user = u[i].name.toLowerCase();
+
+        if(user.indexOf(searchString) != -1){
+
+          //console.log(searchString + " " + user.indexOf(searchString) + " " +u[i].name);
+            this.filteredList.push(u[i].name);
+
+        }
+
+      }
+    })
+
+  }
+
 }
+
+
+
 
