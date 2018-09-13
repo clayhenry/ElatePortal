@@ -8,13 +8,14 @@
   {{message}}
 </div>
 
-<div *ngFor="let list of filteredList">
+<div *ngFor="let list of filteredList"  (keyup)="tabEnter($event)" >
   <span tabindex="2">{{list}}</span>
 
 </div>
 
-<div style="border: 1px solid blue" contenteditable="true" (keyup)="parseKey($event)" id="message" name="message" [(ngModel)]="chatinput"></div>
+<div tabindex="1" style="border: 1px solid blue" contenteditable="true" (keyup)="parseKey($event)" (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
 
 <button tabindex="3" (click)="processChat()">Submit</button>
+
 
 

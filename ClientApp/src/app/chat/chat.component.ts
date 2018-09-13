@@ -46,7 +46,7 @@ export class ChatComponent implements OnInit {
 
   parseKey(event){
     this.filteredList = [];
-    console.log(event.charCode)
+
     //include only alphanumeric
     var regex = new RegExp("^[a-zA-Z0-9]+$");
     var str = String.fromCharCode(!event.charCode ? event.which : event.charCode);
@@ -106,6 +106,11 @@ export class ChatComponent implements OnInit {
 
       }
     })
+
+  }
+
+  tabEnter(event){
+
 
   }
 
