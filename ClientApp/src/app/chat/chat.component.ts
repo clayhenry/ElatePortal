@@ -205,7 +205,7 @@ export class ChatComponent implements OnInit {
     let currentSearchString = "@" + this.currentSearchString.trim().toLowerCase();
 
 
-    let newContent = "&nbsp;<span><b>" + this.selectedListContent + "</b></span>&nbsp;";
+    let newContent = "&nbsp;<span contentEditable=\"false\"><b>" + this.selectedListContent + "</b><span data-id='1213132'>&nbsp;</span></span>";
 
     let currentChatString = this.currentChatBox.innerHTML;
     this.currentChatBox.innerHTML = currentChatString.replace(currentSearchString, newContent);
