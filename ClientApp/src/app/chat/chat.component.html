@@ -4,8 +4,7 @@
 
 </p>
   <div *ngFor="let message of chat" >
-
-  {{message}}
+  <span [innerHTML]="message" ></span>
 </div>
 
 <div >
@@ -14,7 +13,7 @@
   </ul>
 </div>
 
-<div tabindex="1" style="border: 1px solid blue" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
+<div tabindex="1" style="border: 1px solid blue" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (keypress)="checkforCharacter($event)"  (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
 
 <button tabindex="3" (click)="processChat()">Submit</button>
 

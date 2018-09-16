@@ -27,7 +27,7 @@ export class ChatComponent implements OnInit {
   arrowindex = 0;
   listElements : HTMLCollectionOf<HTMLElement>;
   selectedListContent;
-
+  atkey;
 
   ngOnInit() {
 
@@ -38,20 +38,11 @@ export class ChatComponent implements OnInit {
   }
 
 
-  processTabPres(event){
-    if(event.keyCode == 9){
-
-      console.log("tab")
-
-      document.getElementById("message").focus();
-    }
-
-  }
 
   processChat(){
 
 
-    let body =  {message: this.chatinput };
+    let body =  {message: this.currentChatBox.innerHTML };
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     let options =  {
       headers: headers
@@ -60,25 +51,33 @@ export class ChatComponent implements OnInit {
 
   }
 
+  checkforCharacter(event){
+
+    this.atkey = (event.key == "@") ? "@" : "ddd";
+
+
+  }
+
   parseKey(event){
     this.filteredList = [];
-
 
     //include only alphanumeric
     var regex = new RegExp("^[a-zA-Z0-9]+$");
     var str = String.fromCharCode(!event.charCode ? event.which : event.charCode);
 
     //@ symbol
-    if(event.keyCode == 50 || this.currentSearchString.length > 0){
-      //start recording
 
+    if(this.atkey == "@" || this.currentSearchString.length > 0){
+      //start recording
+      this.UpdateUserList()
       if(regex.test(str)){
 
-        if(event.keyCode == 50){
+          //we dont want to carry @ symbol
+        if(this.atkey == "@"){
           this.currentSearchString = " ";
+
         } else{
             this.currentSearchString += event.key;
-            this.UpdateUserList()
         }
       }
 
@@ -89,8 +88,6 @@ export class ChatComponent implements OnInit {
         if(this.currentSearchString.length == 0){
           this.filteredList = [];
           this.currentSearchString = "";
-          this.currentChatBox.innerHTML = "";
-          console.log(0)
 
         } else {
           this.UpdateUserList()
@@ -104,7 +101,6 @@ export class ChatComponent implements OnInit {
         this.currentSearchString = "";
         this.filteredList = [];
       }
-
     }
   }
 
@@ -113,6 +109,7 @@ export class ChatComponent implements OnInit {
 
     this._data.getAllUsersAjax().subscribe(u => {
       let searchString = "";
+      this.filteredList = [];
       searchString =  this.currentSearchString.trim().toLowerCase();
 
       for(let i = 0; i< u.length; i++){
@@ -131,6 +128,10 @@ export class ChatComponent implements OnInit {
 //first action
   tabAction(event){
 
+
+    this.arrowindex = 0;
+    this.atkey = "";
+
     if(event.keyCode == 9){
       this.selectedListContent = this.filteredList[0];
       this.listElements  = document.querySelectorAll(".nameslist li") as HTMLCollectionOf<HTMLElement>;
@@ -140,7 +141,6 @@ export class ChatComponent implements OnInit {
       }
     }
 
-
   }
 
 
@@ -148,7 +148,6 @@ export class ChatComponent implements OnInit {
   tabEnter(event, content){
 
     event.preventDefault();
-
     this.updateArrowKeys(event);
 
     if(event.key =="Enter"){
@@ -163,36 +162,37 @@ export class ChatComponent implements OnInit {
   updateArrowKeys(event){
 
     let currentList = this.filteredList;
-    console.log(currentList[1])
 
-    for(let i = 0; i< this.listElements.length; i++){
-      this.listElements[i].classList.remove("active");
+    if(this.listElements){
+      for(let i = 0; i< this.listElements.length; i++){
+        this.listElements[i].classList.remove("active");
+      }
     }
 
     if(event.key == "ArrowDown"){
       if(this.arrowindex < (this.listElements.length -1 )){
-
         this.arrowindex ++;
-        console.log(this.arrowindex)
       }
     }
 
     if(event.key == "ArrowUp"){
-
       if(this.arrowindex > 0){
         this.arrowindex --;
-        console.log(this.arrowindex)
+
       }
     }
+    try {
+      if(this.listElements.length > 0){
 
-    if(this.listElements.length > 0){
+        this.selectedListContent = this.filteredList[this.arrowindex];
 
-      console.log(this.listElements.length)
-      this.selectedListContent = this.filteredList[this.arrowindex];
+        let index = this.arrowindex ? this.arrowindex : 0;
 
-      let index = this.arrowindex ? this.arrowindex : 0;
+          this.listElements[index].classList.add("active");
+        }
 
-        this.listElements[index].classList.add("active");
+    }  catch (e) {
+      console.log(e)
 
     }
 
@@ -233,12 +233,6 @@ export class ChatComponent implements OnInit {
     this.selectedListContent = this.filteredList[index];
     this.updateMessageTextField()
   }
-
-  onKeyUp(ev:KeyboardEvent) {
-    // do something meaningful with it
-    console.log(`The user just pressed ${ev.key}!`);
-  }
-
 
 
 }
