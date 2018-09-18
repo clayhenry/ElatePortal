@@ -315,7 +315,6 @@ namespace ElatePortal.Repository
 
         }
 
-
         public Task PostReactionUpdate(int blogId, int reactionId, string type, int profileId)
         {
             switch (type)

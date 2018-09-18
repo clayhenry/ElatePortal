@@ -41,8 +41,12 @@ export class ChatComponent implements OnInit {
 
   processChat(){
 
+    let currentTimestamp = new Date();
+    var DateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
 
-    let body =  {message: this.currentChatBox.innerHTML };
+    let message = "<div><img class='profile-image' src='/uploads/" + this._data.profile[0].image + "' ></div> <div>" + this._data.profile[0].name  + " " +  currentTimestamp.toLocaleDateString('en-US',DateOptions) + " " + currentTimestamp.toLocaleTimeString() + "<br>" + this.currentChatBox.innerHTML + "</div>"
+
+    let body =  {message: message, type: "inhouse" };
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     let options =  {
       headers: headers
@@ -203,7 +207,6 @@ export class ChatComponent implements OnInit {
   updateMessageTextField(){
 
     let currentSearchString = "@" + this.currentSearchString.trim().toLowerCase();
-
 
     let newContent = "&nbsp;<span contentEditable=\"false\" data-id='1213132'><b>" + this.selectedListContent + "&nbsp;</b><span>";
 

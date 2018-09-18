@@ -1,15 +1,19 @@
 
-<p>
-  chat works!
+<div>In-house</div>
+<div>Mentions</div>
 
-</p>
-  <div *ngFor="let message of chat" >
+
+<div *ngFor="let message of chat" >
   <span [innerHTML]="message" ></span>
 </div>
 
 <div >
   <ul class="nameslist">
-  <li *ngFor="let list of filteredList; let i=index" tabindex="2" (keydown)="tabEnter($event, list )" (click)="slectClick(list, i)">{{list}}</li>
+  <li *ngFor="let list of filteredList; let i=index" tabindex="2"
+      (keydown)="tabEnter($event, list )"
+      (click)="slectClick(list, i)">
+    {{list}}
+  </li>
   </ul>
 </div>
 

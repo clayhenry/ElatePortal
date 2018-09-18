@@ -4,5 +4,6 @@ export interface IProfile {
   name: string,
   email: string,
   title: string,
+  image : string
 
 }

@@ -22,6 +22,7 @@ namespace ElatePortal.Models
         public string Level { get; set; }
         public string Title { get; set; }
         public string  InternalId { get; set; }
+        public string  Image { get; set; }
     }
 }
 
