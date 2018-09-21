@@ -28,12 +28,13 @@ export class ChatComponent implements OnInit {
   listElements : HTMLCollectionOf<HTMLElement>;
   selectedListContent;
   atkey;
+  messageUsersIds = [];
 
   ngOnInit() {
 
     let connection = new HubConnectionBuilder().withUrl("message").build();
     connection.start().then(()=>console.log("connected"));
-    connection.on('send',data =>{ this.chat.push(data)})
+    connection.on('send',data =>{ this.chat.push(data); console.log(data)})
     this.currentChatBox = document.getElementById("message");
   }
 
@@ -41,24 +42,39 @@ export class ChatComponent implements OnInit {
 
   processChat(){
 
-    let currentTimestamp = new Date();
-    var DateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    //var DateOptions = { weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+    let currentTimestamp = new Date().toLocaleTimeString();
 
-    let message = "<div><img class='profile-image' src='/uploads/" + this._data.profile[0].image + "' ></div> <div>" + this._data.profile[0].name  + " " +  currentTimestamp.toLocaleDateString('en-US',DateOptions) + " " + currentTimestamp.toLocaleTimeString() + "<br>" + this.currentChatBox.innerHTML + "</div>"
+    this.getUserIds(this.currentChatBox);
 
-    let body =  {message: message, type: "inhouse" };
+    let message =  {
+      message: this.currentChatBox.innerHTML,
+      name:this._data.profile[0].name,
+      image: this._data.profile[0].image,
+      date :  currentTimestamp,
+      ids : this.messageUsersIds
+    };
+
+
+    console.log(message);
+
+    //let message = "<div><img class='profile-image' src='/uploads/" + this._data.profile[0].image + "' ></div> <div>" + this._data.profile[0].name  + " " +   + " " + currentTimestamp.toLocaleTimeString() + "<br>" + this.currentChatBox.innerHTML + "</div>"
+
+    let body = message;
     let headers = new HttpHeaders().set('Content-Type', 'application/json; charset=utf-8');
     let options =  {
       headers: headers
     };
-    return this.http.post("/api/message",body, options ).subscribe(c => {console.log(c); this.chatinput = ''})
+    return this.http.post("/api/message",body, options ).subscribe(c => {
+      console.log(c); this.currentChatBox.innerHTML= ''
+
+    })
 
   }
 
   checkforCharacter(event){
 
     this.atkey = (event.key == "@") ? "@" : "ddd";
-
 
   }
 
@@ -122,7 +138,7 @@ export class ChatComponent implements OnInit {
         if(user.indexOf(searchString) != -1){
 
           //console.log(searchString + " " + user.indexOf(searchString) + " " +u[i].name);
-            this.filteredList.push(u[i].name);
+            this.filteredList.push({name: u[i].name, id : u[i].internalId});
         }
       }
     })
@@ -131,7 +147,6 @@ export class ChatComponent implements OnInit {
 
 //first action
   tabAction(event){
-
 
     this.arrowindex = 0;
     this.atkey = "";
@@ -208,11 +223,10 @@ export class ChatComponent implements OnInit {
 
     let currentSearchString = "@" + this.currentSearchString.trim().toLowerCase();
 
-    let newContent = "&nbsp;<span contentEditable=\"false\" data-id='1213132'><b>" + this.selectedListContent + "&nbsp;</b><span>";
+    let newContent = "<div data-user=' "+ this.selectedListContent.id +"' >" + "&nbsp;" +  "<span contentEditable=\"false\"><b>" + this.selectedListContent.name + "&nbsp;</b><span></div>";
 
     let currentChatString = this.currentChatBox.innerHTML;
     this.currentChatBox.innerHTML = currentChatString.replace(currentSearchString, newContent);
-
 
     const range = document.createRange();
     const sel = window.getSelection();
@@ -238,7 +252,23 @@ export class ChatComponent implements OnInit {
   }
 
 
+  getUserIds(message) {
+
+    let g = message.getElementsByTagName("Div");
+
+      for (let i = 0; i < g.length ; i++){
+
+        this.messageUsersIds.push(g[i].dataset.user.trim());
+      }
+
+console.log( this.messageUsersIds);
+
+  }
+
+
+
 }
+
 
 
 

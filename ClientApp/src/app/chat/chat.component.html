@@ -4,7 +4,16 @@
 
 
 <div *ngFor="let message of chat" >
-  <span [innerHTML]="message" ></span>
+
+<div>
+  <img class='profile-image' src ="uploads/{{message.image}}" >
+</div>
+  <div>
+
+    {{message.name}} {{message.date | date }}
+  </div>
+
+  <span [innerHTML]="message.message" ></span>
 </div>
 
 <div >
@@ -12,7 +21,7 @@
   <li *ngFor="let list of filteredList; let i=index" tabindex="2"
       (keydown)="tabEnter($event, list )"
       (click)="slectClick(list, i)">
-    {{list}}
+    {{list.name}}
   </li>
   </ul>
 </div>

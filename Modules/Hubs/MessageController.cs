@@ -1,4 +1,5 @@
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -8,6 +9,7 @@ using ElatePortal.Repository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SignalR;
 using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication.OAuth.Claims;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting.Internal;
 
@@ -34,22 +36,31 @@ namespace ElatePortal.Modules.Hubs
             if (ModelState.IsValid)
             {
                 var user = HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value;
-                var email = "pawel@elate.onmicrosoft.com";
-                var id = "PZe22SR7YS7OwIZhrd5pXWUf0dp1lYgmeV8Pk5jAVJA";
-
+                var UserId = this._portalreposirory.GetProfileId(user);
                 try
                 {
-
-                    var ids = new List<string>
+                    if (message.Ids.Count > 0)
                     {
-                        "PZe22SR7YS7OwIZhrd5pXWUf0dp1lYgmeV8Pk5jAVJA",
-                        "BRMU-Q-kV--0b-JDLwUa7uAaLLFCvYsCq-wylxr4RpM"
+                        _messageHubContext.Clients.Users(message.Ids).SendAsync("send", message);
+                    }
+                    else
+                    {
+                        _messageHubContext.Clients.All.SendAsync("send", message);
+                    }
+    
 
-                    };
+                    this._portalreposirory.setChatMesage(new Chat()
+                    {
 
-                    _messageHubContext.Clients.Users(ids).SendAsync("send", message.Message);
-                    // _messageHubContext.Clients.User(id).SendAsync("send", message.Message);
-//                    _messageHubContext.Clients.All.SendAsync("send", message.Message);
+                            Date = message.Date,
+                            Message = message.Message,
+                            ExternalIds =  string.Join(",", message.Ids),
+                            ProfileId = UserId
+                            
+                        
+                            
+                    });
+
                 }
 
                 catch (HubException e)

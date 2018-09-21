@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ElatePortal.Models;
+using ElatePortal.Modules.Hubs;
 
 
 namespace ElatePortal.DAL
@@ -12,5 +13,6 @@ namespace ElatePortal.DAL
         }
         public DbSet<Reactions> Reactions { get; set; }
         public DbSet<ReactionsPostProfile> ReactionsPostProfile { get; set; }
+        public DbSet<Chat> Chat { get; set; }
     }
 }

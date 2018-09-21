@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 using ElatePortal.Controllers;
+using ElatePortal.Modules.Hubs;
 using Remotion.Linq.Clauses;
 using SQLitePCL;
 
@@ -354,6 +355,14 @@ namespace ElatePortal.Repository
                 }).ToList();
 
             return users;
+
+        }
+
+        public void setChatMesage(Chat chat)
+        {
+
+            this._portalContext.Chat.Add(chat);
+            this._portalContext.SaveChanges();
 
         }
         
