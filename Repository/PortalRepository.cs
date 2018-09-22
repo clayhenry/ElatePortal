@@ -365,6 +365,21 @@ namespace ElatePortal.Repository
             this._portalContext.SaveChanges();
 
         }
+
+        public IQueryable<Chat> GetAllMessages()
+        {
+            var chat = from c in _portalContext.Chat.Include(p => p.Profile)
+                select new Chat()
+                {
+                    Message = c.Message,
+                    Date = c.Date,
+                    Name = c.Name,
+                    Profile = c.Profile
+                };
+
+            return chat;
+
+        }
         
         
         

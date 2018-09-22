@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using ElatePortal.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace ElatePortal.Modules.Hubs
@@ -22,6 +23,10 @@ namespace ElatePortal.Modules.Hubs
         public List<string> Ids { get; set; }
         public string ExternalIds { get; set; }
         public int ProfileId { get; set; }
-        public int CompanyId { get; set; }    
+        public int CompanyId { get; set; }
+ 
+        public Profile Profile { get; set; }
     }
+    
+   
 }

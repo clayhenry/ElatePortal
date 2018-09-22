@@ -13,6 +13,7 @@ const providers = [
 ];
 
 if (environment.production) {
+
   enableProdMode();
 }
 

@@ -41,14 +41,14 @@ namespace ElatePortal.Modules.Hubs
                 {
                     if (message.Ids.Count > 0)
                     {
-                        _messageHubContext.Clients.Users(message.Ids).SendAsync("send", message);
+                        //_messageHubContext.Clients.Users(message.Ids).SendAsync("send", message);
+                        _messageHubContext.Clients.All.SendAsync("send", message);
                     }
                     else
                     {
                         _messageHubContext.Clients.All.SendAsync("send", message);
                     }
     
-
                     this._portalreposirory.setChatMesage(new Chat()
                     {
 
@@ -56,9 +56,6 @@ namespace ElatePortal.Modules.Hubs
                             Message = message.Message,
                             ExternalIds =  string.Join(",", message.Ids),
                             ProfileId = UserId
-                            
-                        
-                            
                     });
 
                 }
@@ -82,5 +79,16 @@ namespace ElatePortal.Modules.Hubs
             return Json(allUsers);
 
         }
+
+        [HttpGet("/api/messages")]
+        public IActionResult GetMessagesAction()
+        {
+
+            var chat = this._portalreposirory.GetAllMessages();
+            
+            return Ok(chat);
+
+        }
+
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -171,7 +172,7 @@ namespace ElatePortal.Modules.Blog
         {
              
                 comments.BlogId = blogid;
-                comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.GetEmail());
+                comments.ProfileId = _portalreposirory.GetProfileId(HttpContext.User?.FindFirst(ClaimTypes.Name)?.Value);
                 comments.Comment = comment;
                 comments.CreatedAt = DateTime.Now;
                 comments.Status = 1;    
