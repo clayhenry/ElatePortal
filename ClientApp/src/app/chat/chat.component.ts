@@ -1,8 +1,10 @@
 import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
 import { HubConnection,HubConnectionBuilder  } from '@aspnet/signalr';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {IUsers} from "../../interfaces/IUsers";
 import {DataService} from "../data.service";
+import {IChat} from "../../interfaces/IChat";
 
 @Component({
   selector: 'app-chat',
@@ -10,15 +12,16 @@ import {DataService} from "../data.service";
   styleUrls: ['./chat.component.css']
 })
 
-@Pipe({ name: 'users' })
+@Pipe({ name: 'users'})
+@Pipe({ name: 'noSanitize' })
 export class ChatComponent implements OnInit {
 
-  constructor(private http: HttpClient,  private _data: DataService,) {
+  constructor(private http: HttpClient,  private _data: DataService, public domSanitizer: DomSanitizer) {
 
   }
 
 
-  chat =[];
+  chat = [];
   chatinput;
   users : IUsers;
   filteredList = [];
@@ -34,10 +37,23 @@ export class ChatComponent implements OnInit {
 
     let connection = new HubConnectionBuilder().withUrl("message").build();
     connection.start().then(()=>console.log("connected"));
-    connection.on('send',data =>{ this.chat.push(data); console.log(data)})
+    connection.on('send',data =>{ this.chat.push(data);})
+
+    this._data.getMessages().subscribe(c => {
+
+      for(let i =0; i < c.length; i++){
+
+        let chat : IChat = new IChat();
+          chat.image = c[i]['profile']['image'];
+          chat.name =  c[i]['profile']['name']
+          chat.message =  c[i]['message'],
+          chat.date =  c[i]['date'],
+        this.chat.unshift(chat);
+      }
+    })
+
     this.currentChatBox = document.getElementById("message");
   }
-
 
 
   processChat(){
@@ -54,10 +70,6 @@ export class ChatComponent implements OnInit {
       date :  currentTimestamp,
       ids : this.messageUsersIds
     };
-
-
-    console.log(message);
-
     //let message = "<div><img class='profile-image' src='/uploads/" + this._data.profile[0].image + "' ></div> <div>" + this._data.profile[0].name  + " " +   + " " + currentTimestamp.toLocaleTimeString() + "<br>" + this.currentChatBox.innerHTML + "</div>"
 
     let body = message;
@@ -66,7 +78,7 @@ export class ChatComponent implements OnInit {
       headers: headers
     };
     return this.http.post("/api/message",body, options ).subscribe(c => {
-      console.log(c); this.currentChatBox.innerHTML= ''
+      this.currentChatBox.innerHTML= ''
 
     })
 
@@ -128,6 +140,7 @@ export class ChatComponent implements OnInit {
  UpdateUserList(){
 
     this._data.getAllUsersAjax().subscribe(u => {
+
       let searchString = "";
       this.filteredList = [];
       searchString =  this.currentSearchString.trim().toLowerCase();
@@ -211,7 +224,6 @@ export class ChatComponent implements OnInit {
         }
 
     }  catch (e) {
-      console.log(e)
 
     }
 
@@ -223,7 +235,7 @@ export class ChatComponent implements OnInit {
 
     let currentSearchString = "@" + this.currentSearchString.trim().toLowerCase();
 
-    let newContent = "<div data-user=' "+ this.selectedListContent.id +"' >" + "&nbsp;" +  "<span contentEditable=\"false\"><b>" + this.selectedListContent.name + "&nbsp;</b><span></div>";
+    let newContent = "<div data-user='"+this.selectedListContent.id+"' style='display: inline' ><span contentEditable=\"false\"><b>&nbsp;" + this.selectedListContent.name + "&nbsp;</b><span></div>";
 
     let currentChatString = this.currentChatBox.innerHTML;
     this.currentChatBox.innerHTML = currentChatString.replace(currentSearchString, newContent);
@@ -258,10 +270,9 @@ export class ChatComponent implements OnInit {
 
       for (let i = 0; i < g.length ; i++){
 
-        this.messageUsersIds.push(g[i].dataset.user.trim());
+        let users = g[i].dataset.user.trim();
+        this.messageUsersIds.push(users);
       }
-
-console.log( this.messageUsersIds);
 
   }
 

@@ -368,14 +368,14 @@ namespace ElatePortal.Repository
 
         public IQueryable<Chat> GetAllMessages()
         {
-            var chat = from c in _portalContext.Chat.Include(p => p.Profile)
+            var chat = (from c in _portalContext.Chat.Include(p => p.Profile)
                 select new Chat()
                 {
                     Message = c.Message,
                     Date = c.Date,
                     Name = c.Name,
                     Profile = c.Profile
-                };
+                }).OrderByDescending(c => c.Date).Take(10);
 
             return chat;
 

@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import {IComments} from "../interfaces/comments";
 import {IProfile} from "../interfaces/IProfile";
 import {IUsers} from "../interfaces/IUsers";
+import {IChat} from "../interfaces/IChat";
 
 @Injectable()
 export class DataService {
@@ -76,6 +77,10 @@ export class DataService {
 
   }
 
+  getMessages (){
+
+    return this.http.get<Array<IChat>>("/api/messages" );
+  }
 
 
 

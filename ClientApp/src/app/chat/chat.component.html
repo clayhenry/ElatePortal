@@ -3,7 +3,7 @@
 <div>Mentions</div>
 
 
-<div *ngFor="let message of chat" >
+<div *ngFor="let message of chat" class="chatMessageBox">
 
 <div>
   <img class='profile-image' src ="uploads/{{message.image}}" >
@@ -13,7 +13,7 @@
     {{message.name}} {{message.date | date }}
   </div>
 
-  <span [innerHTML]="message.message" ></span>
+  <div ngClass="chatMessage" [innerHTML]=" domSanitizer.bypassSecurityTrustHtml(message.message)" ></div>
 </div>
 
 <div >
