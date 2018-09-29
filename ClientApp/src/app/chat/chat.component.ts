@@ -33,11 +33,19 @@ export class ChatComponent implements OnInit {
   atkey;
   messageUsersIds = [];
 
+  directNotifications = 0;
+
   ngOnInit() {
 
     let connection = new HubConnectionBuilder().withUrl("message").build();
     connection.start().then(()=>console.log("connected"));
-    connection.on('send',data =>{ this.chat.push(data);})
+    connection.on('send',data =>{
+      this.messageUsersIds = [];
+      this.chat.push(data)
+
+      console.log(data)
+      this.alertOnMentionMessage(data["ids"]);
+    })
 
     this._data.getMessages().subscribe(c => {
 
@@ -53,6 +61,22 @@ export class ChatComponent implements OnInit {
     })
 
     this.currentChatBox = document.getElementById("message");
+  }
+
+  alertOnMentionMessage(ids){
+
+    let c = this._data.profile
+    let profileId =  c[0].internalId;
+
+    for(let i =0; i < ids.length; i++){
+
+      if(profileId == ids[i]){
+        this.browserNotification();
+        this.directNotifications ++;
+
+        //console.log("match!!" + ids[i] + " " + profileId)
+      }
+    }
   }
 
 
@@ -273,6 +297,20 @@ export class ChatComponent implements OnInit {
         let users = g[i].dataset.user.trim();
         this.messageUsersIds.push(users);
       }
+
+  }
+
+
+  browserNotification(){
+
+    Notification.requestPermission().then(function(result) {
+      console.log(result);
+
+      let options = {
+        body: "test mesage"
+      };
+      let n = new Notification("just testing", options);
+    });
 
   }
 

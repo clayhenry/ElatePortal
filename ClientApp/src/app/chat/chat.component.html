@@ -1,6 +1,6 @@
 
 <div>In-house</div>
-<div>Mentions</div>
+<div>Mentions <span *ngIf="directNotifications > 0">{{directNotifications}}</span></div>
 
 
 <div *ngFor="let message of chat" class="chatMessageBox">
