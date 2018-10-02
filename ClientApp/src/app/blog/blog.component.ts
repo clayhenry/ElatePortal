@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import {Component, OnInit, AfterViewInit, ViewEncapsulation} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {Router} from "@angular/router";
 import {DataService} from "../data.service";
@@ -11,6 +11,7 @@ import {PostComponent} from "../post/post.component";
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
+
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {

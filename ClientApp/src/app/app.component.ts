@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {DataService} from "./data.service";
 import {IProfile} from "../interfaces/IProfile";
 
