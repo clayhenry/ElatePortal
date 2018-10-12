@@ -6,13 +6,15 @@ html {
   top: 0;
   bottom: 0;
   background: silver;
+  font-family: 'IBM Plex Sans', sans-serif;
 }
 
 body {
   height: 100%;
   margin: 0;
-  overflow: auto;
-  background: aqua;
+  overflow-y: scroll;
+  background: #e8e8e8;
+  scroll-snap-type: x mandatory;
 
 }
 
@@ -24,20 +26,32 @@ body {
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
+  scroll-snap-align: center;
 }
 
 .el-rightpanel {
   width:50%;
   float: left;
-
+  scroll-snap-align: center;
 }
 
 .el-contents {
 
-  background-color: aqua;
   display: flex;
-  overflow: hidden;
 
+}
+
+.el-panel {
+
+  margin:10px 0;
+  padding:10px;
+  background-color: white;
+}
+
+.el-panel h1 {
+
+  font-size: 18px;
+  font-weight: bold;
 }
 
 

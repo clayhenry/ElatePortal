@@ -1,10 +1,11 @@
-import { Component, OnInit, Pipe, PipeTransform } from '@angular/core';
+import { Component, OnInit, Pipe, PipeTransform, AfterViewInit, ViewEncapsulation, } from '@angular/core';
 import { HubConnection,HubConnectionBuilder  } from '@aspnet/signalr';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {IUsers} from "../../interfaces/IUsers";
 import {DataService} from "../data.service";
 import {IChat} from "../../interfaces/IChat";
+
 
 @Component({
   selector: 'app-chat',
@@ -16,7 +17,8 @@ import {IChat} from "../../interfaces/IChat";
 @Pipe({ name: 'noSanitize' })
 export class ChatComponent implements OnInit {
 
-  constructor(private http: HttpClient,  private _data: DataService, public domSanitizer: DomSanitizer) {
+
+  constructor(private http: HttpClient,  public _data: DataService, public domSanitizer: DomSanitizer) {
 
   }
 
@@ -72,9 +74,8 @@ export class ChatComponent implements OnInit {
 
       if(profileId == ids[i]){
         this.browserNotification();
-        this.directNotifications ++;
+        this._data.updateDirectNotifications();
 
-        //console.log("match!!" + ids[i] + " " + profileId)
       }
     }
   }
@@ -304,8 +305,6 @@ export class ChatComponent implements OnInit {
   browserNotification(){
 
     Notification.requestPermission().then(function(result) {
-      console.log(result);
-
       let options = {
         body: "test mesage"
       };

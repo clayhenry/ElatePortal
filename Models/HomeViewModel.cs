@@ -27,7 +27,7 @@ namespace ElatePortal.Models
         public List<DepartmentsBlog> DepartmentsBlog { get; set; }
         public int CommentsCount { get; set; }
         public List<ReactionsPostProfile> Reactions { get; set; }
-
+        public string UserImage { get; set; }
         
         public string Preview { get; set; }
        

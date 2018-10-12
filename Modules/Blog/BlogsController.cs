@@ -69,7 +69,9 @@ namespace ElatePortal.Modules.Blog
                                     Preview = new HomeViewModel().TruncateString(t.Content, 15),
                                     CommentsCount = this._portalreposirory.GetBlogCommentCount(t.BlogId),
                                     DepartmentsBlog = t.DepartmentsBlog,
-                                    Reactions = t.Reactions
+                                    Reactions = t.Reactions,
+                                    UserImage = t.UserImage
+                                    
                                 });
            
                             }

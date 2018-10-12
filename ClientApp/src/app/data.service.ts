@@ -15,7 +15,10 @@ export class DataService {
   private _url = "/api/Blogs";
   public profile :IProfile;
 
+
   constructor( private http: HttpClient ) { }
+
+  directNotifications = 0;
 
       getBlogItemsAjax(feature = 0) : Observable<IPosts[]>{
 
@@ -82,6 +85,10 @@ export class DataService {
     return this.http.get<Array<IChat>>("/api/messages" );
   }
 
+  updateDirectNotifications(){
+
+        this.directNotifications ++;
+  }
 
 
   getBlogItems(){

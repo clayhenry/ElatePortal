@@ -1,20 +1,20 @@
-import {Component, OnInit, AfterViewInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit, AfterViewInit, ViewEncapsulation, OnChanges, SimpleChanges,} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
+
 import {Router} from "@angular/router";
 import {DataService} from "../data.service";
-import { FormGroup, FormControl } from '@angular/forms';
+
 import {Location} from '@angular/common';
-import {forEach} from "@angular/router/src/utils/collection";
-import {PostComponent} from "../post/post.component";
+
 
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
+  styleUrls: ['./blog.component.css'],
 
-  styleUrls: ['./blog.component.css']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent implements OnChanges, OnInit {
 
   post;
   reactionIdsCount =[];
@@ -34,12 +34,28 @@ export class BlogComponent implements OnInit {
   reactionToggle = [];
   currentlyLikePost = [];
   canReactLike = [];
+  directNotifications;
+  imageWidth  = {'width.px': (window.innerWidth - 35)};
 
-  constructor(private location: Location, private route: ActivatedRoute, private router: Router, private _data: DataService) {
+
+
+
+  constructor(
+    private location: Location,
+    private route: ActivatedRoute,
+    private router: Router,
+    public _data: DataService,
+
+
+    ) {
 
     //gets url params
     this.route.params.subscribe(res=>this.currentId = res.id);
-  ;
+
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+
 
   }
 
@@ -49,7 +65,9 @@ export class BlogComponent implements OnInit {
     //only on the first, initial load
     this.itemCount = this.items.length;
     this.currentlyLikePost = [];
+
     let feature = this._data.getBlogItemsAjax(1);
+
 
     this._data.getBlogItemsAjax(0).subscribe(d => {
       this._data.getAllTags().subscribe(c => {
@@ -68,9 +86,8 @@ export class BlogComponent implements OnInit {
 
           for (let j = 0; j< v.length; j++){
             this.commentsCount[ v[j]["blogId"] ] = v[j]["commentsCount"]
-
-
           }
+
 
         });
 
@@ -78,6 +95,7 @@ export class BlogComponent implements OnInit {
 
       )
     })
+
 
   }
 

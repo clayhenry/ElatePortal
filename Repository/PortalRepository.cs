@@ -191,7 +191,8 @@ namespace ElatePortal.Repository
                     DepartmentsBlog = f.DepartmentsBlog,
                     CommentsCount = GetBlogCommentCount(f.Id),
                     Reactions = f.ReactionsPostProfile,
-                    Feature = f.Feature
+                    Feature = f.Feature,
+                    UserImage = t.Image
 
                 } );
 

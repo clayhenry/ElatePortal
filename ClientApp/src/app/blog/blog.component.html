@@ -6,7 +6,7 @@
 
 
 <h1>Blog</h1>
-
+<div>Mentions <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span></div>
 <div *ngFor="let tag of tags ">
 
   <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
@@ -16,28 +16,27 @@
 <!--Feature -->
 
 
-<!--<app-feature [posts]="blogFeatures"></app-feature>-->
+<app-feature [posts]="blogFeatures"></app-feature>
 
 
 <!--Blogroll-->
 
 
-<div *ngFor="let post of blogposts; let i=index">
+<div *ngFor="let post of blogposts; let i=index" class="el-panel">
 
-  <blockquote>
+
+   <div class="el-image" *ngIf="post.coverImage"><img src="/uploads/{{post.coverImage}}"  [ngStyle]="imageWidth" ></div>
+
     <h1>
       <div (click)="getBlogPost(post.blogId, i)"> {{post.title}}</div>
     </h1>
-
-    <div *ngFor="let tag of post.departmentsBlog; let j=index">
-      <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
-    </div>
-
-    {{post.coverImage}} {{post.blogId}}<br>
-    {{post.preview}} ... <br> by {{post.name}}, {{post.userTitle}} <br>
+  <div *ngFor="let tag of post.departmentsBlog; let j=index">
+    <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}} </span>
+  </div>
+    {{post.preview}} ... <br> by {{post.name}}, {{post.userTitle}} <img src="/uploads/{{post.userImage}}" class="profile-image" > <br>
 
 
-    <div style="background-color: #2aabd2">
+    <div>
 
 
       <app-comments [post]="post" ></app-comments>
@@ -45,20 +44,12 @@
 
 <app-reaction [post]="post" [index]="i"></app-reaction>
 
-
-
-
-
-
-
     </div>
 
 
-  </blockquote>
   <br>
 
 
-  <hr>
   <br>
 </div>
 
