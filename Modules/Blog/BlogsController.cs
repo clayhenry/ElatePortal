@@ -215,7 +215,7 @@ namespace ElatePortal.Modules.Blog
          //fot this, all you need to do is bind model and evaluate the missing elements.
             if (ModelState.IsValid)
             {
-                var filename = this._helper.UploadImages(files, 3 , 3); 
+                var filename = this._helper.UploadImages(files, 3 , 4); 
                
                 var deps = new List<DepartmentsBlog>();
                 
@@ -262,7 +262,7 @@ namespace ElatePortal.Modules.Blog
                 
                 try
                 {
-                   var filename = this._helper.UploadImages(files, 3 , 3);
+                   var filename = this._helper.UploadImages(files, 3 , 4);
                     
                    var update = this._portalreposirory.UpdateBlogPost( new Models.Blog()
                     {
