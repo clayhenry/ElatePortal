@@ -124,9 +124,45 @@ hr {
 }
 .el-comment-box {
 
-  background-color: aqua !important;
   display: inline-flex;
   flex-direction: column;
   width: 100%;
 }
 
+.el-comment-box ul {
+
+  list-style-type: none;
+  padding: 0px;
+}
+.el-comment-box a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+
+.el-comment-box .el-comment-meta{
+
+  color: #3c3c3c;
+  font-size: 12px;
+
+}
+
+.el-comment-box .el-comment {
+
+  margin-left:30px;
+}
+
+
+.el-comment-box input {
+
+  padding:5px;
+  width: 80%;
+  border: 1px solid #dadada;
+  margin-top:10px;
+}
+.el-comment-box button {
+
+  background-color: #466c8e;
+  color: white;
+  padding: 5px;
+  border: 0;
+}

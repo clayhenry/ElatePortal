@@ -15,8 +15,9 @@
 
 <div *ngIf="blog.comments.length > 0 && blog.isCommentOpen[post.blogId] == post.blogId" class="el-comment-box">
 <div style="width: 100%">
+
   <form (ngSubmit)="blog.submitComment(post.blogId)">
-    <input type="text" name="comment" [(ngModel)]="blog.commentForm[post.blogId]"/>
+    <input type="text" name="comment" [(ngModel)]="blog.commentForm[post.blogId]" placeholder="Add a comment..."/>
     <button type="submit"> Post</button>
   </form>
 </div>
@@ -25,13 +26,18 @@
   <div *ngFor="let comment of blog.comments[post.blogId];">
     <ul *ngFor="let com of  comment.comments">
       <li>
-        {{com.comment}}
+
 
         <div>
-          {{com.createdAt | date: 'dd/MM/yyyy'}}
-          <div *ngFor="let author of com.author ;">
-            <a href="mailto:{{author.email}}"> {{author.name}}</a> {{author.title}}
+
+          <div *ngFor="let author of com.author ;" class="el-comment-meta">
+            <img class="profile-image" src="/uploads/{{author.image}}" style="width:20px; height: 20px;">
+            <a href="mailto:{{author.email}}"> {{author.name}}, {{author.title}}</a>
+            <br>{{com.createdAt | date: 'mediumDate'}}
+            <br>
+
           </div>
+          <div class="el-comment">{{com.comment}}</div>
         </div>
 
       </li>
