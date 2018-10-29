@@ -61,7 +61,6 @@ export class BlogComponent implements OnChanges, OnInit {
 
   ngOnInit() {
 
-
     //only on the first, initial load
     this.itemCount = this.items.length;
     this.currentlyLikePost = [];
@@ -77,6 +76,7 @@ export class BlogComponent implements OnChanges, OnInit {
           this.blogposts = d;
           this.blogFeatures = v;
           this.setReactionsAggregate(d);
+
 
         for (let i = 0; i< d.length; i++){
           this.commentsCount[ d[i]["blogId"] ] = d[i]["commentsCount"];
@@ -101,6 +101,7 @@ export class BlogComponent implements OnChanges, OnInit {
 
 
   setReactionsAggregate(data: Array<any>){
+
 
     let currentProfileId = this._data.profile[0].id;
     let post = [];

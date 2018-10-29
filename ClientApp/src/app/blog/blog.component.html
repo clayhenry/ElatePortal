@@ -1,17 +1,17 @@
+
+<app-header></app-header>
 <div *ngFor="let singlepost of items; let i=index">
   {{singlepost}}
   <br>
 </div>
 
 
+<!--<div>Mentions <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span></div>-->
+<!--<div *ngFor="let tag of tags ">-->
 
-<h1>Blog</h1>
-<div>Mentions <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span></div>
-<div *ngFor="let tag of tags ">
-
-  <div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>
-</div>
-<div (click)="getAllBlogs()">All</div>
+  <!--<div (click)="filterByTag(tag.departmentName)">{{tag.departmentName}}</div>-->
+<!--</div>-->
+<!--<div (click)="getAllBlogs()">All</div>-->
 
 <!--Feature -->
 

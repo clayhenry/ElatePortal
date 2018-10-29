@@ -18,6 +18,7 @@ import { FeatureComponent } from './feature/feature.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ReactionComponent } from './reaction/reaction.component';
 import { ChatComponent } from './chat/chat.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ChatComponent } from './chat/chat.component';
     FeatureComponent,
     CommentsComponent,
     ReactionComponent,
-    ChatComponent
+    ChatComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

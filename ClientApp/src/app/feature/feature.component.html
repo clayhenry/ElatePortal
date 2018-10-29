@@ -6,12 +6,15 @@
 <div *ngFor="let post of posts; let i=index">
   <div *ngIf="post.feature == 1">
       <div class="carusel-item" [attr.data-item]="i">
-        <img src="/uploads/{{post.coverImage}}">
+        <img src="/uploads/{{post.coverImage}}"  [ngStyle]="imageWidth">
+
+       <div class="carusel-content">
         <h1>
           <div (click)="blog.getBlogPost(post.blogId)"> {{post.title}}</div>
         </h1>
+        <div>{{post.preview}}</div>
 
-      </div>
+      </div></div>
 
     </div>
   </div>
@@ -19,7 +22,9 @@
   <div>
   </div>
 </div>
-<span (click)="nav('prev')" >Prev</span>
-<span (click)="nav('next')">Next</span>
+
+
+<!--<span (click)="nav('prev')" >Prev</span>-->
+<!--<span (click)="nav('next')">Next</span>-->
 
 

@@ -1,17 +1,20 @@
 {
-  "name": "ElatePortal",
+  "name": "elateportal",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --extract-css",
-    "build": "ng build --extract-css",
+    "start": "ng serve",
+    "build": "ng build",
     "build:ssr": "npm run build -- --app=ssr --output-hashing=media",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
+  "engines": {
+    "node": "8.11.1"
+  },
   "dependencies": {
     "@angular/animations": "^5.2.11",
     "@angular/common": "^5.2.11",

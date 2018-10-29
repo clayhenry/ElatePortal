@@ -1,11 +1,12 @@
 .carusel-item {
-  background-color: aqua;
+
   display: inline-block;
-  width: 700px;
-  overflow: hidden;
-  position: relative
-
-
+  /*width: 700px;*/
+  /*overflow: hidden;*/
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-snap-align: center;
+  position: relative;
 }
 
 .carusel-container {
@@ -14,11 +15,27 @@
   display: flex;
 }
 .carusel {
-  background-color: #1b6d85;
+
   height: 300px;
-  width: 700px;
+  /*width: 700px;*/
   display: flex;
   margin: 0 auto;
-  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  background-color: white;
+  border: 1px solid lightgrey;
+  scroll-snap-type: x mandatory;
 
+
+}
+
+.carusel h1 {
+  padding :0;
+  margin: 0;
+  font-size: 20px;
+}
+
+.carusel-content {
+
+  padding:10px;
 }

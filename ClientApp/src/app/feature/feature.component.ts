@@ -17,6 +17,7 @@ export class FeatureComponent implements OnInit {
   caruseleItems;
   curretIndex : number = 1;
   currentPos : number = 0;
+  imageWidth = {'width.px': (window.innerWidth)};
 
 
   constructor(private BlogComponent : BlogComponent) {
@@ -25,9 +26,13 @@ export class FeatureComponent implements OnInit {
   }
 
   ngOnInit() {
-   this.caruselItem = document.getElementsByClassName("carusel")[0];
-   this.caruselcontainer =  this.caruselItem.querySelectorAll(".carusel-container")[0];
+    this.caruselItem = document.getElementsByClassName("carusel")[0];
+    this.caruselcontainer = this.caruselItem.querySelectorAll(".carusel-container")[0];
+
+    this.runslideshow();
+
   }
+
 
 
   nav(direction){
@@ -38,10 +43,17 @@ export class FeatureComponent implements OnInit {
     if (direction == "next"){
 
       if (this.curretIndex != caruseleItems.length) {
-        console.log(this.curretIndex +" " + caruseleItems.length);
+
 
         left = (this.currentPos - 100);
-        this.caruselcontainer.style.left = left + "%";
+
+        this.caruselItem.scrollBy({
+          top: 0,
+          left: window.innerWidth,
+          behavior: 'smooth'
+        });
+        console.log(this.imageWidth);
+       // this.caruselcontainer.style.left = left + "%";
         this.currentPos = left;
         this.curretIndex++;
       }
@@ -50,7 +62,14 @@ export class FeatureComponent implements OnInit {
 
       if ((this.curretIndex) != 1) {
         left = (this.currentPos + 100);
-        this.caruselcontainer.style.left = left + "%";
+
+        this.caruselItem.scrollBy({
+          top: 0,
+          left: - window.innerWidth,
+          behavior: 'smooth'
+        });
+
+        // this.caruselcontainer.style.left = left + "%";
         this.currentPos = left;
         this.curretIndex--;
 
@@ -58,8 +77,39 @@ export class FeatureComponent implements OnInit {
     }
 
 
+  }
 
 
+  runslideshow(){
+
+    let index = 1;
+
+    setInterval(()=>{
+
+     let count = this.caruselItem.querySelectorAll(".carusel-item").length;
+
+      console.log(index + " " + count)
+
+      if (index != count) {
+        this.caruselItem.scrollBy({
+          top: 0,
+          left: (window.innerWidth ),
+          behavior: 'smooth'
+        });
+        index++;
+      } else {
+
+        this.caruselItem.scrollBy({
+          top: 0,
+          left: - (window.innerWidth *count),
+          behavior: 'smooth'
+        });
+        index = 1;
+
+      }
+
+
+    }, 7000)
 
   }
 

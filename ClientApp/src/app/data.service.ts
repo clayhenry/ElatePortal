@@ -44,9 +44,9 @@ export class DataService {
     return  this.http.get<Array<any>>(this._url + "/" + "Comments/" + blogid);
   }
 
-  getCurrentProfileAjax() : void {
+  getCurrentProfileAjax() : Observable<IProfile> {
 
-    this.http.get<IProfile>("/api/Profile/").subscribe(d => {this.profile = d;});
+    return this.http.get<IProfile>("/api/Profile/");
 
   }
 
