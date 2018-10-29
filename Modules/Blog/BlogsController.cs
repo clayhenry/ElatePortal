@@ -25,6 +25,7 @@ namespace ElatePortal.Modules.Blog
         private readonly PortalRepository _portalreposirory;
         private readonly CommentContext _commentcontext;
         private Helper _helper;
+        
 
         public BlogsController(
             

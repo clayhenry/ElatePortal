@@ -80,8 +80,8 @@ namespace ElatePortal
                 options => options.SerializerSettings.ReferenceLoopHandling =            
                     Newtonsoft.Json.ReferenceLoopHandling.Ignore
             );
-         
-            
+
+    
             services.AddCors(o => o.AddPolicy("CorsPolicy", builder =>
             {
                 builder
@@ -108,6 +108,9 @@ namespace ElatePortal
                 app.UseExceptionHandler("/Home/Error");
             }
 
+
+
+            app.UseDefaultFiles();
             app.UseStaticFiles();
          
             app.UseAuthentication();
@@ -137,10 +140,17 @@ namespace ElatePortal
 
             app.UseSpa(spa =>
             {
+                
+           
+                    spa.Options.SourcePath = "ClientApp";
+
+              
+                
+                
                 // To learn more about options for serving an Angular SPA from ASP.NET Core,
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
-                spa.Options.SourcePath = "ClientApp";
+               // spa.Options.SourcePath = "ClientApp";
                 
 
                 if (env.IsDevelopment())
