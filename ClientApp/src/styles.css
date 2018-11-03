@@ -25,6 +25,15 @@ hr {
   margin: 0;
 
 }
+h1.logo {
+  font-family: 'Galada', cursive;
+  color: #11243e;
+  font-size: 26px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  height: 5px;
+}
 
 .profile-image {width:50px; height:50px; border-radius: 100%; float: left; margin :0 10px 0 0}
 
@@ -173,4 +182,35 @@ hr {
   display: inline-block;
   padding: 7px;
   background-color: white;
+  position: fixed;
+  z-index: 9;
+  box-shadow: 0px 2px 3px #dcdcdc;
+}
+
+.el-message-icon i {
+
+  font-size: 25px;
+  color: #9d9d9d;
+}
+
+.el-notification-count {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  border: 0;
+  border-radius: 100%;
+  background-color: #d61818;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  /* padding: 5px; */
+
+  font-family: sans-serif;
+}
+
+.el-notification-count .el-notification-number {
+
+  font-size: 10px;
+  color: white;
+  padding: 2px;
 }

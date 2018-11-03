@@ -10,6 +10,7 @@ export class HeaderComponent implements OnInit {
 
 
   profile;
+  clicked = true;
 
   constructor(  public _data: DataService,) { }
 
@@ -24,11 +25,30 @@ export class HeaderComponent implements OnInit {
   }
 
   setProfile(){
-
       this.profile = this._data.profile
 
-    console.log(this.profile)
+  }
 
+  scrollToMessages(){
+
+    let container =  document.getElementsByTagName("body")[0];
+    let direction = 0;
+
+    if(this.clicked){
+      direction = 2000;
+      this.clicked = false;
+
+    } else {
+      direction = -2000;
+      this.clicked = true;
+    }
+
+
+    container.scrollBy({
+      top: 0,
+      left: direction,
+      behavior: 'smooth'
+    });
 
   }
 
