@@ -6,10 +6,10 @@
   <div style="float: left; margin-right:15px;"><img src="/uploads/{{p.image}}" class="profile-image" style="width:30px; height:30px;"></div>
   <div style="float: left;  width: 70%"><h1 class="logo">elate</h1></div>
   <div style="float: right; margin-right:15px;  position: relative;" class="el-message-icon"><i class="far fa-comment-dots" (click)="scrollToMessages()"></i>
-    <div class="el-notification-count" >
-     <div class="el-notification-number"> 1 </div>
+    <div class="el-notification-count" (click)="scrollToMessages()" *ngIf="_data.directNotifications">
+     <div class="el-notification-number" > {{_data.directNotifications}} </div>
     </div>
-    <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span>
+
   </div>
 </div>
 

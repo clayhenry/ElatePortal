@@ -63,6 +63,16 @@ export class ChatComponent implements OnInit {
     })
 
     this.currentChatBox = document.getElementById("message");
+
+    setTimeout(function(){
+
+
+      let msscontaier = document.querySelector(".el-chat-messages");
+        msscontaier.scrollTo(0, msscontaier.scrollHeight)
+
+    }, 200)
+
+
   }
 
   alertOnMentionMessage(ids){
@@ -105,7 +115,10 @@ export class ChatComponent implements OnInit {
     return this.http.post("/api/message",body, options ).subscribe(c => {
       this.currentChatBox.innerHTML= ''
 
+      let msscontaier = document.querySelector(".el-chat-messages");
+      msscontaier.scrollTo(0, msscontaier.scrollHeight + 1000)
     })
+
 
   }
 
@@ -158,6 +171,7 @@ export class ChatComponent implements OnInit {
         this.currentSearchString = "";
         this.filteredList = [];
       }
+
     }
   }
 
@@ -185,6 +199,11 @@ export class ChatComponent implements OnInit {
 
 //first action
   tabAction(event){
+
+    if(event.keyCode == 13){
+      this.processChat();
+      return false
+    }
 
     this.arrowindex = 0;
     this.atkey = "";

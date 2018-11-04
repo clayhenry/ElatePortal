@@ -18,8 +18,8 @@ export class HomeComponent implements OnInit {
     let container =  <HTMLElement>document.querySelector(".el-contents")
     let leftpanel =  <HTMLElement>document.querySelector(".el-leftpanel")
     let rightpanel =  <HTMLElement>document.querySelector(".el-rightpanel")
-
-
+    let mssgs =  <HTMLElement>document.querySelector(".el-chat-messages");
+     mssgs.style.height = (windowHeight -120 ) +"px";
     container.style.width = (windowWidth * 2)+"px";
     container.style.height = windowHeight+"px";
   }

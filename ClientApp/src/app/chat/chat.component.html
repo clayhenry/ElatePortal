@@ -1,34 +1,35 @@
 
-<div>In-house</div>
-<div>Mentions <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span></div>
+  <div>In-house</div>
+  <div>Mentions <span *ngIf="_data.directNotifications > 0">{{_data.directNotifications}}</span></div>
 
+<div class="el-chat-messages">
+  <div *ngFor="let message of chat" class="chatMessageBox">
+    <div>
+      <img class='profile-image' src ="uploads/{{message.image}}" >
+    </div>
+      <div>
 
-<div *ngFor="let message of chat" class="chatMessageBox">
+        {{message.name}} {{message.date | date }}
+      </div>
 
-<div>
-  <img class='profile-image' src ="uploads/{{message.image}}" >
+      <div ngClass="chatMessage" [innerHTML]=" domSanitizer.bypassSecurityTrustHtml(message.message)" ></div>
+    </div>
 </div>
-  <div>
+  <div style="position: relative">
+  <div class="el-chat-box">
+    <div>
+        <ul class="nameslist">
+        <li *ngFor="let list of filteredList; let i=index" tabindex="2"
+            (keydown)="tabEnter($event, list )"
+            (click)="slectClick(list, i)">
+          {{list.name}}
+        </li>
+        </ul>
+      </div>
 
-    {{message.name}} {{message.date | date }}
+      <div class="el-message-input" tabindex="1" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (keypress)="checkforCharacter($event)"  (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
+
+      <!--<button tabindex="3" (click)="processChat()" (keyup)="processChat($event)" >Submit</button>-->
   </div>
 
-  <div ngClass="chatMessage" [innerHTML]=" domSanitizer.bypassSecurityTrustHtml(message.message)" ></div>
 </div>
-
-<div >
-  <ul class="nameslist">
-  <li *ngFor="let list of filteredList; let i=index" tabindex="2"
-      (keydown)="tabEnter($event, list )"
-      (click)="slectClick(list, i)">
-    {{list.name}}
-  </li>
-  </ul>
-</div>
-
-<div tabindex="1" style="border: 1px solid blue" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (keypress)="checkforCharacter($event)"  (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
-
-<button tabindex="3" (click)="processChat()">Submit</button>
-
-
-
