@@ -88,8 +88,6 @@ export class FeatureComponent implements OnInit {
 
      let count = this.caruselItem.querySelectorAll(".carusel-item").length;
 
-      console.log(index + " " + count)
-
       if (index != count) {
         this.caruselItem.scrollBy({
           top: 0,
