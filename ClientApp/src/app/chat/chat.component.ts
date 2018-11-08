@@ -34,7 +34,7 @@ export class ChatComponent implements OnInit {
   selectedListContent;
   atkey;
   messageUsersIds = [];
-
+  showSuggestionBox = true;
   directNotifications = 0;
 
   ngOnInit() {
@@ -128,9 +128,9 @@ export class ChatComponent implements OnInit {
 
   }
 
+
   parseKey(event){
     this.filteredList = [];
-
     //include only alphanumeric
     var regex = new RegExp("^[a-zA-Z0-9]+$");
     var str = String.fromCharCode(!event.charCode ? event.which : event.charCode);
@@ -139,6 +139,7 @@ export class ChatComponent implements OnInit {
 
     if(this.atkey == "@" || this.currentSearchString.length > 0){
       //start recording
+      this.showSuggestionBox = false;
       this.UpdateUserList()
       if(regex.test(str)){
 
@@ -158,6 +159,7 @@ export class ChatComponent implements OnInit {
         if(this.currentSearchString.length == 0){
           this.filteredList = [];
           this.currentSearchString = "";
+          this.showSuggestionBox = true;
 
         } else {
           this.UpdateUserList()
@@ -300,7 +302,7 @@ export class ChatComponent implements OnInit {
   //regular mouse click
 
   slectClick(value, index){
-
+    this.showSuggestionBox = true;
     this.listElements  = document.querySelectorAll(".nameslist li") as HTMLCollectionOf<HTMLElement>;
     this.listElements[index].classList.add("active");
     this.selectedListContent = this.filteredList[index];

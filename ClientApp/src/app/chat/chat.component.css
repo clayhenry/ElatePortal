@@ -1,5 +1,11 @@
 .active {color:red}
 .chatMessageBox {
-  display: block;
-  margin: 15px;
+
+  margin: 5px;
+  display: inline-block;
+  width: 90%;
+  background-color: #f3f6ff;
+  padding: 10px;
+  border-radius: 20px;
+
 }

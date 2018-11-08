@@ -1,9 +1,44 @@
 
 .mainPost {
 
-  margin: 50px;
-  padding: 50px;
+  padding: 40px;
   background-color: white;
-  height: 80%;
+  height: 100%;
+  margin-top:50px;
+}
+
+
+.exit-post {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #f1f4f7;
+  padding: 10px;
+  color: #5a5a5a;
+  top: 40px;
+
+}
+
+.author {
+
+  width: 100%;
+  padding:20px 0
+
+}
+
+
+.el-reactions-post {
+
+
+  font-size: 14px;
+  min-height: 20px;
+
+
+}
+.el-reaction-post {
+
+  float:right;
+  margin: 0 12px
+
 }
 /*::ng-deep body{ overflow: hidden !important;}*/

@@ -9,7 +9,7 @@
     </div>
       <div>
 
-        {{message.name}} {{message.date | date }}
+        <span class="profile-name">{{message.name}}</span><span class="profile-date"> {{message.date | date }}</span>
       </div>
 
       <div ngClass="chatMessage" [innerHTML]=" domSanitizer.bypassSecurityTrustHtml(message.message)" ></div>
@@ -18,7 +18,7 @@
   <div style="position: relative">
   <div class="el-chat-box">
     <div>
-        <ul class="nameslist">
+        <ul class="nameslist" [hidden]="showSuggestionBox">
         <li *ngFor="let list of filteredList; let i=index" tabindex="2"
             (keydown)="tabEnter($event, list )"
             (click)="slectClick(list, i)">
@@ -26,10 +26,11 @@
         </li>
         </ul>
       </div>
-
-      <div class="el-message-input" tabindex="1" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (keypress)="checkforCharacter($event)"  (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
-
-      <!--<button tabindex="3" (click)="processChat()" (keyup)="processChat($event)" >Submit</button>-->
+    <hr>
+    <div style="padding: 20px;">
+      <div placeholder="Message..." class="el-message-input" tabindex="1" contenteditable="true" (keydown)="tabAction($event)"  (keyup)="parseKey($event)" (keypress)="checkforCharacter($event)"  (input)="chatinput=$event.target.innerText" id="message" name="message" ></div>
+    <button contenteditable="true" tabindex="3" (click)="processChat()" (keyup)="processChat($event)" class="el-post-button"> Post </button>
+    </div>
   </div>
 
 </div>

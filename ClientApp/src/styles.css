@@ -18,6 +18,12 @@ body {
 
 }
 
+[contenteditable=true]:empty:before{
+  content: attr(placeholder);
+  display: block; /* For Firefox */
+}
+
+
 hr {
   border: 0;
   height: 1px;
@@ -35,7 +41,18 @@ h1.logo {
   height: 5px;
 }
 
-.profile-image {width:50px; height:50px; border-radius: 100%; float: left; margin :0 10px 0 0}
+.profile-image {width:40px; height:40px; border-radius: 100%; float: left; margin :0 10px 0 0}
+
+ .profile-name {
+  font-weight: bold;
+   font-size: 14px;
+}
+
+ .profile-date {
+
+  color: #969696;
+   font-size: 14px;
+}
 
 .el-leftpanel {
 
@@ -94,7 +111,7 @@ h1.logo {
 
   float: left;
   color: gray;
-  width: 100%;
+
 }
 .el-tags div {
 
@@ -232,15 +249,34 @@ h1.logo {
 .nameslist {
 
   position: absolute;
-  bottom: 80px;
-  width: 100%;
+  bottom: 60px;
+  width: 90%;
   background-color: white;
+  list-style-type: none;
+  box-shadow: 2px 2px 40px 1px #d0d0d0;
+  left: 8px;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 30px;
 }
+
 
 .el-message-input {
 
   padding: 5px;
-  margin:10px;
-  border: 1px solid black;
 
+  border: 0px solid black;
+  width: 70%;
+  float: left;
+
+}
+
+.el-post-button {
+
+  background-color: #466c8e;
+  color: white;
+  padding: 5px;
+  border: 0;
+  margin: 5px;
+  float:right;
 }

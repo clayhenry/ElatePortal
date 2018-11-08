@@ -4,37 +4,66 @@
 <div *ngIf="postActive">
 
 
-<div id="backgroundElement" style="background-color: rgba(255, 255, 255, 0.8); position: fixed;
+<div style="background-color: rgba(255, 255, 255, 0.8); position: fixed;
     top: 0;
     height: 100%;
-    width: 100%;" (click)="back($event)" >
+    width: 100%;"  >
+
+
 
   <div class="mainPost">
+    <div class="exit-post" (click)="back($event)"><i class="fas fa-times" id="backgroundElement" ></i>
+
+    </div>
+
     <div *ngFor="let post of blogpost; " >
 
       <h1>{{post.title}}</h1>
 
-      <div *ngFor="let tag of post.departmentsBlog" >
-        {{ tag.departments.departmentName}}
 
-      </div>
 
-      <div *ngFor="let author of post.author" >
-         <a href="mailto:{{author.email}}"> {{author.name}}</a>, {{author.title}}
-      </div>
-
-      <small>{{post.createdAt | date: 'dd/MM/yyyy'}}</small>
 
       <div>
         {{post.content}}
       </div>
+      <br>
+      <hr>
+
+      <div class="author">
+        <div *ngFor="let author of post.author" >
+          <img class="profile-image" style="width:30px; height:30px;" src="/uploads/{{author.image}}">
 
 
+          <strong> {{author.name}}</strong>, <span class="el-user-title" > {{author.title}}</span>
+        </div>
 
-      <app-comments [post]="post" ></app-comments>
+        <small>{{post.createdAt | date: 'dd/MM/yyyy'}}</small>
+      </div>
 
-      <app-reaction [post]="post" [index]="index"></app-reaction>
 
+      <div class="el-tags">
+        <div *ngFor="let tag of post.departmentsBlog" >
+
+          <span>{{ tag.departments.departmentName}}</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="el-reactions-post">
+
+        <div>
+          <app-reaction [post]="post" [index]="index"></app-reaction>
+        </div>
+
+        <div>
+          <app-comments [post]="post" ></app-comments>
+        </div>
+
+      </div>
+      <br>
+      <hr>
     </div>
 
 

@@ -46,10 +46,11 @@ export class PostComponent implements OnChanges, OnInit {
 
   back(event){
 
+
    if(event.target.id == "backgroundElement"){
      this.postActive = false;
       this.location.replaceState('Portal');
-      document.getElementsByTagName("body")[0].style.overflow = "visible"
+
    }
 
   }
