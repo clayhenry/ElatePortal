@@ -9,3 +9,10 @@
   border-radius: 20px;
 
 }
+.chatMessage {
+  width: 80%;
+  display: block;
+  float: left;
+  margin-top: 10px;
+
+}

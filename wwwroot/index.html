@@ -1,1 +1,50 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>ElatePortal</title><base href="./"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/x-icon" href="favicon.ico"><link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous"><link href="styles.17f120fc1467ab227def.bundle.css" rel="stylesheet"/></head><body><app-root>Loading...</app-root><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.fa62713060e7012f88ea.bundle.js"></script><script type="text/javascript" src="main.9cc5d76bea7972b38abd.bundle.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>ElatePortal</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Galada" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Hashtag My Post Generator">
+
+  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" sizes="16x16" href="/images/16x16.png">
+  <link rel="shortcut icon" sizes="192x192" href="/images/192x192.png">
+
+
+</head>
+<body>
+  <app-root>Loading...</app-root>
+
+  <script>
+
+    //sw
+
+    if ('serviceWorker' in navigator  && 'PushManager' in window) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('sw.js').then(function(registration) {
+          // Registration was successful
+
+
+          console.log('ServiceWorker registration successful with scope: ', registration);
+        }, function(err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+
+
+
+  </script>
+
+<script type="text/javascript" src="inline.bundle.js"></script><script type="text/javascript" src="polyfills.bundle.js"></script><script type="text/javascript" src="styles.bundle.js"></script><script type="text/javascript" src="vendor.bundle.js"></script><script type="text/javascript" src="main.bundle.js"></script></body>
+</html>

@@ -31,6 +31,9 @@ export class HeaderComponent implements OnInit {
 
   scrollToMessages(){
 
+    console.log("asdasd")
+
+
     let container =  document.getElementsByTagName("body")[0];
     let direction = 0;
 

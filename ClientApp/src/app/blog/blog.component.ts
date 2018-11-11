@@ -35,7 +35,7 @@ export class BlogComponent implements OnChanges, OnInit {
   currentlyLikePost = [];
   canReactLike = [];
   directNotifications;
-  imageWidth  = {'width.px': (window.innerWidth - 35)};
+  imageWidth  = {'width.px': (window.innerWidth - 25)};
 
 
 

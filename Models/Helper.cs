@@ -26,7 +26,7 @@ namespace ElatePortal.Models
             this._he = hostingEnvironment;
         }
  
-        public string[] UploadImages (List<IFormFile> files, int x = 1, int y = 1)
+        public string[] UploadImages (List<IFormFile> files, int x = 4, int y = 3)
         {
             long size = files.Sum(f => f.Length);
         
@@ -45,7 +45,7 @@ namespace ElatePortal.Models
                     using (Image<Rgba32> image = Image.Load(this.FilePath))
                     {
                       
-                        image.Mutate(ctx => ctx.Resize(image.Width / x, image.Height / y));
+                        image.Mutate(ctx => ctx.Resize(image.Width, image.Height));
                         image.Save(uploadFilePath); 
                     } 
 

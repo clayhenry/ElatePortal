@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {DataService} from "./data.service";
 import {IProfile} from "../interfaces/IProfile";
+import {enableProdMode} from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,6 @@ export class AppComponent implements OnInit{
   constructor(private _data: DataService){}
 
   ngOnInit() {
-    console.log("authenticateme");
 
   }
 

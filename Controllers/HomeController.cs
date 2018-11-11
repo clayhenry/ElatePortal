@@ -16,6 +16,7 @@ using System.Security.Claims;
 using ElatePortal.Extensions;
 using Microsoft.AspNetCore.Http;
 using ElatePortal.Repository;
+using Microsoft.AspNetCore.Cors;
 
 namespace ElatePortal.Controllers
 {
@@ -48,17 +49,17 @@ namespace ElatePortal.Controllers
             _repositrory = PortalRepository;
      
         }
-  
+     
         public IActionResult Index()
 
         {
 
             if (User.Identity.IsAuthenticated)
             {
-                return Redirect("Portal");
+                return Redirect("/");
             }               
 
-            return Content("sd");
+            return Content("d");
         }
 
 

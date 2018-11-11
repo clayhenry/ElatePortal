@@ -1,6 +1,6 @@
 {
-  "short_name": "Hashtag My Post",
-  "name": "Hashtag My Post Generator",
+  "short_name": "Elate",
+  "name": "Elate Portal",
   "display": "standalone",
   "icons": [
     {
@@ -19,5 +19,5 @@
       "sizes": "192x192"
     }
   ],
-  "start_url": "/index.html?utm_source=homescreen"
+  "start_url": "/Portal"
 }

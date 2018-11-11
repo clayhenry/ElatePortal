@@ -124,12 +124,13 @@ export class ChatComponent implements OnInit {
 
   checkforCharacter(event){
 
-    this.atkey = (event.key == "@") ? "@" : "ddd";
+    this.atkey = (event.key == "@" || event.code == 64 || event.which == 64) ? "@" : "ddd";
 
   }
 
 
   parseKey(event){
+
     this.filteredList = [];
     //include only alphanumeric
     var regex = new RegExp("^[a-zA-Z0-9]+$");
@@ -325,11 +326,20 @@ export class ChatComponent implements OnInit {
 
   browserNotification(){
 
+
     Notification.requestPermission().then(function(result) {
+
+      if ((result === 'denied') ||  (result === 'default')) {
+
+          alert("denied");
+
+      }
+
       let options = {
         body: "test mesage"
       };
       let n = new Notification("just testing", options);
+
     });
 
   }

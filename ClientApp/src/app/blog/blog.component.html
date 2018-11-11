@@ -38,7 +38,7 @@
     <h1> {{post.title}}</h1>
   </div>
 
-  <div class="el-tags">
+  <div class="el-tags" style=" width: 100%;">
     <div *ngFor="let tag of post.departmentsBlog; let j=index">
       <span (click)="filterByTag(tag.departments.departmentName)"> {{tag.departments.departmentName}}</span>
     </div>
